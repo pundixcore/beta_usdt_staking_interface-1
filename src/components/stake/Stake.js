@@ -1272,7 +1272,7 @@ function StakeMenu(props) {
                 </Buttons>
               )}
               {props.userUSDTBalance > 0 && parseInt(props.remainingPoolDepositedSize_second) > 0 ? (
-                <PopupDeposit poolSize={props.poolSize_second} maxPoolSize={props.maxPoolSize_second} remainingPoolDepositedSize={props.remainingPoolDepositedSize} userUSDTBalance={props.userUSDTBalance} userStakedBalance={props.userStakedBalance_second} userUSDTStakingAllowance={props.userUSDTStakingAllowance_second} stake={props.stake} approve={props.approve} pool_id={2} />
+                <PopupDeposit poolSize={props.poolSize_second} maxPoolSize={props.maxPoolSize_second} remainingPoolDepositedSize={props.remainingPoolDepositedSize_second} userUSDTBalance={props.userUSDTBalance} userStakedBalance={props.userStakedBalance_second} userUSDTStakingAllowance={props.userUSDTStakingAllowance_second} stake={props.stake} approve={props.approve} pool_id={2} />
               ) : (
                 <Buttons
                   className="textWhiteLargeButton cell2 center"
