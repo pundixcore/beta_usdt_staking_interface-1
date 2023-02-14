@@ -1,0 +1,56 @@
+{
+  "pool": [
+    {
+      "pid": 0,
+      "synTokenPairsymbol": "bBTC",
+      "synTokenCompany": "Bitcoin",
+      "synTokenName": "Baklava BTC",
+      "synTokenAddresses": {
+        "43113": "",
+        "43114": "0x3C5dE8d32d9047649215e33808f6901d27d2DEe8"
+      },
+      "icon": [
+        {
+          "image": "wbtc",
+          "imageSize": "50px",
+          "imagePosition": "synIconCenter"
+        }
+      ],
+      "marginXPair": "BTC:USDT",
+      "status": "",
+      "platform": "Baklava",
+      "chainlink": "0x2779D32d5166BAaa2B2b658333bA7e6Ec0C65743",
+      "minTxAmount": "10",
+      "mintingFee": "30",
+      "projectLink": "https://baklava.space/menu/",
+      "getLPLink": "",
+      "farmContract": ""
+    },
+    {
+      "pid": 1,
+      "synTokenPairsymbol": "bETH",
+      "synTokenCompany": "Ethereum",
+      "synTokenName": "Baklava ETH",
+      "synTokenAddresses": {
+        "43113": "",
+        "43114": "0xf784e45AEc811dA24E67Ac46B8E214D09375650c"
+      },
+      "icon": [
+        {
+          "image": "weth",
+          "imageSize": "50px",
+          "imagePosition": "synIconCenter"
+        }
+      ],
+      "marginXPair": "ETH:USDT",
+      "status": "",
+      "platform": "Baklava",
+      "chainlink": "0x976B3D034E162d8bD72D6b9C989d545b839003b0",
+      "minTxAmount": "10",
+      "mintingFee": "30",
+      "projectLink": "https://baklava.space/menu/",
+      "getLPLink": "",
+      "farmContract": ""
+    }
+  ]
+}

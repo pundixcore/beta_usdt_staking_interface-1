@@ -1,0 +1,64 @@
+{
+    "vault": [
+        {
+            "pid": 0,
+            "lpTokenPairSymbol": "BRT2",
+            "lpName": "USDC-USDC.e",
+            "status": "",
+            "lpAddresses": {
+                "43113": "",
+                "43114": "0x91CCbbC44221ddb70f54d9E911C4fE80be944232"
+            },
+            "icon": [
+                {
+                    "image": "usdc.svg",
+                    "imageSize": "32px",
+                    "imagePosition": "iconLeft"
+                },
+                {
+                    "image": "usdc.svg",
+                    "imageSize": "32px",
+                    "imagePosition": "iconRight"
+                }
+            ],
+            "platform": "Pangolin",
+            "minCollRatio": 150,
+            "liqPenalty": 5,
+            "assetCeiling": 10000,
+            "assetFloor": 10,
+            "vaultContract": "https://snowtrace.io/address/0x1230F3df6Fa1743a274fd4BBe836961c8F14cFbB",
+            "projectLink": "https://baklava.space/menu/",
+            "getLPLink": "/menu/v2/"
+        },
+        {
+            "pid": 1,
+            "lpTokenPairSymbol": "BRT2",
+            "lpName": "USDC-USDC.e",
+            "status": "",
+            "lpAddresses": {
+                "43113": "",
+                "43114": "0x5cBD2724A4398748615a2ad62ff80607dAC233fC"
+            },
+            "icon": [
+                {
+                    "image": "usdc.svg",
+                    "imageSize": "32px",
+                    "imagePosition": "iconLeft"
+                },
+                {
+                    "image": "usdc.svg",
+                    "imageSize": "32px",
+                    "imagePosition": "iconRight"
+                }
+            ],
+            "platform": "Trader Joe",
+            "minCollRatio": 150,
+            "liqPenalty": 5,
+            "assetCeiling": 10000,
+            "assetFloor": 10,
+            "vaultContract": "https://snowtrace.io/address/0x1230F3df6Fa1743a274fd4BBe836961c8F14cFbB",
+            "projectLink": "https://baklava.space/menu/",
+            "getLPLink": "/menu/v2/"
+        }
+    ]
+}

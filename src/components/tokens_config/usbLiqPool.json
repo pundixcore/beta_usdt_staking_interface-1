@@ -1,0 +1,82 @@
+{
+  "pool": [
+    {
+      "pid": 0,
+      "usdTokenSymbol": "USDC.e",
+      "usdTokenName": "USD Coin",
+      "usdTokenAddresses": {
+        "43113": "",
+        "43114": "0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664"
+      },
+      "icon": {
+        "image": "usdc",
+        "imageSize": "18px",
+        "imagePosition": "iconRight"
+      },
+      "decimals": "6",
+      "decimalUnit": "mWei",
+      "status": "",
+      "chainlink": ""
+    },
+    {
+      "pid": 1,
+      "usdTokenSymbol": "USDC",
+      "usdTokenName": "USD Coin",
+      "usdTokenAddresses": {
+        "43113": "",
+        "43114": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E"
+      },
+      "icon": {
+        "image": "usdc",
+        "imageSize": "18px",
+        "imagePosition": "iconRight"
+      },
+      "decimals": "6",
+      "decimalUnit": "mWei",
+      "status": "",
+      "chainlink": ""
+    },
+    {
+      "pid": "",
+      "usdTokenSymbol": "",
+      "usdTokenName": "",
+      "usdTokenAddresses": {
+        "43113": "",
+        "43114": ""
+      },
+      "icon": "",
+      "decimals": "",
+      "decimalUnit": "",
+      "status": "",
+      "chainlink": ""
+    },
+    {
+      "pid": "",
+      "usdTokenSymbol": "",
+      "usdTokenName": "",
+      "usdTokenAddresses": {
+        "43113": "",
+        "43114": ""
+      },
+      "icon": "",
+      "decimals": "",
+      "decimalUnit": "",
+      "status": "",
+      "chainlink": ""
+    },
+    {
+      "pid": 4,
+      "usdTokenSymbol": "USB",
+      "usdTokenName": "USB Coin",
+      "usdTokenAddresses": {
+        "43113": "",
+        "43114": "0xc3fdd1652dD28b0b1D3401CC6fa50B4d8C45e7Ad"
+      },
+      "icon": "USB",
+      "decimals": "18",
+      "decimalUnit": "Ether",
+      "status": "",
+      "chainlink": "0x7898AcCC83587C3C55116c5230C17a6Cd9C71bad"
+    }
+  ]
+}

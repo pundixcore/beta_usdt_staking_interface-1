@@ -1,0 +1,749 @@
+{
+  "farm": [
+    {
+      "pid": 6,
+      "lpTokenPairSymbol": "PGL",
+      "lpName": "USDC-USDC.e",
+      "status": "",
+      "lpAddresses": {
+        "43114": "0x8a9c36BC3CEd5ECce703A4dA8032218Dfe72fE86"
+      },
+      "vaultAddresses": {
+        "43114": "0x91CCbbC44221ddb70f54d9E911C4fE80be944232"
+      },
+      "icon": [
+        {
+          "image": "usdc",
+          "imageSize": "32px",
+          "imagePosition": "iconLeft"
+        },
+        {
+          "image": "usdc",
+          "imageSize": "32px",
+          "imagePosition": "iconRight"
+        }
+      ],
+      "style": "roundedCardbody",
+      "platform": "Pangolin",
+      "allocPoint": "1000",
+      "getLPLink": "https://app.pangolin.exchange/#/pool",
+      "farmContract": "https://snowtrace.io/address/0x91CCbbC44221ddb70f54d9E911C4fE80be944232#code",
+      "total3rdPartyAPR": "3",
+      "3rdPartyId": "54",
+      "bonusReward": [],
+      "token": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+          "decimals": "6",
+          "symbol": "USDC",
+          "name": "USD Coin"
+        }
+      },
+      "quoteToken": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664",
+          "decimals": "6",
+          "symbol": "USDC.e",
+          "name": "USD Coin"
+        }
+      }
+    },
+    {
+      "pid": 13,
+      "lpTokenPairSymbol": "JLP",
+      "lpName": "USDC-USDC.e",
+      "status": "",
+      "lpAddresses": {
+        "43114": "0x2A8A315e82F85D1f0658C5D66A452Bbdd9356783"
+      },
+      "vaultAddresses": {
+        "43114": "0x5cBD2724A4398748615a2ad62ff80607dAC233fC"
+      },
+      "icon": [
+        {
+          "image": "usdc",
+          "imageSize": "32px",
+          "imagePosition": "iconLeft"
+        },
+        {
+          "image": "usdc",
+          "imageSize": "32px",
+          "imagePosition": "iconRight"
+        }
+      ],
+      "style": "roundedCardbody",
+      "platform": "Trader Joe",
+      "allocPoint": 100,
+      "getLPLink": "https://traderjoexyz.com/pool",
+      "farmContract": "https://snowtrace.io/address/0x5cBD2724A4398748615a2ad62ff80607dAC233fC#code",
+      "total3rdPartyAPR": "0.82",
+      "3rdPartyId": "",
+      "token": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+          "decimals": "6",
+          "symbol": "USDC",
+          "name": "USD Coin"
+        }
+      },
+      "quoteToken": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664",
+          "decimals": "6",
+          "symbol": "USDC.e",
+          "name": "USD Coin"
+        }
+      }
+    },
+    {
+      "pid": 2,
+      "lpTokenPairSymbol": "PGL",
+      "lpName": "BAVA-AVAX",
+      "status": "",
+      "lpAddresses": {
+        "43114": "0xeB69651B7146F4A42EBC32B03785C3eEddE58Ee7"
+      },
+      "vaultAddresses": {
+        "43114": "0x2E136DcB78C5C166a55C90F87A4bBFb7C980B7a2"
+      },
+      "icon": [
+        {
+          "image": "bava",
+          "imageSize": "32px",
+          "imagePosition": "iconLeft"
+        },
+        {
+          "image": "avax",
+          "imageSize": "32px",
+          "imagePosition": "iconRight"
+        }
+      ],
+      "style": "roundedCardbody",
+      "platform": "Pangolin",
+      "allocPoint": "1000",
+      "getLPLink": "https://app.pangolin.exchange/#/pool",
+      "farmContract": "https://snowtrace.io/address/0x2E136DcB78C5C166a55C90F87A4bBFb7C980B7a2#code",
+      "total3rdPartyAPR": "27",
+      "3rdPartyId": "84",
+      "bonusReward": [],
+      "token": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0xe19A1684873faB5Fb694CfD06607100A632fF21c",
+          "decimals": "18",
+          "symbol": "BAVA",
+          "name": "Bava Token"
+        }
+      },
+      "quoteToken": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+          "decimals": "18",
+          "symbol": "AVAX",
+          "name": "Wrapped AVAX"
+        }
+      }
+    },
+    {
+      "pid": 10,
+      "lpTokenPairSymbol": "JLP",
+      "lpName": "BAVA-AVAX",
+      "status": "",
+      "lpAddresses": {
+        "43114": "0x5a9071890302609D82E9d883EA7E6e89E9D6306f"
+      },
+      "vaultAddresses": {
+        "43114": "0xBFd13f98A84C59D42D2086298100D4d7A715733D"
+      },
+      "icon": [
+        {
+          "image": "bava",
+          "imageSize": "34px",
+          "imagePosition": "iconLeft"
+        },
+        {
+          "image": "avax",
+          "imageSize": "32px",
+          "imagePosition": "iconRight"
+        }
+      ],
+      "style": "roundedCardbody",
+      "platform": "Trader Joe",
+      "allocPoint": 1000,
+      "getLPLink": "https://traderjoexyz.com/pool",
+      "farmContract": "https://snowtrace.io/address/0xBFd13f98A84C59D42D2086298100D4d7A715733D#code",
+      "total3rdPartyAPR": "1.32",
+      "3rdPartyId": "",
+      "token": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0xe19A1684873faB5Fb694CfD06607100A632fF21c",
+          "decimals": "18",
+          "symbol": "BAVA",
+          "name": "Bava Token"
+        }
+      },
+      "quoteToken": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+          "decimals": "18",
+          "symbol": "AVAX",
+          "name": "Wrapped AVAX"
+        }
+      }
+    },
+    {
+      "pid": 11,
+      "lpTokenPairSymbol": "JLP",
+      "lpName": "BAVA-USDC.e",
+      "status": "",
+      "lpAddresses": {
+        "43114": "0x2C3601Fe09C23DF8BeB8216298D1502C985e376f"
+      },
+      "vaultAddresses": {
+        "43114": "0xDCeDB18047945de1F05F649569b3d2B0e648D9C8"
+      },
+      "icon": [
+        {
+          "image": "bava",
+          "imageSize": "34px",
+          "imagePosition": "iconLeft"
+        },
+        {
+          "image": "usdc",
+          "imageSize": "32px",
+          "imagePosition": "iconRight"
+        }
+      ],
+      "style": "roundedCardbody",
+      "platform": "Trader Joe",
+      "allocPoint": 2000,
+      "getLPLink": "https://traderjoexyz.com/pool",
+      "farmContract": "https://snowtrace.io/address/0xDCeDB18047945de1F05F649569b3d2B0e648D9C8#code",
+      "total3rdPartyAPR": "1.06",
+      "3rdPartyId": "",
+      "token": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0xe19A1684873faB5Fb694CfD06607100A632fF21c",
+          "decimals": "18",
+          "symbol": "BAVA",
+          "name": "Bava Token"
+        }
+      },
+      "quoteToken": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664",
+          "decimals": "6",
+          "symbol": "USDC.e",
+          "name": "USD Coin"
+        }
+      }
+    },
+    {
+      "pid": 0,
+      "lpTokenPairSymbol": "PGL",
+      "lpName": "AVAX-USDT.e",
+      "status": "",
+      "lpAddresses": {
+        "43114": "0xe28984e1EE8D431346D32BeC9Ec800Efb643eef4"
+      },
+      "vaultAddresses": {
+        "43114": "0x9841c066021Bfb9D1c79e8E82A597Dd133d8804F"
+      },
+      "icon": [
+        {
+          "image": "avax",
+          "imageSize": "32px",
+          "imagePosition": "iconLeft"
+        },
+        {
+          "image": "usdt",
+          "imageSize": "32px",
+          "imagePosition": "iconRight"
+        }
+      ],
+      "style": "roundedCardbody",
+      "platform": "Pangolin",
+      "allocPoint": "1000",
+      "getLPLink": "https://app.pangolin.exchange/#/pool",
+      "farmContract": "https://snowtrace.io/address/0x9841c066021Bfb9D1c79e8E82A597Dd133d8804F#code",
+      "total3rdPartyAPR": "27",
+      "3rdPartyId": "7",
+      "apr": "1",
+      "reinvestAmount": "0",
+      "returnRatio": "1",
+      "bonusReward": [],
+      "token": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+          "decimals": "18",
+          "symbol": "AVAX",
+          "name": "Wrapped AVAX"
+        }
+      },
+      "quoteToken": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0xc7198437980c041c805A1EDcbA50c1Ce5db95118",
+          "decimals": "6",
+          "symbol": "USDT.e",
+          "name": "Tether USD"
+        }
+      }
+    },
+    {
+      "pid": 1,
+      "lpTokenPairSymbol": "PGL",
+      "lpName": "AVAX-USDC.e",
+      "status": "",
+      "lpAddresses": {
+        "43114": "0xbd918Ed441767fe7924e99F6a0E0B568ac1970D9"
+      },
+      "vaultAddresses": {
+        "43114": "0xc331aF15574d80a4a34FEd8Ee1369E7900dCD47E"
+      },
+      "icon": [
+        {
+          "image": "avax",
+          "imageSize": "32px",
+          "imagePosition": "iconLeft"
+        },
+        {
+          "image": "usdc",
+          "imageSize": "32px",
+          "imagePosition": "iconRight"
+        }
+      ],
+      "style": "roundedCardbody",
+      "platform": "Pangolin",
+      "allocPoint": "1000",
+      "getLPLink": "https://app.pangolin.exchange/#/pool",
+      "farmContract": "https://snowtrace.io/address/0xc331aF15574d80a4a34FEd8Ee1369E7900dCD47E#code",
+      "total3rdPartyAPR": "27",
+      "3rdPartyId": "9",
+      "bonusReward": [],
+      "token": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+          "decimals": "18",
+          "symbol": "AVAX",
+          "name": "Wrapped AVAX"
+        }
+      },
+      "quoteToken": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664",
+          "decimals": "6",
+          "symbol": "USDC.e",
+          "name": "USD Coin"
+        }
+      }
+    },
+    {
+      "pid": 3,
+      "lpTokenPairSymbol": "PGL",
+      "lpName": "AVAX-PNG",
+      "status": "",
+      "lpAddresses": {
+        "43114": "0xd7538cABBf8605BdE1f4901B47B8D42c61DE0367"
+      },
+      "vaultAddresses": {
+        "43114": "0x17bc0557d5946b1304f8c0b5af18f4faddbf9d49"
+      },
+      "icon": [
+        {
+          "image": "avax",
+          "imageSize": "32px",
+          "imagePosition": "iconLeft"
+        },
+        {
+          "image": "png",
+          "imageSize": "32px",
+          "imagePosition": "iconRight"
+        }
+      ],
+      "style": "roundedCardbody",
+      "platform": "Pangolin",
+      "allocPoint": "1000",
+      "getLPLink": "https://app.pangolin.exchange/#/pool",
+      "farmContract": "https://snowtrace.io/address/0x17bc0557d5946b1304f8c0b5af18f4faddbf9d49#code",
+      "total3rdPartyAPR": "27",
+      "3rdPartyId": "0",
+      "bonusReward": [],
+      "token": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+          "decimals": "18",
+          "symbol": "AVAX",
+          "name": "Wrapped AVAX"
+        }
+      },
+      "quoteToken": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0x60781C2586D68229fde47564546784ab3fACA982",
+          "decimals": "18",
+          "symbol": "PNG",
+          "name": "Pangolin"
+        }
+      }
+    },
+    {
+      "pid": 4,
+      "lpTokenPairSymbol": "PGL",
+      "lpName": "QI-AVAX",
+      "status": "",
+      "lpAddresses": {
+        "43114": "0xE530dC2095Ef5653205CF5ea79F8979a7028065c"
+      },
+      "vaultAddresses": {
+        "43114": "0xeccFBE23903932DE517b0eb1f80d9e8779A864E0"
+      },
+      "icon": [
+        {
+          "image": "qi",
+          "imageSize": "32px",
+          "imagePosition": "iconLeft"
+        },
+        {
+          "image": "avax",
+          "imageSize": "32px",
+          "imagePosition": "iconRight"
+        }
+      ],
+      "style": "roundedCardbody",
+      "platform": "Pangolin",
+      "allocPoint": "1000",
+      "getLPLink": "https://app.pangolin.exchange/#/pool",
+      "farmContract": "https://snowtrace.io/address/0xeccFBE23903932DE517b0eb1f80d9e8779A864E0#code",
+      "total3rdPartyAPR": "37",
+      "3rdPartyId": "19",
+      "bonusReward": [],
+      "token": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0x8729438EB15e2C8B576fCc6AeCdA6A148776C0F5",
+          "decimals": "18",
+          "symbol": "QI",
+          "name": "QI Token"
+        }
+      },
+      "quoteToken": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+          "decimals": "18",
+          "symbol": "AVAX",
+          "name": "AVAX Token"
+        }
+      }
+    },
+    {
+      "pid": 5,
+      "lpTokenPairSymbol": "PGL",
+      "lpName": "AVAX-WETH.e",
+      "status": "",
+      "lpAddresses": {
+        "43114": "0x7c05d54fc5CB6e4Ad87c6f5db3b807C94bB89c52"
+      },
+      "vaultAddresses": {
+        "43114": "0x0D382907A342c0ac2DD735a0F8defe59A28D5DE4"
+      },
+      "icon": [
+        {
+          "image": "avax",
+          "imageSize": "32px",
+          "imagePosition": "iconLeft"
+        },
+        {
+          "image": "weth",
+          "imageSize": "32px",
+          "imagePosition": "iconRight"
+        }
+      ],
+      "style": "roundedCardbody",
+      "platform": "Pangolin",
+      "allocPoint": "1000",
+      "getLPLink": "https://app.pangolin.exchange/#/pool",
+      "farmContract": "https://snowtrace.io/address/0x0D382907A342c0ac2DD735a0F8defe59A28D5DE4#code",
+      "total3rdPartyAPR": "15",
+      "3rdPartyId": "8",
+      "bonusReward": [],
+      "token": {
+        "MAINNET": {
+          "chainId": "",
+          "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+          "decimals": "18",
+          "symbol": "AVAX",
+          "name": "Avax Token"
+        }
+      },
+      "quoteToken": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0x49D5c2BdFfac6CE2BFdB6640F4F80f226bc10bAB",
+          "decimals": "18",
+          "symbol": "WETH.e",
+          "name": "WETH.e Token"
+        }
+      }
+    },
+    {
+      "pid": 7,
+      "lpTokenPairSymbol": "PGL",
+      "lpName": "sAVAX-AVAX",
+      "status": "",
+      "lpAddresses": {
+        "43114": "0x4E9A38F05c38106C1cf5c145Df24959ec50ff70D"
+      },
+      "vaultAddresses": {
+        "43114": "0xd0Cf7b1071c7c12a7c36ca4CA863B2583D9C338A"
+      },
+      "icon": [
+        {
+          "image": "savax",
+          "imageSize": "32px",
+          "imagePosition": "iconLeft"
+        },
+        {
+          "image": "avax",
+          "imageSize": "32px",
+          "imagePosition": "iconRight"
+        }
+      ],
+      "style": "roundedCardbody",
+      "platform": "Pangolin",
+      "allocPoint": "500",
+      "getLPLink": "https://app.pangolin.exchange/#/pool",
+      "farmContract": "https://snowtrace.io/address/0xd0Cf7b1071c7c12a7c36ca4CA863B2583D9C338A#code",
+      "total3rdPartyAPR": "1",
+      "3rdPartyId": "90",
+      "bonusReward": [
+        "QI"
+      ],
+      "token": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0x2b2C81e08f1Af8835a78Bb2A90AE924ACE0eA4bE",
+          "decimals": "18",
+          "symbol": "sAVAX",
+          "name": "Staked AVAX"
+        }
+      },
+      "quoteToken": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+          "decimals": "18",
+          "symbol": "AVAX",
+          "name": "Wrapped AVAX"
+        }
+      }
+    },
+    {
+      "pid": 8,
+      "lpTokenPairSymbol": "PGL",
+      "lpName": "USDC.e-USDT.e",
+      "status": "",
+      "lpAddresses": {
+        "43114": "0xc13E562d92F7527c4389Cd29C67DaBb0667863eA"
+      },
+      "vaultAddresses": {
+        "43114": "0xDb535E437581f6f72D2547fb9ccaa24A90eeFDF2"
+      },
+      "icon": [
+        {
+          "image": "usdc",
+          "imageSize": "32px",
+          "imagePosition": "iconLeft"
+        },
+        {
+          "image": "usdt",
+          "imageSize": "32px",
+          "imagePosition": "iconRight"
+        }
+      ],
+      "style": "roundedCardbody",
+      "platform": "Pangolin",
+      "allocPoint": "1000",
+      "getLPLink": "https://app.pangolin.exchange/#/pool",
+      "farmContract": "https://snowtrace.io/address/0xDb535E437581f6f72D2547fb9ccaa24A90eeFDF2#code",
+      "total3rdPartyAPR": "0",
+      "3rdPartyId": "2",
+      "bonusReward": [],
+      "token": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664",
+          "decimals": "18",
+          "symbol": "USDC.e",
+          "name": "USDC.e Token"
+        }
+      },
+      "quoteToken": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0xc7198437980c041c805A1EDcbA50c1Ce5db95118",
+          "decimals": "18",
+          "symbol": "USDT.e",
+          "name": "USDT.e Token"
+        }
+      }
+    },
+    {
+      "pid": 9,
+      "lpTokenPairSymbol": "PNG",
+      "lpName": "PNG",
+      "status": "",
+      "lpAddresses": {
+        "43114": "0x60781C2586D68229fde47564546784ab3fACA982"
+      },
+      "vaultAddresses": {
+        "43114": "0xD146D2b9E017585faBbE0943e122b07FaefF1380"
+      },
+      "icon": [
+        {
+          "image": "png",
+          "imageSize": "32px",
+          "imagePosition": "iconCenter"
+        }
+      ],
+      "style": "roundedCardbody",
+      "platform": "Pangolin",
+      "allocPoint": "250",
+      "getLPLink": "https://app.pangolin.exchange/#/stake/0",
+      "farmContract": "https://snowtrace.io/address/0xD146D2b9E017585faBbE0943e122b07FaefF1380#code",
+      "total3rdPartyAPR": "6",
+      "3rdPartyId": "",
+      "bonusReward": [],
+      "token": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0x60781C2586D68229fde47564546784ab3fACA982",
+          "decimals": "18",
+          "symbol": "PNG",
+          "name": "Pangolin"
+        }
+      },
+      "quoteToken": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0x60781C2586D68229fde47564546784ab3fACA982",
+          "decimals": "18",
+          "symbol": "PNG",
+          "name": "Pangolin"
+        }
+      }
+    },
+    {
+      "pid": 12,
+      "lpTokenPairSymbol": "JLP",
+      "lpName": "AVAX-USDC",
+      "status": "",
+      "lpAddresses": {
+        "43114": "0xf4003F4efBE8691B60249E6afbD307aBE7758adb"
+      },
+      "vaultAddresses": {
+        "43114": "0x2d3147AC6dB2a8DfeE1946a9D59b1B0CBc3489c9"
+      },
+      "icon": [
+        {
+          "image": "avax",
+          "imageSize": "32px",
+          "imagePosition": "iconLeft"
+        },
+        {
+          "image": "usdc",
+          "imageSize": "32px",
+          "imagePosition": "iconRight"
+        }
+      ],
+      "style": "roundedCardbody",
+      "platform": "Trader Joe",
+      "allocPoint": 100,
+      "getLPLink": "https://traderjoexyz.com/pool",
+      "farmContract": "https://snowtrace.io/address/0x2d3147AC6dB2a8DfeE1946a9D59b1B0CBc3489c9#code",
+      "total3rdPartyAPR": "7.01",
+      "3rdPartyId": "",
+      "token": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+          "decimals": "18",
+          "symbol": "AVAX",
+          "name": "Wrapped AVAX"
+        }
+      },
+      "quoteToken": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+          "decimals": "6",
+          "symbol": "USDC",
+          "name": "USD Coin"
+        }
+      }
+    },
+    {
+      "pid": 14,
+      "lpTokenPairSymbol": "JLP",
+      "lpName": "AVAX-USDT",
+      "status": "",
+      "lpAddresses": {
+        "43114": "0xbb4646a764358ee93c2a9c4a147d5aDEd527ab73"
+      },
+      "vaultAddresses": {
+        "43114": "0xFec19beb4e68B4c93622c51d4ad8AF804fe421AA"
+      },
+      "icon": [
+        {
+          "image": "avax",
+          "imageSize": "32px",
+          "imagePosition": "iconLeft"
+        },
+        {
+          "image": "usdt",
+          "imageSize": "32px",
+          "imagePosition": "iconRight"
+        }
+      ],
+      "style": "roundedCardbody",
+      "platform": "Trader Joe",
+      "allocPoint": 100,
+      "getLPLink": "https://traderjoexyz.com/pool",
+      "farmContract": "https://snowtrace.io/address/0xFec19beb4e68B4c93622c51d4ad8AF804fe421AA#code",
+      "total3rdPartyAPR": "8.06",
+      "3rdPartyId": "",
+      "token": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+          "decimals": "18",
+          "symbol": "AVAX",
+          "name": "Wrapped AVAX"
+        }
+      },
+      "quoteToken": {
+        "MAINNET": {
+          "chainId": "43114",
+          "address": "0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7",
+          "decimals": "6",
+          "symbol": "USDt",
+          "name": "Tether USD"
+        }
+      }
+    }
+  ]
+}

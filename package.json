@@ -1,0 +1,55 @@
+{
+  "name": "marginx",
+  "version": "0.1.0",
+  "description": "usdt Staking",
+  "author": "marginx",
+  "proxy": "https://marginx.io/",
+  "Access-Control-Allow-Origin": "*",
+  "dependencies": {
+    "@walletconnect/web3-provider": "^1.6.6",
+    "babel-polyfill": "6.26.0",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-stage-2": "6.24.1",
+    "babel-preset-stage-3": "6.24.1",
+    "babel-register": "6.26.0",
+    "big-integer": "^1.6.50",
+    "bootstrap": "4.3.1",
+    "chai": "4.2.0",
+    "chai-as-promised": "7.1.1",
+    "chai-bignumber": "3.0.0",
+    "cors": "^2.8.5",
+    "identicon.js": "^2.3.3",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.4.0",
+    "react-burger-menu": "^3.0.6",
+    "react-dom": "^18.2.0",
+    "react-horizontal-scrolling": "^0.1.13",
+    "react-icons": "^4.2.0",
+    "react-responsive": "^9.0.0-beta.7",
+    "react-router-dom": "^5.2.1",
+    "react-scripts": "2.1.3",
+    "react-scroll": "^1.8.8",
+    "reactjs-popup": "^2.0.5",
+    "styled-components": "^5.3.1",
+    "web3": "1.2.11"
+  },
+  "scripts": {
+    "start": "react-scripts start ",
+    "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "web-vitals": "^3.1.0"
+  }
+}
