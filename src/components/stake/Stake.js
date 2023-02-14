@@ -1149,7 +1149,6 @@ function StakeMenu(props) {
                   </tr>
                 </tbody>
 
-
                 <thead className="textBlackSmall" style={{ color: "white", height: "35px" }}>
                   <tr>
                     <td style={{ textAlign: "start" }} scope="col" width="120">

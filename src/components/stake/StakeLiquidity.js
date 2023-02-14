@@ -124,14 +124,11 @@ function StakeLiquidity(props) {
                                 }}
                               >
                                 <div>
-                                  {parseFloat(
-                                    window.web3Eth.utils.fromWei(
-                                      props.poolSize,
-                                      "mwei"
-                                    )
-                                  ).toLocaleString("en-US", {
-                                    maximumFractionDigits: 0,
-                                  })}{" "}
+                                  {parseFloat(window.web3Eth.utils.fromWei(props.poolSize, "mwei")).toLocaleString("en-US", {
+                                    maximumFractionDigits: 0
+                                  })}{" "}/{" "}{parseFloat(window.web3Eth.utils.fromWei(props.maxPoolSize, "mwei")).toLocaleString("en-US", {
+                                    maximumFractionDigits: 0
+                                  })}
                                 </div>
                                 <div className="JYkOF">
                                   <ImgNextGen
@@ -620,7 +617,7 @@ function StakeLiquidity(props) {
                       {props.wallet || props.walletConnect ? (
                         <div className="iqmhrC">
                           {props.userActiveBalanceNextEpoch > 0 &&
-                          parseInt(props.poolTimeRemainingInCurrentEpoch) >
+                            parseInt(props.poolTimeRemainingInCurrentEpoch) >
                             parseInt(props.poolBlackoutWindow) ? (
                             <PopupRequestWithdraw
                               poolEndOfCurrentEpoch={
@@ -906,7 +903,7 @@ function StakeLiquidity(props) {
                                         NOW_IN_MS +
                                         parseInt(
                                           props.poolTimeRemainingInCurrentEpoch *
-                                            1000
+                                          1000
                                         )
                                       }
                                     />
@@ -1260,14 +1257,11 @@ function StakeLiquidity(props) {
                             }}
                           >
                             <div>
-                              {parseFloat(
-                                window.web3Eth.utils.fromWei(
-                                  props.poolSize,
-                                  "mwei"
-                                )
-                              ).toLocaleString("en-US", {
-                                maximumFractionDigits: 0,
-                              })}{" "}
+                              {parseFloat(window.web3Eth.utils.fromWei(props.poolSize, "mwei")).toLocaleString("en-US", {
+                                maximumFractionDigits: 0
+                              })}{" "}/{" "}{parseFloat(window.web3Eth.utils.fromWei(props.maxPoolSize, "mwei")).toLocaleString("en-US", {
+                                maximumFractionDigits: 0
+                              })}
                             </div>
                             <div className="JYkOF">
                               <ImgNextGen
@@ -1999,7 +1993,7 @@ function StakeLiquidity(props) {
                                     NOW_IN_MS +
                                     parseInt(
                                       props.poolTimeRemainingInCurrentEpoch *
-                                        1000
+                                      1000
                                     )
                                   }
                                 />
@@ -2401,14 +2395,11 @@ function StakeLiquidity(props) {
                                 }}
                               >
                                 <div>
-                                  {parseFloat(
-                                    window.web3Eth.utils.fromWei(
-                                      props.poolSize_second,
-                                      "mwei"
-                                    )
-                                  ).toLocaleString("en-US", {
-                                    maximumFractionDigits: 0,
-                                  })}{" "}
+                                  {parseFloat(window.web3Eth.utils.fromWei(props.poolSize_second, "mwei")).toLocaleString("en-US", {
+                                    maximumFractionDigits: 0
+                                  })}{" "}/{" "}{parseFloat(window.web3Eth.utils.fromWei(props.maxPoolSize_second, "mwei")).toLocaleString("en-US", {
+                                    maximumFractionDigits: 0
+                                  })}
                                 </div>
                                 <div className="JYkOF">
                                   <ImgNextGen
@@ -2898,9 +2889,9 @@ function StakeLiquidity(props) {
                       {props.wallet || props.walletConnect ? (
                         <div className="iqmhrC">
                           {props.userActiveBalanceNextEpoch_second > 0 &&
-                          parseInt(
-                            props.poolTimeRemainingInCurrentEpoch_second
-                          ) > parseInt(props.poolBlackoutWindow_second) ? (
+                            parseInt(
+                              props.poolTimeRemainingInCurrentEpoch_second
+                            ) > parseInt(props.poolBlackoutWindow_second) ? (
                             <PopupRequestWithdraw
                               poolEndOfCurrentEpoch={
                                 props.poolEndOfCurrentEpoch_second
@@ -3118,7 +3109,7 @@ function StakeLiquidity(props) {
                                       targetDate={
                                         NOW_IN_MS +
                                         props.timeRemainingNextBlackout_second *
-                                          1000
+                                        1000
                                       }
                                     />
                                   </div>
@@ -3188,7 +3179,7 @@ function StakeLiquidity(props) {
                                         NOW_IN_MS +
                                         parseInt(
                                           props.poolTimeRemainingInCurrentEpoch_second *
-                                            1000
+                                          1000
                                         )
                                       }
                                     />
@@ -3489,9 +3480,6 @@ function StakeLiquidity(props) {
                         >
                           &#8599; Forums
                         </Buttons>
-                        {/* <Buttons className="textWhiteLargeButton cell2 center" style={{ height: '32px', width: '30%', maxWidth: '122px', border: '0px solid white', color: 'white', padding: "5px 16px", backgroundColor: "#3a3c44", borderRadius: '22px' }} size="lg" onClick={() => {
-                                                window.open(`https://discord.com/invite/7yUjqadZFq`, '_blank')
-                                            }}>&#8599; Discord</Buttons> */}
                       </div>
                     </div>
                   </div>
@@ -3542,14 +3530,11 @@ function StakeLiquidity(props) {
                             }}
                           >
                             <div>
-                              {parseFloat(
-                                window.web3Eth.utils.fromWei(
-                                  props.poolSize_second,
-                                  "mwei"
-                                )
-                              ).toLocaleString("en-US", {
-                                maximumFractionDigits: 0,
-                              })}{" "}
+                              {parseFloat(window.web3Eth.utils.fromWei(props.poolSize_second, "mwei")).toLocaleString("en-US", {
+                                maximumFractionDigits: 0
+                              })}{" "}/{" "}{parseFloat(window.web3Eth.utils.fromWei(props.maxPoolSize_second, "mwei")).toLocaleString("en-US", {
+                                maximumFractionDigits: 0
+                              })}
                             </div>
                             <div className="JYkOF">
                               <ImgNextGen
@@ -4221,7 +4206,7 @@ function StakeLiquidity(props) {
                                   targetDate={
                                     NOW_IN_MS +
                                     props.timeRemainingNextBlackout_second *
-                                      1000
+                                    1000
                                   }
                                 />
                               </div>
@@ -4291,7 +4276,7 @@ function StakeLiquidity(props) {
                                     NOW_IN_MS +
                                     parseInt(
                                       props.poolTimeRemainingInCurrentEpoch_second *
-                                        1000
+                                      1000
                                     )
                                   }
                                 />

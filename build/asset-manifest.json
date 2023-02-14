@@ -1,8 +1,8 @@
 {
   "main.css": "/static/css/main.4ce98fc8.chunk.css",
-  "main.js": "/static/js/main.048521ae.chunk.js",
+  "main.js": "/static/js/main.a7fe0873.chunk.js",
   "static/css/1.c4d0fffb.chunk.css": "/static/css/1.c4d0fffb.chunk.css",
-  "static/js/1.5dde7a03.chunk.js": "/static/js/1.5dde7a03.chunk.js",
+  "static/js/1.c7a963f6.chunk.js": "/static/js/1.c7a963f6.chunk.js",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
   "static/media/usdt.svg": "/static/media/usdt.0b8d2118.svg",
   "static/media/fx.svg": "/static/media/fx.b57cc715.svg",
@@ -19,6 +19,6 @@
   "static/media/metamask-fox.svg": "/static/media/metamask-fox.c06f3a3e.svg",
   "static/media/walletconnect-logo.svg": "/static/media/walletconnect-logo.37f2bc6e.svg",
   "index.html": "/index.html",
-  "precache-manifest.754002a3571246a21413573684ce2d19.js": "/precache-manifest.754002a3571246a21413573684ce2d19.js",
+  "precache-manifest.e9d101901e17b7616c3809d6ae1b8b64.js": "/precache-manifest.e9d101901e17b7616c3809d6ae1b8b64.js",
   "service-worker.js": "/service-worker.js"
 }

@@ -115,7 +115,7 @@ class App extends Component {
     let poolBlackoutWindow = await response7;
     let maxPoolSize = await response8;
 
-    let APR = window.web3Eth.utils.fromWei(poolSize, "mWei") / (window.web3Eth.utils.fromWei(poolRewardRate, "Ether") * 31536000 * this.state.fxPrice) * 100
+    let APR = (window.web3Eth.utils.fromWei(poolRewardRate, "Ether") * 31536000 * this.state.fxPrice) / window.web3Eth.utils.fromWei(poolSize, "mWei") * 100
     let remainingPoolDepositedSize = maxPoolSize - poolSize;
     let poolEndOfCurrentEpoch = parseInt(poolStartOfCurrentEpoch) + parseInt(poolEpochInterval);
 
@@ -151,7 +151,7 @@ class App extends Component {
     let poolBlackoutWindow_second = await response7_second;
     let maxPoolSize_second = await response8_second;
 
-    let APR_second = window.web3Eth.utils.fromWei(poolSize_second, "mWei") / (window.web3Eth.utils.fromWei(poolRewardRate_second, "Ether") * 31536000 * this.state.fxPrice) * 100
+    let APR_second = (window.web3Eth.utils.fromWei(poolRewardRate_second, "Ether") * 31536000 * this.state.fxPrice) / window.web3Eth.utils.fromWei(poolSize_second, "mWei") * 100
     let remainingPoolDepositedSize_second = maxPoolSize_second - poolSize_second;
     let poolEndOfCurrentEpoch_second = parseInt(poolStartOfCurrentEpoch_second) + parseInt(poolEpochInterval_second);
 
