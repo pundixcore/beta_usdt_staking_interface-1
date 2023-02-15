@@ -57,7 +57,7 @@ function StakeMenu(props) {
               marginBottom: "30px",
               marginRight: "20px",
               color: "white",
-              width: "485px",
+              width: "490px",
               height: "220px",
               borderRadius: "25px"
             }}
@@ -128,7 +128,7 @@ function StakeMenu(props) {
               marginLeft: "0px",
               color: "white",
               height: "220px",
-              width: "485px",
+              width: "490px",
               borderRadius: "25px",
               backgroundImage: `url(${nftBackground})`,
               backgroundPosition: "center center",
@@ -370,7 +370,7 @@ function StakeMenu(props) {
             color: "white",
             height: "200px",
             minWidth: "300px",
-            maxWidth: "485px",
+            maxWidth: "490px",
             borderRadius: "25px"
           }}
         >
@@ -495,7 +495,7 @@ function StakeMenu(props) {
             color: "white",
             height: "220px",
             minWidth: "300px",
-            maxWidth: "485px",
+            maxWidth: "490px",
             borderRadius: "25px",
             backgroundImage: `url(${nftBackground})`,
             backgroundPosition: "center center",
