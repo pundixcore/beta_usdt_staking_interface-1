@@ -1,12 +1,13 @@
 {
-  "main.css": "/static/css/main.4ce98fc8.chunk.css",
-  "main.js": "/static/js/main.ba632e86.chunk.js",
+  "main.css": "/static/css/main.e87d5c27.chunk.css",
+  "main.js": "/static/js/main.7f76f065.chunk.js",
   "static/css/1.c4d0fffb.chunk.css": "/static/css/1.c4d0fffb.chunk.css",
-  "static/js/1.c7a963f6.chunk.js": "/static/js/1.c7a963f6.chunk.js",
+  "static/js/1.3369e734.chunk.js": "/static/js/1.3369e734.chunk.js",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
   "static/media/usdt.svg": "/static/media/usdt.0b8d2118.svg",
   "static/media/fx.svg": "/static/media/fx.b57cc715.svg",
   "static/media/dots-bg.png": "/static/media/dots-bg.5c28c78f.png",
+  "static/media/bannerFX.png": "/static/media/bannerFX.239d23ed.png",
   "static/media/marginx-title.svg": "/static/media/marginx-title.71d6fe97.svg",
   "static/media/Discord.svg": "/static/media/Discord.3339cb5c.svg",
   "static/media/Twitter.svg": "/static/media/Twitter.5d460d8c.svg",
@@ -19,6 +20,6 @@
   "static/media/metamask-fox.svg": "/static/media/metamask-fox.c06f3a3e.svg",
   "static/media/walletconnect-logo.svg": "/static/media/walletconnect-logo.37f2bc6e.svg",
   "index.html": "/index.html",
-  "precache-manifest.51a403265ac4743b7f5cb9087eae3960.js": "/precache-manifest.51a403265ac4743b7f5cb9087eae3960.js",
+  "precache-manifest.d7d3ec075cd0a0b19997ef67e162e61c.js": "/precache-manifest.d7d3ec075cd0a0b19997ef67e162e61c.js",
   "service-worker.js": "/service-worker.js"
 }

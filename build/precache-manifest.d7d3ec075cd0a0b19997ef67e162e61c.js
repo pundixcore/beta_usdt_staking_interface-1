@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "ba632e8670cc088a6787",
-    "url": "/static/css/main.4ce98fc8.chunk.css"
+    "revision": "7f76f065a85a81fc3596",
+    "url": "/static/css/main.e87d5c27.chunk.css"
   },
   {
-    "revision": "ba632e8670cc088a6787",
-    "url": "/static/js/main.ba632e86.chunk.js"
+    "revision": "7f76f065a85a81fc3596",
+    "url": "/static/js/main.7f76f065.chunk.js"
   },
   {
-    "revision": "c7a963f6ce3094606be7",
+    "revision": "3369e734b2ab7d957dad",
     "url": "/static/css/1.c4d0fffb.chunk.css"
   },
   {
-    "revision": "c7a963f6ce3094606be7",
-    "url": "/static/js/1.c7a963f6.chunk.js"
+    "revision": "3369e734b2ab7d957dad",
+    "url": "/static/js/1.3369e734.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -30,6 +30,10 @@ self.__precacheManifest = [
   {
     "revision": "5c28c78fca9d531acc853b28f3c8c8cf",
     "url": "/static/media/dots-bg.5c28c78f.png"
+  },
+  {
+    "revision": "239d23ed368cdfaa212527e1d6e5734b",
+    "url": "/static/media/bannerFX.239d23ed.png"
   },
   {
     "revision": "71d6fe970e6332666847ce872eeebb22",
@@ -76,7 +80,7 @@ self.__precacheManifest = [
     "url": "/static/media/walletconnect-logo.37f2bc6e.svg"
   },
   {
-    "revision": "212b154981782dad136d39cc3399747a",
+    "revision": "36f450ff498e0b448f69dcb164d9460a",
     "url": "/index.html"
   }
 ];
