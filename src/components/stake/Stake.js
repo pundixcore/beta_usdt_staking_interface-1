@@ -9,6 +9,7 @@ import ImgNextGen from "../ImgNextGen";
 import PopupDeposit from "./PopupDeposit";
 
 import nftBackground from "../images/dots-bg.png";
+import bannerFX from "../images/bannerFX.png";
 import usdt from "../images/usdt.svg";
 import fx from "../images/fx.svg";
 import marginxLogo from "../images/marginx-title.svg";
@@ -59,21 +60,29 @@ function StakeMenu(props) {
               color: "white",
               width: "490px",
               height: "220px",
-              borderRadius: "25px"
+              borderRadius: "25px",
             }}
           >
-            <div className="card-body" style={{ marginLeft: "5px", padding: "10px" }}>
+            <div className="card-body" style={{
+              marginLeft: "5px", padding: "10px",
+              backgroundImage: `url(${bannerFX})`,
+              borderRadius: "25px",
+              backgroundPosition: "bottom center",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
+              zIndex: '0'
+            }}>
               <div className="textWhite rowC" style={{ fontSize: "20px", color: "white" }}>
-                <ImgNextGen srcWebp={marginxLogo} style={{ marginLeft: "0px", marginRight: "18px" }} width="110" alt="" />
+                <ImgNextGen srcWebp={marginxLogo} style={{ marginLeft: "0px", marginRight: "18px" }} width="105" alt="" />
                 <div>
-                  <div className="bzThwT mb-2 mt-3">
+                  <div className="bzThwT mb-2 mt-4">
                     <b>USDT (ERC20)</b>
                   </div>
-                  <div className="kXLvz mb-4" style={{ fontSize: "26px" }}>
-                    <b>MarginX Market Maker Liquidity Pool</b>
+                  <div className="kXLvz mb-4" style={{ fontSize: "27px" }}>
+                    <b>Welcome to MarginX Liquidity Pool</b>
                   </div>
 
-                  <ButtonGroup>
+                  {/* <ButtonGroup>
                     <div className="mr-3">
                       <Buttons
                         className="textWhiteLargeButton cell2 center"
@@ -116,7 +125,7 @@ function StakeMenu(props) {
                         &#8599; Read more
                       </Buttons>
                     </div>
-                  </ButtonGroup>
+                  </ButtonGroup> */}
                 </div>
               </div>
             </div>
@@ -374,18 +383,26 @@ function StakeMenu(props) {
             borderRadius: "25px"
           }}
         >
-          <div className="card-body" style={{ marginLeft: "0px", padding: "15px" }}>
+          <div className="card-body" style={{
+            marginLeft: "0px", padding: "15px",
+            backgroundImage: `url(${bannerFX})`,
+            borderRadius: "25px",
+            backgroundPosition: "bottom center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain",
+            zIndex: '0'
+          }}>
             <MediaQuery minWidth={481}>
               <div className="textWhite rowC" style={{ fontSize: "20px", color: "white" }}>
                 <ImgNextGen srcWebp={marginxLogo} style={{ marginLeft: "0px", marginRight: "18px" }} width="105" alt="" />
                 <div>
-                  <div className="bzThwT mb-2 mt-1">
+                  <div className="bzThwT mb-2 mt-3">
                     <b>USDT (ERC20)</b>
                   </div>
-                  <div className="kXLvz mb-3" style={{ fontSize: "24px", lineHeight: "2.2rem" }}>
-                    <b>MarginX Market Maker Liquidity Pool</b>
+                  <div className="kXLvz mb-3" style={{ fontSize: "25px", lineHeight: "2.3rem" }}>
+                    <b>Welcome to MarginX Liquidity Pool</b>
                   </div>
-                  <ButtonGroup>
+                  {/* <ButtonGroup>
                     <div className="mr-3">
                       <Buttons
                         className="textWhiteLargeButton cell2 center"
@@ -428,18 +445,18 @@ function StakeMenu(props) {
                         &#8599; Read more
                       </Buttons>
                     </div>
-                  </ButtonGroup>
+                  </ButtonGroup> */}
                 </div>
               </div>
             </MediaQuery>
             <MediaQuery maxWidth={480}>
-              <div className="bzThwT mb-2 mt-1">
+              <div className="bzThwT mb-2 mt-3">
                 <b>USDT (ERC20)</b>
               </div>
-              <div className="kXLvz mb-3" style={{ fontSize: "24px", lineHeight: "2.2rem" }}>
-                <b>MarginX Market Maker Liquidity Pool</b>
+              <div className="kXLvz mb-3" style={{ fontSize: "25px", lineHeight: "2.3rem" }}>
+                <b>Welcome to MarginX Liquidity Pool</b>
               </div>
-              <ButtonGroup>
+              {/* <ButtonGroup>
                 <div className="mr-2">
                   <Buttons
                     className="textWhiteLargeButton cell2 center"
@@ -482,7 +499,7 @@ function StakeMenu(props) {
                     &#8599; Read more
                   </Buttons>
                 </div>
-              </ButtonGroup>
+              </ButtonGroup> */}
             </MediaQuery>
           </div>
         </div>
@@ -728,9 +745,9 @@ function StakeMenu(props) {
       <div className="mr-auto" style={{ marginTop: "10px", color: "white" }}>
         <div className="card-body">
           <div className="textWhite mb-1" style={{ fontSize: "1.5rem", color: "white" }}>
-            <b>Maker LP Incentives</b>
+            <b>Liquidity Pool Incentives</b>
           </div>
-          <div style={{ color: "grey" }}>Earn rewards for verified market makers to enhance the order book depth on MarginX.</div>
+          <div style={{ color: "grey" }}>Earn rewards for providing liquidity to verified Market Makers & participating in AI Bots Trading on MarginX.</div>
         </div>
       </div>
 
@@ -761,7 +778,7 @@ function StakeMenu(props) {
           <div className="card-body">
             <div style={{ marginBottom: "80px" }}>
               <div className="float-left textWhite" style={{ fontSize: "1.25rem", color: "white" }}>
-                Liquidity Pool
+                Maker Liquidity Pool
               </div>
               {/* <div className="float-right" style={{ marginLeft: "10px" }}>
                                   <ImgNextGen
@@ -920,7 +937,7 @@ function StakeMenu(props) {
                           }}
                         >
                           <div>
-                           {props.APR.toLocaleString("en-US", {
+                            {props.APR.toLocaleString("en-US", {
                               maximumFractionDigits: 2
                             })} %
                           </div>
@@ -1034,7 +1051,7 @@ function StakeMenu(props) {
           <div className="card-body">
             <div style={{ marginBottom: "80px" }}>
               <div className="float-left textWhite" style={{ fontSize: "1.25rem", color: "white" }}>
-                Liquidity Pool
+                AI Bots Trading Pool
               </div>
               {/* <div className="float-right" style={{ marginLeft: "10px" }}>
                                   <ImgNextGen
@@ -1193,7 +1210,7 @@ function StakeMenu(props) {
                           }}
                         >
                           <div>
-                           {props.APR_second.toLocaleString("en-US", {
+                            {props.APR_second.toLocaleString("en-US", {
                               maximumFractionDigits: 2
                             })} %
                           </div>
@@ -1547,7 +1564,7 @@ function StakeMenu(props) {
               ONLY private blockchain wallets can participate. Please do not send funds from an exchange.
             </li>
             <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
-              There are no principal guarantees for this version of the Maker Liquidity Pool.
+              There are no principal guarantees for this version of the MarginX Liquidity Pool.
             </li>
             <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
               $ETH is required to pay the gas fees for withdrawals.
@@ -1556,7 +1573,7 @@ function StakeMenu(props) {
               Participants need to request for withdrawals and claim their rewards manually on maker.marginx.io.
             </li>
             <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
-              MarginX is not be liable for any loss of funds due to user’s negligence.
+              MarginX is not liable for any loss of funds due to user’s negligence.
             </li>
           </ul>
         </div>
