@@ -60,18 +60,22 @@ function StakeMenu(props) {
               color: "white",
               width: "490px",
               height: "220px",
-              borderRadius: "25px",
+              borderRadius: "25px"
             }}
           >
-            <div className="card-body" style={{
-              marginLeft: "5px", padding: "10px",
-              backgroundImage: `url(${bannerFX})`,
-              borderRadius: "25px",
-              backgroundPosition: "bottom center",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "contain",
-              zIndex: '0'
-            }}>
+            <div
+              className="card-body"
+              style={{
+                marginLeft: "5px",
+                padding: "10px",
+                backgroundImage: `url(${bannerFX})`,
+                borderRadius: "25px",
+                backgroundPosition: "bottom center",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "contain",
+                zIndex: "0"
+              }}
+            >
               <div className="textWhite rowC" style={{ fontSize: "20px", color: "white" }}>
                 <ImgNextGen srcWebp={marginxLogo} style={{ marginLeft: "0px", marginRight: "18px" }} width="105" alt="" />
                 <div>
@@ -187,7 +191,7 @@ function StakeMenu(props) {
                                 }}
                               >
                                 {parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount, "Ether")) + parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount_second, "Ether")) >= //Issei
-                                  0 ? (
+                                0 ? (
                                   <div>
                                     {(parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount, "Ether")) + parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount_second, "Ether"))).toLocaleString("en-US", {
                                       maximumFractionDigits: 2
@@ -383,15 +387,19 @@ function StakeMenu(props) {
             borderRadius: "25px"
           }}
         >
-          <div className="card-body" style={{
-            marginLeft: "0px", padding: "15px",
-            backgroundImage: `url(${bannerFX})`,
-            borderRadius: "25px",
-            backgroundPosition: "bottom center",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "contain",
-            zIndex: '0'
-          }}>
+          <div
+            className="card-body"
+            style={{
+              marginLeft: "0px",
+              padding: "15px",
+              backgroundImage: `url(${bannerFX})`,
+              borderRadius: "25px",
+              backgroundPosition: "bottom center",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
+              zIndex: "0"
+            }}
+          >
             <MediaQuery minWidth={481}>
               <div className="textWhite rowC" style={{ fontSize: "20px", color: "white" }}>
                 <ImgNextGen srcWebp={marginxLogo} style={{ marginLeft: "0px", marginRight: "18px" }} width="105" alt="" />
@@ -568,7 +576,7 @@ function StakeMenu(props) {
                                     "Ether"
                                   )
                                 ) >= //issei
-                                0 ? (
+                              0 ? (
                                 <div>
                                   {(
                                     parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount, "Ether")) +
@@ -606,7 +614,7 @@ function StakeMenu(props) {
                       "Ether"
                     )
                   ) ==
-                  0 ? (
+                0 ? (
                   <Buttons
                     className="buttonGradientBorder cell3 center"
                     style={{
@@ -764,7 +772,7 @@ function StakeMenu(props) {
               width: "100%"
             }}
           > */}
-      <div className="lkBtSA" style={{ borderRadius: "20px", marginRight: '20px', marginBottom: '16px' }}>
+      <div className="lkBtSA" style={{ borderRadius: "20px", marginRight: "20px", marginBottom: "16px" }}>
         {/* <Link to="/liquidity" className='exLink0'> */}
         <div
           className="card cardbody"
@@ -829,7 +837,9 @@ function StakeMenu(props) {
                           <div>
                             {parseFloat(window.web3Eth.utils.fromWei(props.poolSize, "mwei")).toLocaleString("en-US", {
                               maximumFractionDigits: 0
-                            })}{" "}/{" "}{parseFloat(window.web3Eth.utils.fromWei(props.maxPoolSize, "mwei")).toLocaleString("en-US", {
+                            })}{" "}
+                            /{" "}
+                            {parseFloat(window.web3Eth.utils.fromWei(props.maxPoolSize, "mwei")).toLocaleString("en-US", {
                               maximumFractionDigits: 0
                             })}
                           </div>
@@ -939,7 +949,8 @@ function StakeMenu(props) {
                           <div>
                             {props.APR.toLocaleString("en-US", {
                               maximumFractionDigits: 2
-                            })} %
+                            })}{" "}
+                            %
                           </div>
                         </div>
                       ) : (
@@ -1102,7 +1113,9 @@ function StakeMenu(props) {
                           <div>
                             {parseFloat(window.web3Eth.utils.fromWei(props.poolSize_second, "mwei")).toLocaleString("en-US", {
                               maximumFractionDigits: 0
-                            })}{" "}/{" "}{parseFloat(window.web3Eth.utils.fromWei(props.maxPoolSize_second, "mwei")).toLocaleString("en-US", {
+                            })}{" "}
+                            /{" "}
+                            {parseFloat(window.web3Eth.utils.fromWei(props.maxPoolSize_second, "mwei")).toLocaleString("en-US", {
                               maximumFractionDigits: 0
                             })}
                           </div>
@@ -1212,7 +1225,8 @@ function StakeMenu(props) {
                           <div>
                             {props.APR_second.toLocaleString("en-US", {
                               maximumFractionDigits: 2
-                            })} %
+                            })}{" "}
+                            %
                           </div>
                         </div>
                       ) : (
@@ -1231,7 +1245,6 @@ function StakeMenu(props) {
                     </td>
                   </tr>
                 </tbody>
-
               </table>
             </div>
           </div>

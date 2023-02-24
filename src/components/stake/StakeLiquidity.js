@@ -270,8 +270,8 @@ function StakeLiquidity(props) {
                   </div>
                   {props.wallet || props.walletConnect ? (
                     <div className="iqmhrC">
-                      {props.userUSDTBalance > 0 ? (
-                        <PopupDeposit userUSDTBalance={props.userUSDTBalance} userStakedBalance={props.userStakedBalance} userUSDTStakingAllowance={props.userUSDTStakingAllowance} stake={props.stake} approve={props.approve} pool_id={1} />
+                      {props.userUSDTBalance > 0 && parseInt(props.remainingPoolDepositedSize) > 0 ? (
+                        <PopupDeposit userUSDTBalance={props.userUSDTBalance} userStakedBalance={props.userStakedBalance} userUSDTStakingAllowance={props.userUSDTStakingAllowance} stake={props.stake} approve={props.approve} pool_id={1} remainingPoolDepositedSize={props.remainingPoolDepositedSize} />
                       ) : (
                         <Buttons
                           className="textWhiteLargeButton cell2 center"
@@ -1085,8 +1085,8 @@ function StakeLiquidity(props) {
               </div>
               {props.wallet || props.walletConnect ? (
                 <div className="iqmhrC">
-                  {props.userUSDTBalance > 0 ? (
-                    <PopupDeposit userUSDTBalance={props.userUSDTBalance} userStakedBalance={props.userStakedBalance} userUSDTStakingAllowance={props.userUSDTStakingAllowance} stake={props.stake} approve={props.approve} pool_id={1} />
+                  {props.userUSDTBalance > 0 && parseInt(props.remainingPoolDepositedSize) > 0 ? (
+                    <PopupDeposit userUSDTBalance={props.userUSDTBalance} userStakedBalance={props.userStakedBalance} userUSDTStakingAllowance={props.userUSDTStakingAllowance} stake={props.stake} approve={props.approve} pool_id={1} remainingPoolDepositedSize={props.remainingPoolDepositedSize} />
                   ) : (
                     <Buttons
                       className="textWhiteLargeButton cell2 center"
@@ -1936,8 +1936,8 @@ function StakeLiquidity(props) {
                   </div>
                   {props.wallet || props.walletConnect ? (
                     <div className="iqmhrC">
-                      {props.userUSDTBalance > 0 ? (
-                        <PopupDeposit userUSDTBalance={props.userUSDTBalance} userStakedBalance={props.userStakedBalance_second} userUSDTStakingAllowance={props.userUSDTStakingAllowance_second} stake={props.stake} approve={props.approve} pool_id={2} />
+                      {props.userUSDTBalance > 0 && parseInt(props.remainingPoolDepositedSize_second) > 0 ? (
+                        <PopupDeposit userUSDTBalance={props.userUSDTBalance} userStakedBalance={props.userStakedBalance_second} userUSDTStakingAllowance={props.userUSDTStakingAllowance_second} stake={props.stake} approve={props.approve} pool_id={2} remainingPoolDepositedSize={props.remainingPoolDepositedSize_second} />
                       ) : (
                         <Buttons
                           className="textWhiteLargeButton cell2 center"
@@ -2415,13 +2415,9 @@ function StakeLiquidity(props) {
                       </div>
                     </div>
                     <div className="textBlackSmall" style={{ color: "white" }}>
-                      <div style={{ textAlign: "start" }}>
-                        MarginX AI Bots Trading Pool is a way to allow participants deposit their funds into a smart contract on Ethereum, and let fund managers (i.e. a series of artificial intelligence trading algorithms) deploy and run trading strategies on their behalf.
-                      </div>
+                      <div style={{ textAlign: "start" }}>MarginX AI Bots Trading Pool is a way to allow participants deposit their funds into a smart contract on Ethereum, and let fund managers (i.e. a series of artificial intelligence trading algorithms) deploy and run trading strategies on their behalf.</div>
                       <br />
-                      <div style={{ textAlign: "start" }}>
-                        To be more specific, this feature uses machine learning frameworks to analyze millions of data points and execute trades at the optimal price with a specific strategy.
-                      </div>
+                      <div style={{ textAlign: "start" }}>To be more specific, this feature uses machine learning frameworks to analyze millions of data points and execute trades at the optimal price with a specific strategy.</div>
                     </div>
                   </div>
 
@@ -2732,7 +2728,7 @@ function StakeLiquidity(props) {
               </div>
               {props.wallet || props.walletConnect ? (
                 <div className="iqmhrC">
-                  {props.userUSDTBalance > 0 ? (
+                  {props.userUSDTBalance > 0 && parseInt(props.remainingPoolDepositedSize_second) > 0 ? (
                     <PopupDeposit userUSDTBalance={props.userUSDTBalance} userStakedBalance={props.userStakedBalance_second} userUSDTStakingAllowance={props.userUSDTStakingAllowance_second} stake={props.stake} approve={props.approve} pool_id={2} />
                   ) : (
                     <Buttons
@@ -3183,13 +3179,9 @@ function StakeLiquidity(props) {
                   </div>
                 </div>
                 <div className="textBlackSmall" style={{ color: "white" }}>
-                  <div style={{ textAlign: "start" }}>
-                    MarginX AI Bots Trading Pool is a way to allow participants deposit their funds into a smart contract on Ethereum, and let fund managers (i.e. a series of artificial intelligence trading algorithms) deploy and run trading strategies on their behalf.
-                  </div>
+                  <div style={{ textAlign: "start" }}>MarginX AI Bots Trading Pool is a way to allow participants deposit their funds into a smart contract on Ethereum, and let fund managers (i.e. a series of artificial intelligence trading algorithms) deploy and run trading strategies on their behalf.</div>
                   <br />
-                  <div style={{ textAlign: "start" }}>
-                    To be more specific, this feature uses machine learning frameworks to analyze millions of data points and execute trades at the optimal price with a specific strategy.
-                  </div>
+                  <div style={{ textAlign: "start" }}>To be more specific, this feature uses machine learning frameworks to analyze millions of data points and execute trades at the optimal price with a specific strategy.</div>
                 </div>
               </div>
 
@@ -3247,7 +3239,7 @@ function StakeLiquidity(props) {
                 </div>
                 <div className="textBlackSmall" style={{ color: "white" }}>
                   <div scope="col" style={{ textAlign: "start" }} width="120">
-                  To encourage participation of the AI Bots Trading Pool, all participants will receive daily $FX rewards proportional to the amount of USDT they deposit, against the total amount of USDT in the pool. The total amount of $FX rewards to be distributed daily for the AI Bots Trading Pool is 3,000 $FX.
+                    To encourage participation of the AI Bots Trading Pool, all participants will receive daily $FX rewards proportional to the amount of USDT they deposit, against the total amount of USDT in the pool. The total amount of $FX rewards to be distributed daily for the AI Bots Trading Pool is 3,000 $FX.
                   </div>
                 </div>
               </div>

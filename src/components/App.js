@@ -35,8 +35,8 @@ class App extends Component {
   async loadGecko() {
     let responseGecko = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=fx-coin&vs_currencies=usd`);
     const geckoPrice = await responseGecko.json();
-    const fxPrice = geckoPrice["fx-coin"]["usd"]
-    this.setState({ fxPrice })
+    const fxPrice = geckoPrice["fx-coin"]["usd"];
+    this.setState({ fxPrice });
   }
 
   async loadBlockchainData() {
@@ -115,7 +115,7 @@ class App extends Component {
     let poolBlackoutWindow = await response7;
     let maxPoolSize = await response8;
 
-    let APR = (window.web3Eth.utils.fromWei(poolRewardRate, "Ether") * 31536000 * this.state.fxPrice) / window.web3Eth.utils.fromWei(poolSize, "mWei") * 100
+    let APR = ((window.web3Eth.utils.fromWei(poolRewardRate, "Ether") * 31536000 * this.state.fxPrice) / window.web3Eth.utils.fromWei(poolSize, "mWei")) * 100;
     let remainingPoolDepositedSize = maxPoolSize - poolSize;
     let poolEndOfCurrentEpoch = parseInt(poolStartOfCurrentEpoch) + parseInt(poolEpochInterval);
 
@@ -128,7 +128,7 @@ class App extends Component {
     this.setState({ poolBlackoutWindow });
     this.setState({ maxPoolSize });
     this.setState({ remainingPoolDepositedSize });
-    this.setState({ APR })
+    this.setState({ APR });
 
     /*
     For the second pool 
@@ -151,7 +151,7 @@ class App extends Component {
     let poolBlackoutWindow_second = await response7_second;
     let maxPoolSize_second = await response8_second;
 
-    let APR_second = (window.web3Eth.utils.fromWei(poolRewardRate_second, "Ether") * 31536000 * this.state.fxPrice) / window.web3Eth.utils.fromWei(poolSize_second, "mWei") * 100
+    let APR_second = ((window.web3Eth.utils.fromWei(poolRewardRate_second, "Ether") * 31536000 * this.state.fxPrice) / window.web3Eth.utils.fromWei(poolSize_second, "mWei")) * 100;
     let remainingPoolDepositedSize_second = maxPoolSize_second - poolSize_second;
     let poolEndOfCurrentEpoch_second = parseInt(poolStartOfCurrentEpoch_second) + parseInt(poolEpochInterval_second);
 
@@ -164,7 +164,7 @@ class App extends Component {
     this.setState({ poolBlackoutWindow_second });
     this.setState({ maxPoolSize_second });
     this.setState({ remainingPoolDepositedSize_second });
-    this.setState({ APR_second })
+    this.setState({ APR_second });
 
     this.setState({ blockchainLoading: true });
   }
@@ -211,7 +211,7 @@ class App extends Component {
 
   async loadTimeRemainingNextBlackout(address) {
     let timeRemainingNextBlackout = 0;
-    let blackoutWindow = await this.state.liquidityStakingV1.methods.getBlackoutWindow().call()
+    let blackoutWindow = await this.state.liquidityStakingV1.methods.getBlackoutWindow().call();
     // let blackoutWindow = "60";
     let poolTimeRemainingInCurrentEpoch;
 
@@ -407,8 +407,8 @@ class App extends Component {
     }
     // window.web3Eth = new Web3(`https://rpc.ankr.com/eth_goerli`);
     // window.web3Eth = new Web3(`https://eth-mainnet.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
-    // window.web3Eth = new Web3(`https://eth-goerli.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
-    window.web3Eth = new Web3(`https://rpc.ankr.com/eth`);
+    window.web3Eth = new Web3(`https://eth-goerli.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
+    //window.web3Eth = new Web3(`https://rpc.ankr.com/eth`);
     try {
       let id = await window.web3Eth.eth.net.isListening();
     } catch (e) {
@@ -422,9 +422,9 @@ class App extends Component {
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum);
     }
-    // window.web3Eth = new Web3(`https://rpc.ankr.com/eth_goerli`);
+    window.web3Eth = new Web3(`https://rpc.ankr.com/eth_goerli`);
     // window.web3Eth = new Web3(`https://rpc.ankr.com/eth`);
-    window.web3Eth = new Web3(`https://eth-mainnet.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
+    //window.web3Eth = new Web3(`https://eth-mainnet.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
     this.setState({ loading: true });
   }
 
@@ -496,13 +496,13 @@ class App extends Component {
         // 530: "https://fx-json-web3.functionx.io:8545"
         // 43114: "https://api.avax.network/ext/bc/C/rpc"
         // 56: `https://bsc-dataseed.binance.org/`
-        // 5: `https://eth-goerli.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`
-        1: `https://eth-mainnet.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`
+        5: `https://eth-goerli.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`
+        //1: `https://eth-mainnet.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`
       },
       // chainId: 530,
       // chainId: 43114,
-      chainId: 1,
-      // chainId: 5
+      //chainId: 1
+      chainId: 5
     });
     await window.provider.enable();
     window.web3Con = await new Web3(window.provider);
@@ -987,26 +987,23 @@ class App extends Component {
       intWeb3 = window.web3;
     }
 
-    liquidityStaking = new intWeb3.eth.Contract(
-      claimProxy.abi,
-      process.env.REACT_APP_claimRewards_allPool_address
-    );
+    liquidityStaking = new intWeb3.eth.Contract(claimProxy.abi, process.env.REACT_APP_claimRewards_allPool_address);
 
-    if(this.state.userEarnedRewardAmount > 0) {
-      claim = true
+    if (this.state.userEarnedRewardAmount > 0) {
+      claim = true;
     }
 
-    if(this.state.userEarnedRewardAmount_second > 0) {
-      claim2 = true
+    if (this.state.userEarnedRewardAmount_second > 0) {
+      claim2 = true;
     }
 
     await liquidityStaking.methods
       .claimRewards([claim, claim2])
       .send({ from: this.state.account })
-      .then(async (result) => {
+      .then(async result => {
         await this.loadBlockchainUserData();
       })
-      .catch((err) => {
+      .catch(err => {
         if (err.code === 4001) {
           // EIP-1193 userRejectedRequest error
           // If this happens, the user rejected the connection request.
@@ -1047,8 +1044,7 @@ class App extends Component {
     let navMenuContent;
     let footerContent;
 
-    navMenuContent =
-      <NavbMenu account={this.state.account} first4Account={this.state.first4Account} last4Account={this.state.last4Account} wallet={this.state.wallet} networkName={this.state.networkName} walletConnect={this.state.walletConnect} BAVAPrice={this.state.BAVAPrice} setWalletTrigger={this.setWalletTrigger} connectMetamask={this.connectMetamask} mobileWalletConnect={this.mobileWalletConnect} connectCoin98={this.connectCoin98} WalletDisconnect={this.WalletDisconnect} addUSBTokenWallet={this.addUSBTokenWallet} addBAVATokenWallet={this.addBAVATokenWallet} sortFarm={this.sortFarm} />;
+    navMenuContent = <NavbMenu account={this.state.account} first4Account={this.state.first4Account} last4Account={this.state.last4Account} wallet={this.state.wallet} networkName={this.state.networkName} walletConnect={this.state.walletConnect} BAVAPrice={this.state.BAVAPrice} setWalletTrigger={this.setWalletTrigger} connectMetamask={this.connectMetamask} mobileWalletConnect={this.mobileWalletConnect} connectCoin98={this.connectCoin98} WalletDisconnect={this.WalletDisconnect} addUSBTokenWallet={this.addUSBTokenWallet} addBAVATokenWallet={this.addBAVATokenWallet} sortFarm={this.sortFarm} />;
     footerContent = <Footer />;
     stakeContent = (
       <Stake
@@ -1072,7 +1068,6 @@ class App extends Component {
         remainingPoolDepositedSize_second={this.state.remainingPoolDepositedSize_second}
         APR={this.state.APR}
         APR_second={this.state.APR_second}
-
         userUSDTBalance={this.state.userUSDTBalance} // no need to add duplicate for this
         userStakedBalance={this.state.userStakedBalance} // require duplicate
         userStakedBalance_second={this.state.userStakedBalance_second}
@@ -1121,7 +1116,6 @@ class App extends Component {
         remainingPoolDepositedSize_second={this.state.remainingPoolDepositedSize_second}
         APR={this.state.APR}
         APR_second={this.state.APR_second}
-
         userUSDTBalance={this.state.userUSDTBalance} // no need to add duplicate for this
         userStakedBalance={this.state.userStakedBalance} // require duplicate
         userStakedBalance_second={this.state.userStakedBalance_second}
