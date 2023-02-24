@@ -1085,7 +1085,7 @@ function StakeLiquidity(props) {
               </div>
               {props.wallet || props.walletConnect ? (
                 <div className="iqmhrC">
-                  {props.userUSDTBalance > 0 ? (
+                  {props.userUSDTBalance > 0 && parseInt(props.remainingPoolDepositedSize) > 0 ? (
                     <PopupDeposit userUSDTBalance={props.userUSDTBalance} userStakedBalance={props.userStakedBalance} userUSDTStakingAllowance={props.userUSDTStakingAllowance} stake={props.stake} approve={props.approve} pool_id={1} remainingPoolDepositedSize={props.remainingPoolDepositedSize} />
                   ) : (
                     <Buttons
@@ -1936,7 +1936,7 @@ function StakeLiquidity(props) {
                   </div>
                   {props.wallet || props.walletConnect ? (
                     <div className="iqmhrC">
-                      {props.userUSDTBalance > 0 ? (
+                      {props.userUSDTBalance > 0 && parseInt(props.remainingPoolDepositedSize_second) > 0 ? (
                         <PopupDeposit userUSDTBalance={props.userUSDTBalance} userStakedBalance={props.userStakedBalance_second} userUSDTStakingAllowance={props.userUSDTStakingAllowance_second} stake={props.stake} approve={props.approve} pool_id={2} remainingPoolDepositedSize={props.remainingPoolDepositedSize_second} />
                       ) : (
                         <Buttons
