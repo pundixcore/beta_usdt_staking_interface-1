@@ -406,7 +406,7 @@ class App extends Component {
       window.web3 = new Web3(window.ethereum);
     }
     // window.web3Eth = new Web3(`https://rpc.ankr.com/eth_goerli`);
-    // window.web3Eth = new Web3(`https://eth-mainnet.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
+    //window.web3Eth = new Web3(`https://eth-mainnet.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
     window.web3Eth = new Web3(`https://eth-goerli.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
     //window.web3Eth = new Web3(`https://rpc.ankr.com/eth`);
     try {
@@ -423,7 +423,7 @@ class App extends Component {
       window.web3 = new Web3(window.ethereum);
     }
     window.web3Eth = new Web3(`https://rpc.ankr.com/eth_goerli`);
-    // window.web3Eth = new Web3(`https://rpc.ankr.com/eth`);
+    //window.web3Eth = new Web3(`https://rpc.ankr.com/eth`);
     //window.web3Eth = new Web3(`https://eth-mainnet.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
     this.setState({ loading: true });
   }
@@ -732,7 +732,7 @@ class App extends Component {
 
   /* ============================== Smart Contract function ==============================
    */
-  stake = async (amount, address) => {
+  stake = async (amount, address, close = 0) => {
     let liquidityStaking;
     let intWeb3;
 
@@ -747,6 +747,16 @@ class App extends Component {
       await liquidityStaking.methods
         .stake(amount)
         .send({ from: this.state.account })
+        // .then(async result => {
+        //   await this.loadBlockchainData();
+        //   await this.loadBlockchainUserData();
+        // })
+        .on("transactionHash", () => {
+          if (close !== 0) {
+            close();
+          }
+          return "transactionHash";
+        })
         .then(async result => {
           await this.loadBlockchainData();
           await this.loadBlockchainUserData();
@@ -765,6 +775,16 @@ class App extends Component {
       await liquidityStaking.methods
         .stake(amount)
         .send({ from: this.state.account })
+        // .then(async result => {
+        //   await this.loadBlockchainData();
+        //   await this.loadBlockchainUserData();
+        // })
+        .on("transactionHash", () => {
+          if (close !== 0) {
+            close();
+          }
+          return "transactionHash";
+        })
         .then(async result => {
           await this.loadBlockchainData();
           await this.loadBlockchainUserData();

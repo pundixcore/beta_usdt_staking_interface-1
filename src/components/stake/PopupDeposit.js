@@ -368,11 +368,11 @@ function PopupDeposit(props) {
                     amount = window.web3Eth.utils.toWei(amount, "mWei");
                     setTxLoading(true);
                     if (props.pool_id === 1) {
-                      await props.stake(amount, process.env.REACT_APP_liquiditystakingV1_address);
+                      await props.stake(amount, process.env.REACT_APP_liquiditystakingV1_address, close);
                     } else if (props.pool_id === 2) {
-                      await props.stake(amount, process.env.REACT_APP_liquiditystakingV1_address_second);
+                      await props.stake(amount, process.env.REACT_APP_liquiditystakingV1_address_second, close);
                     }
-                    close();
+                    //close();
                   } else {
                     setTxLoading(true);
                     if (props.pool_id === 1) {
