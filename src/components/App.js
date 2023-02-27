@@ -405,10 +405,8 @@ class App extends Component {
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum);
     }
+    window.web3Eth = new Web3(`https://rpc.ankr.com/eth`);
     // window.web3Eth = new Web3(`https://rpc.ankr.com/eth_goerli`);
-    //window.web3Eth = new Web3(`https://eth-mainnet.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
-    window.web3Eth = new Web3(`https://eth-goerli.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
-    //window.web3Eth = new Web3(`https://rpc.ankr.com/eth`);
     try {
       let id = await window.web3Eth.eth.net.isListening();
     } catch (e) {
@@ -422,9 +420,8 @@ class App extends Component {
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum);
     }
-    window.web3Eth = new Web3(`https://rpc.ankr.com/eth_goerli`);
-    //window.web3Eth = new Web3(`https://rpc.ankr.com/eth`);
-    //window.web3Eth = new Web3(`https://eth-mainnet.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
+    window.web3Eth = new Web3(`https://eth-mainnet.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
+    // window.web3Eth = new Web3(`https://eth-goerli.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
     this.setState({ loading: true });
   }
 
@@ -732,7 +729,7 @@ class App extends Component {
 
   /* ============================== Smart Contract function ==============================
    */
-  stake = async (amount, address, close = 0) => {
+  stake = async (amount, address, close) => {
     let liquidityStaking;
     let intWeb3;
 
@@ -747,14 +744,8 @@ class App extends Component {
       await liquidityStaking.methods
         .stake(amount)
         .send({ from: this.state.account })
-        // .then(async result => {
-        //   await this.loadBlockchainData();
-        //   await this.loadBlockchainUserData();
-        // })
         .on("transactionHash", () => {
-          if (close !== 0) {
-            close();
-          }
+          close();
           return "transactionHash";
         })
         .then(async result => {
@@ -775,14 +766,8 @@ class App extends Component {
       await liquidityStaking.methods
         .stake(amount)
         .send({ from: this.state.account })
-        // .then(async result => {
-        //   await this.loadBlockchainData();
-        //   await this.loadBlockchainUserData();
-        // })
         .on("transactionHash", () => {
-          if (close !== 0) {
-            close();
-          }
+          close();
           return "transactionHash";
         })
         .then(async result => {

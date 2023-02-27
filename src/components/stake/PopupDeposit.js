@@ -238,10 +238,10 @@ function PopupDeposit(props) {
                         onClick={event1 => {
                           let depositAmount = "0";
                           if (bigInt(props.remainingPoolDepositedSize).value > bigInt(props.userUSDTBalance).value) {
-                            console.log("Other Hello", props.remainingPoolDepositedSize);
+                            // console.log("Other Hello", props.remainingPoolDepositedSize);
                             depositAmount = props.userUSDTBalance;
                           } else {
-                            console.log("Hello", props.remainingPoolDepositedSize);
+                            // console.log("Hello", props.remainingPoolDepositedSize);
                             depositAmount = props.remainingPoolDepositedSize.toString();
                           }
                           handleClick(window.web3Eth.utils.fromWei(depositAmount, "mWei"));
