@@ -493,13 +493,13 @@ class App extends Component {
         // 530: "https://fx-json-web3.functionx.io:8545"
         // 43114: "https://api.avax.network/ext/bc/C/rpc"
         // 56: `https://bsc-dataseed.binance.org/`
-        5: `https://eth-goerli.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`
-        //1: `https://eth-mainnet.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`
+        // 5: `https://eth-goerli.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`
+        1: `https://eth-mainnet.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`
       },
       // chainId: 530,
       // chainId: 43114,
-      //chainId: 1
-      chainId: 5
+      chainId: 1
+      // chainId: 5
     });
     await window.provider.enable();
     window.web3Con = await new Web3(window.provider);
