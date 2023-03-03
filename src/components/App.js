@@ -835,7 +835,7 @@ class App extends Component {
     }
   };
 
-  withdraw = async (amount, address) => {
+  withdraw = async (amount, address, close) => {
     let liquidityStaking;
     let intWeb3;
 
@@ -850,6 +850,10 @@ class App extends Component {
       await liquidityStaking.methods
         .withdrawStake(this.state.account, amount)
         .send({ from: this.state.account })
+        .on("transactionHash", () => {
+          close();
+          return "transactionHash";
+        })
         .then(async result => {
           await this.loadBlockchainData();
           await this.loadBlockchainUserData();
@@ -868,6 +872,10 @@ class App extends Component {
       await liquidityStaking.methods
         .withdrawStake(this.state.account, amount)
         .send({ from: this.state.account })
+        .on("transactionHash", () => {
+          close();
+          return "transactionHash";
+        })
         .then(async result => {
           await this.loadBlockchainData();
           await this.loadBlockchainUserData();
@@ -884,7 +892,7 @@ class App extends Component {
     }
   };
 
-  requestWithdraw = async (amount, address) => {
+  requestWithdraw = async (amount, address, close) => {
     let liquidityStaking;
     let intWeb3;
 
@@ -899,6 +907,10 @@ class App extends Component {
       await liquidityStaking.methods
         .requestWithdrawal(amount)
         .send({ from: this.state.account })
+        .on("transactionHash", () => {
+          close();
+          return "transactionHash";
+        })
         .then(async result => {
           await this.loadBlockchainData();
           await this.loadBlockchainUserData();
@@ -917,6 +929,10 @@ class App extends Component {
       await liquidityStaking.methods
         .requestWithdrawal(amount)
         .send({ from: this.state.account })
+        .on("transactionHash", () => {
+          close();
+          return "transactionHash";
+        })
         .then(async result => {
           await this.loadBlockchainData();
           await this.loadBlockchainUserData();
