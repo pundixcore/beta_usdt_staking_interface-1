@@ -365,11 +365,11 @@ function PopupRequestWithdraw(props) {
                   amount = window.web3Eth.utils.toWei(amount, "mWei");
                   setTxLoading(true);
                   if (props.pool_id === 1) {
-                    await props.requestWithdraw(amount, process.env.REACT_APP_liquiditystakingV1_address);
+                    await props.requestWithdraw(amount, process.env.REACT_APP_liquiditystakingV1_address, close);
                   } else if (props.pool_id === 2) {
-                    await props.requestWithdraw(amount, process.env.REACT_APP_liquiditystakingV1_address_second);
+                    await props.requestWithdraw(amount, process.env.REACT_APP_liquiditystakingV1_address_second, close);
                   }
-                  close();
+                  //close();
                 }
               }}
             >
