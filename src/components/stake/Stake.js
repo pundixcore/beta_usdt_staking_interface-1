@@ -1334,7 +1334,7 @@ function StakeMenu(props) {
             <div className="textWhite mb-1" style={{ fontSize: "1.5rem", color: "white" }}>
               <b>Epoch</b>
             </div>
-            <div style={{ color: "grey" }}>Each Epoch last 28 days.</div>
+            <div style={{ color: "grey" }}>Each Epoch lasts 28 days.</div>
           </div>
         </div>
       </MediaQuery>
@@ -1345,7 +1345,7 @@ function StakeMenu(props) {
             <div className="textWhite mb-1" style={{ fontSize: "1.5rem", color: "white" }}>
               <b>Epoch</b>
             </div>
-            <div style={{ color: "grey" }}>Each Epoch last 28 days.</div>
+            <div style={{ color: "grey" }}>Each Epoch lasts 28 days.</div>
           </div>
         </div>
       </MediaQuery>
