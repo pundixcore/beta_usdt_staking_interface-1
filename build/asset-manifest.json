@@ -1,9 +1,12 @@
 {
-  "main.css": "/static/css/main.e87d5c27.chunk.css",
-  "main.js": "/static/js/main.1200646e.chunk.js",
-  "static/css/1.c4d0fffb.chunk.css": "/static/css/1.c4d0fffb.chunk.css",
-  "static/js/1.9c7a81aa.chunk.js": "/static/js/1.9c7a81aa.chunk.js",
+  "main.css": "/static/css/main.53bdbd6e.chunk.css",
+  "main.js": "/static/js/main.d0bea93c.chunk.js",
+  "main.js.map": "/static/js/main.d0bea93c.chunk.js.map",
+  "static/css/1.21833ab7.chunk.css": "/static/css/1.21833ab7.chunk.css",
+  "static/js/1.4135187c.chunk.js": "/static/js/1.4135187c.chunk.js",
+  "static/js/1.4135187c.chunk.js.map": "/static/js/1.4135187c.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
+  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
   "static/media/usdt.svg": "/static/media/usdt.0b8d2118.svg",
   "static/media/fx.svg": "/static/media/fx.b57cc715.svg",
   "static/media/dots-bg.png": "/static/media/dots-bg.5c28c78f.png",
@@ -19,7 +22,9 @@
   "static/media/coin98.webp": "/static/media/coin98.814bc745.webp",
   "static/media/metamask-fox.svg": "/static/media/metamask-fox.c06f3a3e.svg",
   "static/media/walletconnect-logo.svg": "/static/media/walletconnect-logo.37f2bc6e.svg",
+  "static/css/1.21833ab7.chunk.css.map": "/static/css/1.21833ab7.chunk.css.map",
+  "static/css/main.53bdbd6e.chunk.css.map": "/static/css/main.53bdbd6e.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.f67e757e1889eba4fc7520a4453192cd.js": "/precache-manifest.f67e757e1889eba4fc7520a4453192cd.js",
+  "precache-manifest.d2022ad1f5690473fe103b876f9f44c6.js": "/precache-manifest.d2022ad1f5690473fe103b876f9f44c6.js",
   "service-worker.js": "/service-worker.js"
 }
