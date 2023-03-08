@@ -405,8 +405,8 @@ class App extends Component {
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum);
     }
-    // window.web3Eth = new Web3(`https://rpc.ankr.com/eth`);
-    window.web3Eth = new Web3(`https://rpc.ankr.com/eth_goerli`);
+    window.web3Eth = new Web3(`https://rpc.ankr.com/eth`);
+    // window.web3Eth = new Web3(`https://rpc.ankr.com/eth_goerli`);
     try {
       let id = await window.web3Eth.eth.net.isListening();
     } catch (e) {
@@ -420,8 +420,8 @@ class App extends Component {
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum);
     }
-    // window.web3Eth = new Web3(`https://eth-mainnet.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
-    window.web3Eth = new Web3(`https://eth-goerli.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
+    window.web3Eth = new Web3(`https://eth-mainnet.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
+    // window.web3Eth = new Web3(`https://eth-goerli.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
     this.setState({ loading: true });
   }
 
@@ -493,13 +493,13 @@ class App extends Component {
         // 530: "https://fx-json-web3.functionx.io:8545"
         // 43114: "https://api.avax.network/ext/bc/C/rpc"
         // 56: `https://bsc-dataseed.binance.org/`
-        5: `https://eth-goerli.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`
-        // 1: `https://eth-mainnet.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`
+        // 5: `https://eth-goerli.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`
+        1: `https://eth-mainnet.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`
       },
       // chainId: 530,
       // chainId: 43114,
-      // chainId: 1
-      chainId: 5
+      chainId: 1
+      // chainId: 5
     });
     await window.provider.enable();
     window.web3Con = await new Web3(window.provider);
