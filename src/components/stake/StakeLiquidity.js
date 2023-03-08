@@ -821,15 +821,33 @@ function StakeLiquidity(props) {
                     </div>
                     <div className="textBlackSmall" style={{ color: "white" }}>
                       <div scope="col" style={{ textAlign: "start" }} width="120">
-                        The Maker Liquidity Pool serves as an upgrade to the Maker Incentive section of the 100-Day Incentive Program. All participants of the Maker Liquidity Pool shall be rewarded in $FX, to an average 9,000 $FX daily (remaining balance from Maker Incentive section).
+                        Participants will share the profit/loss from the performance of the Maker LP proportionally, and shall be entitled to a portion of MarginX’s net platform (trading) fee. The rewards shall be distributed in $FX on a weekly basis.
                       </div>
                       <br />
                       <div scope="col" style={{ textAlign: "start" }} width="120">
-                        Users will receive $FX, distributed continuously according to each user's portion of the total USDT in the pool.
+                        MarginX net platform fee = Platform fee - Trading fee rebate - Referral commission
                       </div>
                       <br />
                       <div scope="col" style={{ textAlign: "start" }} width="120">
-                        Users must request to withdraw USDT at least 14 days before the current epoch ends. If users do not request to withdraw, the deposited USDT is rolled over into the next epoch.
+                        Distribution of MarginX net platform fee:
+                        <br />
+                        60% goes to Maker LP rewards
+                        <br />
+                        10% goes to Insurance Pool
+                        <br />
+                        30% goes to MarginX Treasury
+                      </div>
+                      <br />
+                      <div scope="col" style={{ textAlign: "start" }} width="120">
+                        New Maker LP rewards = Trading profit/loss + 60% of net platform fee
+                      </div>
+                      <br />
+                      <div scope="col" style={{ textAlign: "start" }} width="120">
+                        Each user will receive a proportional amount of the platform fee rewards based on their deposit amount.
+                      </div>
+                      <br />
+                      <div scope="col" style={{ textAlign: "start" }} width="120">
+                        Note: Users must request to withdraw USDT at least 14 days before the current epoch ends. If users do not request to withdraw, the deposited USDT is rolled over into the next epoch.
                       </div>
                     </div>
                   </div>
