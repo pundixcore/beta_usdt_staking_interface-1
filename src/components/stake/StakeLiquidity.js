@@ -412,7 +412,7 @@ function StakeLiquidity(props) {
                   </big>
                 </label>
                 <div className="mb-4" style={{ color: "grey" }}>
-                  View and manage your pending and available withdraws.
+                  View and manage your pending and available Withdrawals.
                 </div>
                 <div style={{ marginTop: "1.5rem", display: "block" }}>
                   <div className="blackBox">
@@ -1217,7 +1217,7 @@ function StakeLiquidity(props) {
                 </big>
               </label>
               <div className="mb-4" style={{ color: "grey" }}>
-                View and manage your pending and available withdraws.
+                View and manage your pending and available Withdrawals.
               </div>
               <div style={{ marginTop: "1.5rem", display: "block" }}>
                 <div className="lkBtSA" style={{ borderRadius: "20px", marginBottom: "12px" }}>
@@ -2078,7 +2078,7 @@ function StakeLiquidity(props) {
                   </big>
                 </label>
                 <div className="mb-4" style={{ color: "grey" }}>
-                  View and manage your pending and available withdraws.
+                  View and manage your pending and available Withdrawals.
                 </div>
                 <div style={{ marginTop: "1.5rem", display: "block" }}>
                   <div className="blackBox">
@@ -2860,7 +2860,7 @@ function StakeLiquidity(props) {
                 </big>
               </label>
               <div className="mb-4" style={{ color: "grey" }}>
-                View and manage your pending and available withdraws.
+                View and manage your pending and available Withdrawals.
               </div>
               <div style={{ marginTop: "1.5rem", display: "block" }}>
                 <div className="lkBtSA" style={{ borderRadius: "20px", marginBottom: "12px" }}>
