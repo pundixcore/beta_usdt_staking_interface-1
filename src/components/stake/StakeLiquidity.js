@@ -713,7 +713,7 @@ function StakeLiquidity(props) {
                       $ETH is required to pay the gas fees for withdrawals.
                     </li>
                     <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
-                      Participants need to request for withdrawals and claim their rewards manually on maker.marginx.io.
+                      Participants need to request for withdrawals manually on maker.marginx.io.
                     </li>
                     <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
                       MarginX is not be liable for any loss of funds due to user’s negligence.
@@ -1516,7 +1516,7 @@ function StakeLiquidity(props) {
                         $ETH is required to pay the gas fees for withdrawals.
                       </li>
                       <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
-                        Participants need to request for withdrawals and claim their rewards manually on maker.marginx.io.
+                        Participants need to request for withdrawals manually on maker.marginx.io.
                       </li>
                       <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
                         MarginX is not be liable for any loss of funds due to user’s negligence.
@@ -2414,7 +2414,7 @@ function StakeLiquidity(props) {
                       $ETH is required to pay the gas fees for withdrawals.
                     </li>
                     <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
-                      Participants need to request for withdrawals and claim their rewards manually on maker.marginx.io.
+                      Participants need to request for withdrawals manually on maker.marginx.io.
                     </li>
                     <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
                       MarginX is not be liable for any loss of funds due to user’s negligence.
@@ -3179,7 +3179,7 @@ function StakeLiquidity(props) {
                         $ETH is required to pay the gas fees for withdrawals.
                       </li>
                       <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
-                        Participants need to request for withdrawals and claim their rewards manually on maker.marginx.io.
+                        Participants need to request for withdrawals manually on maker.marginx.io.
                       </li>
                       <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
                         MarginX is not be liable for any loss of funds due to user’s negligence.
