@@ -17,7 +17,7 @@ import bigInt from "big-integer";
 import HorizontalScroll from "react-horizontal-scrolling";
 
 function StakeMenu(props) {
-  const convertTimeStamp = (event) => {
+  const convertTimeStamp = event => {
     var timestamp = event;
     var date = new Date(timestamp * 1000);
     var year = date.getFullYear();
@@ -26,18 +26,7 @@ function StakeMenu(props) {
     var hours = date.getHours();
     var minutes = date.getMinutes();
     var seconds = date.getSeconds();
-    var date =
-      year +
-      "-" +
-      month +
-      "-" +
-      day +
-      " " +
-      hours +
-      ":" +
-      minutes +
-      ":" +
-      seconds;
+    var date = year + "-" + month + "-" + day + " " + hours + ":" + minutes + ":" + seconds;
     return date;
   };
 
@@ -48,21 +37,18 @@ function StakeMenu(props) {
     padding: "20px",
     width: "380px",
     borderRadius: "15px",
-    minWidth: "320px",
+    minWidth: "320px"
   };
 
   return (
-    <div
-      id="content"
-      style={{ margin: "0", color: "#ff9a04", maxWidth: "1000px" }}
-    >
+    <div id="content" style={{ margin: "0", color: "#ff9a04", maxWidth: "1000px" }}>
       <MediaQuery minWidth={981}>
         <div
           style={{
             display: "flex",
             justifyContent: "space-between",
             marginTop: "3rem",
-            width: "100%",
+            width: "100%"
           }}
         >
           <div
@@ -73,23 +59,12 @@ function StakeMenu(props) {
               color: "white",
               width: "485px",
               height: "220px",
-              borderRadius: "25px",
+              borderRadius: "25px"
             }}
           >
-            <div
-              className="card-body"
-              style={{ marginLeft: "5px", padding: "10px" }}
-            >
-              <div
-                className="textWhite rowC"
-                style={{ fontSize: "20px", color: "white" }}
-              >
-                <ImgNextGen
-                  srcWebp={marginxLogo}
-                  style={{ marginLeft: "0px", marginRight: "18px" }}
-                  width="110"
-                  alt=""
-                />
+            <div className="card-body" style={{ marginLeft: "5px", padding: "10px" }}>
+              <div className="textWhite rowC" style={{ fontSize: "20px", color: "white" }}>
+                <ImgNextGen srcWebp={marginxLogo} style={{ marginLeft: "0px", marginRight: "18px" }} width="110" alt="" />
                 <div>
                   <div className="bzThwT mb-2 mt-3">
                     <b>USDT (ERC20)</b>
@@ -110,7 +85,7 @@ function StakeMenu(props) {
                           color: "white",
                           padding: "5px 16px",
                           backgroundColor: "black",
-                          borderRadius: "22px",
+                          borderRadius: "22px"
                         }}
                         size="lg"
                         onClick={() => {
@@ -131,14 +106,11 @@ function StakeMenu(props) {
                           color: "black",
                           padding: "5px 16px",
                           backgroundColor: "white",
-                          borderRadius: "22px",
+                          borderRadius: "22px"
                         }}
                         size="lg"
                         onClick={() => {
-                          window.open(
-                            `https://forum.starscan.io/t/maker-liquidity-pool-usdt-erc-20-beta/4955`,
-                            "_blank"
-                          );
+                          window.open(`https://forum.starscan.io/t/maker-liquidity-pool-usdt-erc-20-beta/4955`, "_blank");
                         }}
                       >
                         &#8599; Read more
@@ -161,7 +133,7 @@ function StakeMenu(props) {
               backgroundImage: `url(${nftBackground})`,
               backgroundPosition: "center center",
               backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
+              backgroundSize: "cover"
             }}
           >
             <div className="card-body" style={{ padding: "15px" }}>
@@ -170,7 +142,7 @@ function StakeMenu(props) {
                 style={{
                   marginBottom: "12px",
                   color: "white",
-                  maxWidth: "400px",
+                  maxWidth: "400px"
                 }}
               >
                 <div className="card-body" style={{ padding: "15px" }}>
@@ -182,7 +154,7 @@ function StakeMenu(props) {
                     style={{
                       fontSize: "1.25rem",
                       color: "white",
-                      lineHeight: "1.5rem",
+                      lineHeight: "1.5rem"
                     }}
                   >
                     <td style={{ textAlign: "start" }} scope="col" width="120">
@@ -192,7 +164,7 @@ function StakeMenu(props) {
                           style={{
                             fontSize: "1.25rem",
                             color: "white",
-                            lineHeight: "1.5rem",
+                            lineHeight: "1.5rem"
                           }}
                         >
                           <div>
@@ -202,18 +174,13 @@ function StakeMenu(props) {
                                 style={{
                                   fontSize: "1.25rem",
                                   color: "white",
-                                  lineHeight: "1.5rem",
+                                  lineHeight: "1.5rem"
                                 }}
                               >
                                 {props.userEarnedRewardAmount >= 0 ? (
                                   <div>
-                                    {parseFloat(
-                                      window.web3Eth.utils.fromWei(
-                                        props.userEarnedRewardAmount,
-                                        "Ether"
-                                      )
-                                    ).toLocaleString("en-US", {
-                                      maximumFractionDigits: 2,
+                                    {parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount, "Ether")).toLocaleString("en-US", {
+                                      maximumFractionDigits: 2
                                     })}{" "}
                                   </div>
                                 ) : (
@@ -230,12 +197,7 @@ function StakeMenu(props) {
                       )}
                     </td>
                     <div style={{ textAlign: "end" }}>
-                      <ImgNextGen
-                        srcWebp={fx}
-                        style={{ marginLeft: "6px", marginRight: "0px" }}
-                        width="28px"
-                        alt=""
-                      />
+                      <ImgNextGen srcWebp={fx} style={{ marginLeft: "6px", marginRight: "0px" }} width="28px" alt="" />
                     </div>
                   </div>
                   {props.userEarnedRewardAmount == 0 ? (
@@ -245,7 +207,7 @@ function StakeMenu(props) {
                         height: "38px",
                         width: "80px",
                         cursor: "not-allowed",
-                        opacity: "0.5",
+                        opacity: "0.5"
                       }}
                     >
                       Claim
@@ -256,9 +218,7 @@ function StakeMenu(props) {
                       style={{ height: "38px", width: "80px" }}
                       size="lg"
                       onClick={() => {
-                        props.claimReward(
-                          process.env.REACT_APP_liquiditystakingV1_address
-                        );
+                        props.claimReward(process.env.REACT_APP_liquiditystakingV1_address);
                       }}
                     >
                       <div className="linearGradientText center">Claim</div>
@@ -267,10 +227,7 @@ function StakeMenu(props) {
                 </div>
               </div>
 
-              <div
-                className="textWhite"
-                style={{ fontSize: "20px", color: "white" }}
-              >
+              <div className="textWhite" style={{ fontSize: "20px", color: "white" }}>
                 <big>
                   <b>Portfolio</b>
                 </big>
@@ -281,28 +238,19 @@ function StakeMenu(props) {
                 <table>
                   <thead className="textBlackSmall" style={{ color: "white" }}>
                     <tr>
-                      <td
-                        style={{ textAlign: "start" }}
-                        scope="col"
-                        width="120"
-                      >
+                      <td style={{ textAlign: "start" }} scope="col" width="120">
                         {props.accountLoading ? (
                           <div
                             className="eWMWa-D"
                             style={{
                               fontSize: "1.25rem",
                               color: "white",
-                              lineHeight: "1.5rem",
+                              lineHeight: "1.5rem"
                             }}
                           >
                             <div>
-                              {parseFloat(
-                                window.web3Eth.utils.fromWei(
-                                  props.userUSDTBalance,
-                                  "mwei"
-                                )
-                              ).toLocaleString("en-US", {
-                                maximumFractionDigits: 0,
+                              {parseFloat(window.web3Eth.utils.fromWei(props.userUSDTBalance, "mwei")).toLocaleString("en-US", {
+                                maximumFractionDigits: 0
                               })}{" "}
                             </div>
                             <div className="JYkOF">
@@ -310,7 +258,7 @@ function StakeMenu(props) {
                                 srcWebp={usdt}
                                 style={{
                                   marginLeft: "6px",
-                                  marginRight: "0px",
+                                  marginRight: "0px"
                                 }}
                                 width="24px"
                                 alt=""
@@ -321,28 +269,19 @@ function StakeMenu(props) {
                           <span>-</span>
                         )}
                       </td>
-                      <td
-                        style={{ textAlign: "start" }}
-                        scope="col"
-                        width="120"
-                      >
+                      <td style={{ textAlign: "start" }} scope="col" width="120">
                         {props.accountLoading ? (
                           <div
                             className="eWMWa-D"
                             style={{
                               fontSize: "1.25rem",
                               color: "white",
-                              lineHeight: "1.5rem",
+                              lineHeight: "1.5rem"
                             }}
                           >
                             <div>
-                              {parseFloat(
-                                window.web3Eth.utils.fromWei(
-                                  props.userStakedBalance,
-                                  "mwei"
-                                )
-                              ).toLocaleString("en-US", {
-                                maximumFractionDigits: 0,
+                              {parseFloat(window.web3Eth.utils.fromWei(props.userStakedBalance, "mwei")).toLocaleString("en-US", {
+                                maximumFractionDigits: 0
                               })}{" "}
                             </div>
                             <div className="JYkOF">
@@ -350,7 +289,7 @@ function StakeMenu(props) {
                                 srcWebp={usdt}
                                 style={{
                                   marginLeft: "6px",
-                                  marginRight: "0px",
+                                  marginRight: "0px"
                                 }}
                                 width="24px"
                                 alt=""
@@ -361,28 +300,19 @@ function StakeMenu(props) {
                           <span>-</span>
                         )}
                       </td>
-                      <td
-                        style={{ textAlign: "start" }}
-                        scope="col"
-                        width="120"
-                      >
+                      <td style={{ textAlign: "start" }} scope="col" width="120">
                         {props.accountLoading ? (
                           <div
                             className="eWMWa-D"
                             style={{
                               fontSize: "1.25rem",
                               color: "white",
-                              lineHeight: "1.5rem",
+                              lineHeight: "1.5rem"
                             }}
                           >
                             <div>
-                              {parseFloat(
-                                window.web3Eth.utils.fromWei(
-                                  props.userWithdrawableAmount,
-                                  "mwei"
-                                )
-                              ).toLocaleString("en-US", {
-                                maximumFractionDigits: 0,
+                              {parseFloat(window.web3Eth.utils.fromWei(props.userWithdrawableAmount, "mwei")).toLocaleString("en-US", {
+                                maximumFractionDigits: 0
                               })}{" "}
                             </div>
                             <div className="JYkOF">
@@ -390,7 +320,7 @@ function StakeMenu(props) {
                                 srcWebp={usdt}
                                 style={{
                                   marginLeft: "6px",
-                                  marginRight: "0px",
+                                  marginRight: "0px"
                                 }}
                                 width="24px"
                                 alt=""
@@ -405,25 +335,13 @@ function StakeMenu(props) {
                   </thead>
                   <tbody className="" style={{ color: "white" }}>
                     <tr>
-                      <td
-                        style={{ textAlign: "start" }}
-                        scope="col"
-                        width="120"
-                      >
+                      <td style={{ textAlign: "start" }} scope="col" width="120">
                         Wallet
                       </td>
-                      <td
-                        style={{ textAlign: "start" }}
-                        scope="col"
-                        width="120"
-                      >
+                      <td style={{ textAlign: "start" }} scope="col" width="120">
                         Deposited
                       </td>
-                      <td
-                        style={{ textAlign: "start" }}
-                        scope="col"
-                        width="120"
-                      >
+                      <td style={{ textAlign: "start" }} scope="col" width="120">
                         Available
                       </td>
                     </tr>
@@ -444,32 +362,18 @@ function StakeMenu(props) {
             height: "200px",
             minWidth: "300px",
             maxWidth: "485px",
-            borderRadius: "25px",
+            borderRadius: "25px"
           }}
         >
-          <div
-            className="card-body"
-            style={{ marginLeft: "0px", padding: "15px" }}
-          >
+          <div className="card-body" style={{ marginLeft: "0px", padding: "15px" }}>
             <MediaQuery minWidth={481}>
-              <div
-                className="textWhite rowC"
-                style={{ fontSize: "20px", color: "white" }}
-              >
-                <ImgNextGen
-                  srcWebp={marginxLogo}
-                  style={{ marginLeft: "0px", marginRight: "18px" }}
-                  width="105"
-                  alt=""
-                />
+              <div className="textWhite rowC" style={{ fontSize: "20px", color: "white" }}>
+                <ImgNextGen srcWebp={marginxLogo} style={{ marginLeft: "0px", marginRight: "18px" }} width="105" alt="" />
                 <div>
                   <div className="bzThwT mb-2 mt-1">
                     <b>USDT (ERC20)</b>
                   </div>
-                  <div
-                    className="kXLvz mb-3"
-                    style={{ fontSize: "24px", lineHeight: "2.2rem" }}
-                  >
+                  <div className="kXLvz mb-3" style={{ fontSize: "24px", lineHeight: "2.2rem" }}>
                     <b>MarginX Market Maker Liquidity Pool</b>
                   </div>
                   <ButtonGroup>
@@ -484,7 +388,7 @@ function StakeMenu(props) {
                           color: "white",
                           padding: "5px 16px",
                           backgroundColor: "black",
-                          borderRadius: "22px",
+                          borderRadius: "22px"
                         }}
                         size="lg"
                         onClick={() => {
@@ -505,14 +409,11 @@ function StakeMenu(props) {
                           color: "black",
                           padding: "5px 16px",
                           backgroundColor: "white",
-                          borderRadius: "22px",
+                          borderRadius: "22px"
                         }}
                         size="lg"
                         onClick={() => {
-                          window.open(
-                            `https://forum.starscan.io/t/maker-liquidity-pool-usdt-erc-20-beta/4955`,
-                            "_blank"
-                          );
+                          window.open(`https://forum.starscan.io/t/maker-liquidity-pool-usdt-erc-20-beta/4955`, "_blank");
                         }}
                       >
                         &#8599; Read more
@@ -526,10 +427,7 @@ function StakeMenu(props) {
               <div className="bzThwT mb-2 mt-1">
                 <b>USDT (ERC20)</b>
               </div>
-              <div
-                className="kXLvz mb-3"
-                style={{ fontSize: "24px", lineHeight: "2.2rem" }}
-              >
+              <div className="kXLvz mb-3" style={{ fontSize: "24px", lineHeight: "2.2rem" }}>
                 <b>MarginX Market Maker Liquidity Pool</b>
               </div>
               <ButtonGroup>
@@ -544,7 +442,7 @@ function StakeMenu(props) {
                       color: "white",
                       padding: "5px 16px",
                       backgroundColor: "black",
-                      borderRadius: "22px",
+                      borderRadius: "22px"
                     }}
                     size="lg"
                     onClick={() => {
@@ -565,14 +463,11 @@ function StakeMenu(props) {
                       color: "black",
                       padding: "5px 16px",
                       backgroundColor: "white",
-                      borderRadius: "22px",
+                      borderRadius: "22px"
                     }}
                     size="lg"
                     onClick={() => {
-                      window.open(
-                        `https://forum.starscan.io/t/maker-liquidity-pool-usdt-erc-20-beta/4955`,
-                        "_blank"
-                      );
+                      window.open(`https://forum.starscan.io/t/maker-liquidity-pool-usdt-erc-20-beta/4955`, "_blank");
                     }}
                   >
                     &#8599; Read more
@@ -596,7 +491,7 @@ function StakeMenu(props) {
             backgroundImage: `url(${nftBackground})`,
             backgroundPosition: "center center",
             backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
+            backgroundSize: "cover"
           }}
         >
           <div className="card-body" style={{ padding: "15px" }}>
@@ -605,7 +500,7 @@ function StakeMenu(props) {
               style={{
                 marginBottom: "12px",
                 color: "white",
-                maxWidth: "400px",
+                maxWidth: "400px"
               }}
             >
               <div className="card-body" style={{ padding: "15px" }}>
@@ -617,7 +512,7 @@ function StakeMenu(props) {
                   style={{
                     fontSize: "1.25rem",
                     color: "white",
-                    lineHeight: "1.5rem",
+                    lineHeight: "1.5rem"
                   }}
                 >
                   <td style={{ textAlign: "start" }} scope="col" width="120">
@@ -627,7 +522,7 @@ function StakeMenu(props) {
                         style={{
                           fontSize: "1.25rem",
                           color: "white",
-                          lineHeight: "1.5rem",
+                          lineHeight: "1.5rem"
                         }}
                       >
                         <div>
@@ -637,18 +532,13 @@ function StakeMenu(props) {
                               style={{
                                 fontSize: "1.25rem",
                                 color: "white",
-                                lineHeight: "1.5rem",
+                                lineHeight: "1.5rem"
                               }}
                             >
                               {props.userEarnedRewardAmount >= 0 ? (
                                 <div>
-                                  {parseFloat(
-                                    window.web3Eth.utils.fromWei(
-                                      props.userEarnedRewardAmount,
-                                      "Ether"
-                                    )
-                                  ).toLocaleString("en-US", {
-                                    maximumFractionDigits: 2,
+                                  {parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount, "Ether")).toLocaleString("en-US", {
+                                    maximumFractionDigits: 2
                                   })}{" "}
                                 </div>
                               ) : (
@@ -665,12 +555,7 @@ function StakeMenu(props) {
                     )}
                   </td>
                   <div>
-                    <ImgNextGen
-                      srcWebp={fx}
-                      style={{ marginLeft: "6px", marginRight: "0px" }}
-                      width="28px"
-                      alt=""
-                    />
+                    <ImgNextGen srcWebp={fx} style={{ marginLeft: "6px", marginRight: "0px" }} width="28px" alt="" />
                   </div>
                 </div>
                 {props.userEarnedRewardAmount == 0 ? (
@@ -680,7 +565,7 @@ function StakeMenu(props) {
                       height: "38px",
                       width: "80px",
                       cursor: "not-allowed",
-                      opacity: "0.5",
+                      opacity: "0.5"
                     }}
                   >
                     Claim
@@ -691,9 +576,7 @@ function StakeMenu(props) {
                     style={{ height: "38px", width: "80px" }}
                     size="lg"
                     onClick={() => {
-                      props.claimReward(
-                        process.env.REACT_APP_liquiditystakingV1_address
-                      );
+                      props.claimReward(process.env.REACT_APP_liquiditystakingV1_address);
                     }}
                   >
                     <div className="linearGradientText center">Claim</div>
@@ -702,10 +585,7 @@ function StakeMenu(props) {
               </div>
             </div>
 
-            <div
-              className="textWhite"
-              style={{ fontSize: "20px", color: "white" }}
-            >
+            <div className="textWhite" style={{ fontSize: "20px", color: "white" }}>
               <big>
                 <b>Portfolio</b>
               </big>
@@ -723,26 +603,16 @@ function StakeMenu(props) {
                           style={{
                             fontSize: "1.25rem",
                             color: "white",
-                            lineHeight: "1.5rem",
+                            lineHeight: "1.5rem"
                           }}
                         >
                           <div>
-                            {parseFloat(
-                              window.web3Eth.utils.fromWei(
-                                props.userUSDTBalance,
-                                "mwei"
-                              )
-                            ).toLocaleString("en-US", {
-                              maximumFractionDigits: 0,
+                            {parseFloat(window.web3Eth.utils.fromWei(props.userUSDTBalance, "mwei")).toLocaleString("en-US", {
+                              maximumFractionDigits: 0
                             })}{" "}
                           </div>
                           <div className="JYkOF">
-                            <ImgNextGen
-                              srcWebp={usdt}
-                              style={{ marginLeft: "6px", marginRight: "0px" }}
-                              width="24px"
-                              alt=""
-                            />
+                            <ImgNextGen srcWebp={usdt} style={{ marginLeft: "6px", marginRight: "0px" }} width="24px" alt="" />
                           </div>
                         </div>
                       ) : (
@@ -756,26 +626,16 @@ function StakeMenu(props) {
                           style={{
                             fontSize: "1.25rem",
                             color: "white",
-                            lineHeight: "1.5rem",
+                            lineHeight: "1.5rem"
                           }}
                         >
                           <div>
-                            {parseFloat(
-                              window.web3Eth.utils.fromWei(
-                                props.userStakedBalance,
-                                "mwei"
-                              )
-                            ).toLocaleString("en-US", {
-                              maximumFractionDigits: 0,
+                            {parseFloat(window.web3Eth.utils.fromWei(props.userStakedBalance, "mwei")).toLocaleString("en-US", {
+                              maximumFractionDigits: 0
                             })}{" "}
                           </div>
                           <div className="JYkOF">
-                            <ImgNextGen
-                              srcWebp={usdt}
-                              style={{ marginLeft: "6px", marginRight: "0px" }}
-                              width="24px"
-                              alt=""
-                            />
+                            <ImgNextGen srcWebp={usdt} style={{ marginLeft: "6px", marginRight: "0px" }} width="24px" alt="" />
                           </div>
                         </div>
                       ) : (
@@ -789,26 +649,16 @@ function StakeMenu(props) {
                           style={{
                             fontSize: "1.25rem",
                             color: "white",
-                            lineHeight: "1.5rem",
+                            lineHeight: "1.5rem"
                           }}
                         >
                           <div>
-                            {parseFloat(
-                              window.web3Eth.utils.fromWei(
-                                props.userWithdrawableAmount,
-                                "mwei"
-                              )
-                            ).toLocaleString("en-US", {
-                              maximumFractionDigits: 0,
+                            {parseFloat(window.web3Eth.utils.fromWei(props.userWithdrawableAmount, "mwei")).toLocaleString("en-US", {
+                              maximumFractionDigits: 0
                             })}{" "}
                           </div>
                           <div className="JYkOF">
-                            <ImgNextGen
-                              srcWebp={usdt}
-                              style={{ marginLeft: "6px", marginRight: "0px" }}
-                              width="24px"
-                              alt=""
-                            />
+                            <ImgNextGen srcWebp={usdt} style={{ marginLeft: "6px", marginRight: "0px" }} width="24px" alt="" />
                           </div>
                         </div>
                       ) : (
@@ -838,16 +688,10 @@ function StakeMenu(props) {
 
       <div className="mr-auto" style={{ marginTop: "10px", color: "white" }}>
         <div className="card-body">
-          <div
-            className="textWhite mb-1"
-            style={{ fontSize: "1.5rem", color: "white" }}
-          >
+          <div className="textWhite mb-1" style={{ fontSize: "1.5rem", color: "white" }}>
             <b>Maker LP Incentives</b>
           </div>
-          <div style={{ color: "grey" }}>
-            Earn rewards for verified market makers to enhance the order book
-            depth on MarginX.
-          </div>
+          <div style={{ color: "grey" }}>Earn rewards for verified market makers to enhance the order book depth on MarginX.</div>
         </div>
       </div>
 
@@ -861,7 +705,7 @@ function StakeMenu(props) {
               marginLeft: "3rem",
               marginRight: "3rem",
               marginBottom: "3rem",
-              width: "100%",
+              width: "100%"
             }}
           >
             <div className="lkBtSA" style={{ borderRadius: "20px" }}>
@@ -872,15 +716,12 @@ function StakeMenu(props) {
                   height: "100%",
                   color: "white",
                   minWidth: "300px",
-                  maxWidth: "400px",
+                  maxWidth: "400px"
                 }}
               >
                 <div className="card-body">
                   <div style={{ marginBottom: "80px" }}>
-                    <div
-                      className="float-left textWhite"
-                      style={{ fontSize: "1.25rem", color: "white" }}
-                    >
+                    <div className="float-left textWhite" style={{ fontSize: "1.25rem", color: "white" }}>
                       Liquidity Pool
                     </div>
                     {/* <div className="float-right" style={{ marginLeft: "10px" }}>
@@ -890,10 +731,7 @@ function StakeMenu(props) {
                                   />
                               </div> */}
                     <Link to="/liquidity" className="exLink0">
-                      <div
-                        className="float-right"
-                        style={{ marginLeft: "10px" }}
-                      >
+                      <div className="float-right" style={{ marginLeft: "10px" }}>
                         <Buttons
                           className="textWhiteLargeButton cell2 center"
                           style={{
@@ -902,9 +740,8 @@ function StakeMenu(props) {
                             border: "0px",
                             color: "black",
                             padding: "5px 16px",
-                            backgroundImage:
-                              "linear-gradient(90deg, #18eed8 1%, #a6f616 100%)",
-                            borderRadius: "22px",
+                            backgroundImage: "linear-gradient(90deg, #18eed8 1%, #a6f616 100%)",
+                            borderRadius: "22px"
                           }}
                           size="lg"
                         >
@@ -915,33 +752,21 @@ function StakeMenu(props) {
                   </div>
                   <div>
                     <table>
-                      <thead
-                        className="textBlackSmall"
-                        style={{ color: "white", height: "35px" }}
-                      >
+                      <thead className="textBlackSmall" style={{ color: "white", height: "35px" }}>
                         <tr>
-                          <td
-                            style={{ textAlign: "start" }}
-                            scope="col"
-                            width="120"
-                          >
+                          <td style={{ textAlign: "start" }} scope="col" width="120">
                             {props.blockchainLoading ? (
                               <div
                                 className="eWMWa-D"
                                 style={{
                                   fontSize: "1.25rem",
                                   color: "white",
-                                  lineHeight: "1.5rem",
+                                  lineHeight: "1.5rem"
                                 }}
                               >
                                 <div>
-                                  {parseFloat(
-                                    window.web3Eth.utils.fromWei(
-                                      props.poolSize,
-                                      "mwei"
-                                    )
-                                  ).toLocaleString("en-US", {
-                                    maximumFractionDigits: 0,
+                                  {parseFloat(window.web3Eth.utils.fromWei(props.poolSize, "mwei")).toLocaleString("en-US", {
+                                    maximumFractionDigits: 0
                                   })}{" "}
                                 </div>
                                 <div className="JYkOF">
@@ -949,7 +774,7 @@ function StakeMenu(props) {
                                     srcWebp={usdt}
                                     style={{
                                       marginLeft: "6px",
-                                      marginRight: "0px",
+                                      marginRight: "0px"
                                     }}
                                     width="24px"
                                     alt=""
@@ -960,28 +785,19 @@ function StakeMenu(props) {
                               <span className="loader"></span>
                             )}
                           </td>
-                          <td
-                            style={{ textAlign: "start" }}
-                            scope="col"
-                            width="120"
-                          >
+                          <td style={{ textAlign: "start" }} scope="col" width="120">
                             {props.blockchainLoading ? (
                               <div
                                 className="eWMWa-D"
                                 style={{
                                   fontSize: "1.25rem",
                                   color: "white",
-                                  lineHeight: "1.5rem",
+                                  lineHeight: "1.5rem"
                                 }}
                               >
                                 <div>
-                                  {parseFloat(
-                                    window.web3Eth.utils.fromWei(
-                                      props.poolRewardRate,
-                                      "Ether"
-                                    ) * 86400
-                                  ).toLocaleString("en-US", {
-                                    maximumFractionDigits: 0,
+                                  {parseFloat(window.web3Eth.utils.fromWei(props.poolRewardRate, "Ether") * 86400).toLocaleString("en-US", {
+                                    maximumFractionDigits: 0
                                   })}
                                 </div>
                                 <div className="JYkOF">
@@ -989,7 +805,7 @@ function StakeMenu(props) {
                                     srcWebp={fx}
                                     style={{
                                       marginLeft: "6px",
-                                      marginRight: "0px",
+                                      marginRight: "0px"
                                     }}
                                     width="28px"
                                     alt=""
@@ -1000,28 +816,19 @@ function StakeMenu(props) {
                               <span className="loader"></span>
                             )}
                           </td>
-                          <td
-                            style={{ textAlign: "start" }}
-                            scope="col"
-                            width="120"
-                          >
+                          <td style={{ textAlign: "start" }} scope="col" width="120">
                             {props.accountLoading ? (
                               <div
                                 className="eWMWa-D"
                                 style={{
                                   fontSize: "1.25rem",
                                   color: "white",
-                                  lineHeight: "1.5rem",
+                                  lineHeight: "1.5rem"
                                 }}
                               >
                                 <div>
-                                  {parseFloat(
-                                    window.web3Eth.utils.fromWei(
-                                      props.userStakedBalance,
-                                      "mwei"
-                                    )
-                                  ).toLocaleString("en-US", {
-                                    maximumFractionDigits: 0,
+                                  {parseFloat(window.web3Eth.utils.fromWei(props.userStakedBalance, "mwei")).toLocaleString("en-US", {
+                                    maximumFractionDigits: 0
                                   })}{" "}
                                 </div>
                                 <div className="JYkOF">
@@ -1029,7 +836,7 @@ function StakeMenu(props) {
                                     srcWebp={usdt}
                                     style={{
                                       marginLeft: "6px",
-                                      marginRight: "0px",
+                                      marginRight: "0px"
                                     }}
                                     width="24px"
                                     alt=""
@@ -1042,30 +849,15 @@ function StakeMenu(props) {
                           </td>
                         </tr>
                       </thead>
-                      <tbody
-                        className="textBlackSmall"
-                        style={{ color: "white" }}
-                      >
+                      <tbody className="textBlackSmall" style={{ color: "white" }}>
                         <tr>
-                          <td
-                            style={{ textAlign: "start" }}
-                            scope="col"
-                            width="120"
-                          >
+                          <td style={{ textAlign: "start" }} scope="col" width="120">
                             Pool Size
                           </td>
-                          <td
-                            style={{ textAlign: "start" }}
-                            scope="col"
-                            width="120"
-                          >
+                          <td style={{ textAlign: "start" }} scope="col" width="120">
                             Yield / day
                           </td>
-                          <td
-                            style={{ textAlign: "start" }}
-                            scope="col"
-                            width="120"
-                          >
+                          <td style={{ textAlign: "start" }} scope="col" width="120">
                             Your Deposit
                           </td>
                         </tr>
@@ -1082,25 +874,15 @@ function StakeMenu(props) {
                     <div className="eWMWa-D">
                       {props.userEarnedRewardAmount >= 0 ? (
                         <span>
-                          {parseFloat(
-                            window.web3Eth.utils.fromWei(
-                              props.userEarnedRewardAmount,
-                              "Ether"
-                            )
-                          ).toLocaleString("en-US", {
-                            maximumFractionDigits: 2,
+                          {parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount, "Ether")).toLocaleString("en-US", {
+                            maximumFractionDigits: 2
                           })}
                         </span>
                       ) : (
                         <span>TBD</span>
                       )}
                       <div>
-                        <ImgNextGen
-                          srcWebp={fx}
-                          style={{ marginLeft: "6px", marginRight: "15px" }}
-                          width="28px"
-                          alt=""
-                        />
+                        <ImgNextGen srcWebp={fx} style={{ marginLeft: "6px", marginRight: "15px" }} width="28px" alt="" />
                       </div>
                     </div>
                     <div className="iddTJh">Your rewards</div>
@@ -1114,7 +896,7 @@ function StakeMenu(props) {
                           width: "80px",
                           marginRight: "10px",
                           cursor: "not-allowed",
-                          opacity: "0.5",
+                          opacity: "0.5"
                         }}
                       >
                         Claim
@@ -1125,28 +907,18 @@ function StakeMenu(props) {
                         style={{
                           height: "38px",
                           width: "80px",
-                          marginRight: "10px",
+                          marginRight: "10px"
                         }}
                         size="lg"
                         onClick={() => {
-                          props.claimReward(
-                            process.env.REACT_APP_liquiditystakingV1_address
-                          );
+                          props.claimReward(process.env.REACT_APP_liquiditystakingV1_address);
                         }}
                       >
                         <div className="linearGradientText center">Claim</div>
                       </Buttons>
                     )}
                     {props.userUSDTBalance > 0 ? (
-                      <PopupDeposit
-                        userUSDTBalance={props.userUSDTBalance}
-                        userStakedBalance={props.userStakedBalance}
-                        userUSDTStakingAllowance={
-                          props.userUSDTStakingAllowance
-                        }
-                        stake={props.stake}
-                        approve={props.approve}
-                      />
+                      <PopupDeposit userUSDTBalance={props.userUSDTBalance} userStakedBalance={props.userStakedBalance} userUSDTStakingAllowance={props.userUSDTStakingAllowance} stake={props.stake} approve={props.approve} />
                     ) : (
                       <Buttons
                         className="textWhiteLargeButton cell2 center"
@@ -1156,11 +928,10 @@ function StakeMenu(props) {
                           border: "0px",
                           color: "black",
                           padding: "5px 16px",
-                          backgroundImage:
-                            "linear-gradient(90deg, #18eed8 1%, #a6f616 100%)",
+                          backgroundImage: "linear-gradient(90deg, #18eed8 1%, #a6f616 100%)",
                           borderRadius: "22px",
                           cursor: "not-allowed",
-                          opacity: "0.5",
+                          opacity: "0.5"
                         }}
                       >
                         Deposit
@@ -1178,15 +949,12 @@ function StakeMenu(props) {
                   height: "100%",
                   color: "white",
                   minWidth: "300px",
-                  maxWidth: "400px",
+                  maxWidth: "400px"
                 }}
               >
                 <div className="card-body">
                   <div style={{ marginBottom: "80px" }}>
-                    <div
-                      className="float-left textWhite"
-                      style={{ fontSize: "1.25rem", color: "white" }}
-                    >
+                    <div className="float-left textWhite" style={{ fontSize: "1.25rem", color: "white" }}>
                       Liquidity Pool
                     </div>
                     {/* <div className="float-right" style={{ marginLeft: "10px" }}>
@@ -1196,10 +964,7 @@ function StakeMenu(props) {
                                   />
                               </div> */}
                     <Link to="/liquidity" className="exLink0">
-                      <div
-                        className="float-right"
-                        style={{ marginLeft: "10px" }}
-                      >
+                      <div className="float-right" style={{ marginLeft: "10px" }}>
                         <Buttons
                           className="textWhiteLargeButton cell2 center"
                           style={{
@@ -1208,9 +973,8 @@ function StakeMenu(props) {
                             border: "0px",
                             color: "black",
                             padding: "5px 16px",
-                            backgroundImage:
-                              "linear-gradient(90deg, #18eed8 1%, #a6f616 100%)",
-                            borderRadius: "22px",
+                            backgroundImage: "linear-gradient(90deg, #18eed8 1%, #a6f616 100%)",
+                            borderRadius: "22px"
                           }}
                           size="lg"
                         >
@@ -1221,33 +985,21 @@ function StakeMenu(props) {
                   </div>
                   <div>
                     <table>
-                      <thead
-                        className="textBlackSmall"
-                        style={{ color: "white", height: "35px" }}
-                      >
+                      <thead className="textBlackSmall" style={{ color: "white", height: "35px" }}>
                         <tr>
-                          <td
-                            style={{ textAlign: "start" }}
-                            scope="col"
-                            width="120"
-                          >
+                          <td style={{ textAlign: "start" }} scope="col" width="120">
                             {props.blockchainLoading ? (
                               <div
                                 className="eWMWa-D"
                                 style={{
                                   fontSize: "1.25rem",
                                   color: "white",
-                                  lineHeight: "1.5rem",
+                                  lineHeight: "1.5rem"
                                 }}
                               >
                                 <div>
-                                  {parseFloat(
-                                    window.web3Eth.utils.fromWei(
-                                      props.poolSize,
-                                      "mwei"
-                                    )
-                                  ).toLocaleString("en-US", {
-                                    maximumFractionDigits: 0,
+                                  {parseFloat(window.web3Eth.utils.fromWei(props.poolSize, "mwei")).toLocaleString("en-US", {
+                                    maximumFractionDigits: 0
                                   })}{" "}
                                 </div>
                                 <div className="JYkOF">
@@ -1255,7 +1007,7 @@ function StakeMenu(props) {
                                     srcWebp={usdt}
                                     style={{
                                       marginLeft: "6px",
-                                      marginRight: "0px",
+                                      marginRight: "0px"
                                     }}
                                     width="24px"
                                     alt=""
@@ -1266,28 +1018,19 @@ function StakeMenu(props) {
                               <span className="loader"></span>
                             )}
                           </td>
-                          <td
-                            style={{ textAlign: "start" }}
-                            scope="col"
-                            width="120"
-                          >
+                          <td style={{ textAlign: "start" }} scope="col" width="120">
                             {props.blockchainLoading ? (
                               <div
                                 className="eWMWa-D"
                                 style={{
                                   fontSize: "1.25rem",
                                   color: "white",
-                                  lineHeight: "1.5rem",
+                                  lineHeight: "1.5rem"
                                 }}
                               >
                                 <div>
-                                  {parseFloat(
-                                    window.web3Eth.utils.fromWei(
-                                      props.poolRewardRate,
-                                      "Ether"
-                                    ) * 86400
-                                  ).toLocaleString("en-US", {
-                                    maximumFractionDigits: 0,
+                                  {parseFloat(window.web3Eth.utils.fromWei(props.poolRewardRate, "Ether") * 86400).toLocaleString("en-US", {
+                                    maximumFractionDigits: 0
                                   })}
                                 </div>
                                 <div className="JYkOF">
@@ -1295,7 +1038,7 @@ function StakeMenu(props) {
                                     srcWebp={fx}
                                     style={{
                                       marginLeft: "6px",
-                                      marginRight: "0px",
+                                      marginRight: "0px"
                                     }}
                                     width="28px"
                                     alt=""
@@ -1306,28 +1049,19 @@ function StakeMenu(props) {
                               <span className="loader"></span>
                             )}
                           </td>
-                          <td
-                            style={{ textAlign: "start" }}
-                            scope="col"
-                            width="120"
-                          >
+                          <td style={{ textAlign: "start" }} scope="col" width="120">
                             {props.accountLoading ? (
                               <div
                                 className="eWMWa-D"
                                 style={{
                                   fontSize: "1.25rem",
                                   color: "white",
-                                  lineHeight: "1.5rem",
+                                  lineHeight: "1.5rem"
                                 }}
                               >
                                 <div>
-                                  {parseFloat(
-                                    window.web3Eth.utils.fromWei(
-                                      props.userStakedBalance,
-                                      "mwei"
-                                    )
-                                  ).toLocaleString("en-US", {
-                                    maximumFractionDigits: 0,
+                                  {parseFloat(window.web3Eth.utils.fromWei(props.userStakedBalance, "mwei")).toLocaleString("en-US", {
+                                    maximumFractionDigits: 0
                                   })}{" "}
                                 </div>
                                 <div className="JYkOF">
@@ -1335,7 +1069,7 @@ function StakeMenu(props) {
                                     srcWebp={usdt}
                                     style={{
                                       marginLeft: "6px",
-                                      marginRight: "0px",
+                                      marginRight: "0px"
                                     }}
                                     width="24px"
                                     alt=""
@@ -1348,30 +1082,15 @@ function StakeMenu(props) {
                           </td>
                         </tr>
                       </thead>
-                      <tbody
-                        className="textBlackSmall"
-                        style={{ color: "white" }}
-                      >
+                      <tbody className="textBlackSmall" style={{ color: "white" }}>
                         <tr>
-                          <td
-                            style={{ textAlign: "start" }}
-                            scope="col"
-                            width="120"
-                          >
+                          <td style={{ textAlign: "start" }} scope="col" width="120">
                             Pool Size
                           </td>
-                          <td
-                            style={{ textAlign: "start" }}
-                            scope="col"
-                            width="120"
-                          >
+                          <td style={{ textAlign: "start" }} scope="col" width="120">
                             Yield / day
                           </td>
-                          <td
-                            style={{ textAlign: "start" }}
-                            scope="col"
-                            width="120"
-                          >
+                          <td style={{ textAlign: "start" }} scope="col" width="120">
                             Your Deposit
                           </td>
                         </tr>
@@ -1388,25 +1107,15 @@ function StakeMenu(props) {
                     <div className="eWMWa-D">
                       {props.userEarnedRewardAmount >= 0 ? (
                         <span>
-                          {parseFloat(
-                            window.web3Eth.utils.fromWei(
-                              props.userEarnedRewardAmount,
-                              "Ether"
-                            )
-                          ).toLocaleString("en-US", {
-                            maximumFractionDigits: 2,
+                          {parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount, "Ether")).toLocaleString("en-US", {
+                            maximumFractionDigits: 2
                           })}
                         </span>
                       ) : (
                         <span>TBD</span>
                       )}
                       <div>
-                        <ImgNextGen
-                          srcWebp={fx}
-                          style={{ marginLeft: "6px", marginRight: "15px" }}
-                          width="28px"
-                          alt=""
-                        />
+                        <ImgNextGen srcWebp={fx} style={{ marginLeft: "6px", marginRight: "15px" }} width="28px" alt="" />
                       </div>
                     </div>
                     <div className="iddTJh">Your rewards</div>
@@ -1420,7 +1129,7 @@ function StakeMenu(props) {
                           width: "80px",
                           marginRight: "10px",
                           cursor: "not-allowed",
-                          opacity: "0.5",
+                          opacity: "0.5"
                         }}
                       >
                         Claim
@@ -1431,29 +1140,18 @@ function StakeMenu(props) {
                         style={{
                           height: "38px",
                           width: "80px",
-                          marginRight: "10px",
+                          marginRight: "10px"
                         }}
                         size="lg"
                         onClick={() => {
-                          props.claimReward(
-                            process.env
-                              .REACT_APP_liquiditystakingV1_address_second
-                          );
+                          props.claimReward(process.env.REACT_APP_liquiditystakingV1_address_second);
                         }}
                       >
                         <div className="linearGradientText center">Claim</div>
                       </Buttons>
                     )}
                     {props.userUSDTBalance > 0 ? (
-                      <PopupDeposit
-                        userUSDTBalance={props.userUSDTBalance}
-                        userStakedBalance={props.userStakedBalance}
-                        userUSDTStakingAllowance={
-                          props.userUSDTStakingAllowance
-                        }
-                        stake={props.stake}
-                        approve={props.approve}
-                      />
+                      <PopupDeposit userUSDTBalance={props.userUSDTBalance} userStakedBalance={props.userStakedBalance} userUSDTStakingAllowance={props.userUSDTStakingAllowance} stake={props.stake} approve={props.approve} />
                     ) : (
                       <Buttons
                         className="textWhiteLargeButton cell2 center"
@@ -1463,11 +1161,10 @@ function StakeMenu(props) {
                           border: "0px",
                           color: "black",
                           padding: "5px 16px",
-                          backgroundImage:
-                            "linear-gradient(90deg, #18eed8 1%, #a6f616 100%)",
+                          backgroundImage: "linear-gradient(90deg, #18eed8 1%, #a6f616 100%)",
                           borderRadius: "22px",
                           cursor: "not-allowed",
-                          opacity: "0.5",
+                          opacity: "0.5"
                         }}
                       >
                         Deposit
@@ -1482,83 +1179,51 @@ function StakeMenu(props) {
       </MediaQuery>
 
       <MediaQuery minWidth={981}>
-        <div
-          className="mr-auto"
-          style={{ marginTop: "40px", color: "white", maxWidth: "400px" }}
-        >
+        <div className="mr-auto" style={{ marginTop: "40px", color: "white", maxWidth: "400px" }}>
           <div className="card-body">
-            <div
-              className="textWhite mb-1"
-              style={{ fontSize: "1.5rem", color: "white" }}
-            >
+            <div className="textWhite mb-1" style={{ fontSize: "1.5rem", color: "white" }}>
               <b>Epoch</b>
             </div>
-            <div style={{ color: "grey" }}>Each Epoch last 28 days.</div>
+            <div style={{ color: "grey" }}>Each Epoch lasts 28 days.</div>
           </div>
         </div>
       </MediaQuery>
 
       <MediaQuery maxWidth={980}>
-        <div
-          className="mr-auto"
-          style={{ marginTop: "30px", color: "white", maxWidth: "400px" }}
-        >
+        <div className="mr-auto" style={{ marginTop: "30px", color: "white", maxWidth: "400px" }}>
           <div className="card-body">
-            <div
-              className="textWhite mb-1"
-              style={{ fontSize: "1.5rem", color: "white" }}
-            >
+            <div className="textWhite mb-1" style={{ fontSize: "1.5rem", color: "white" }}>
               <b>Epoch</b>
             </div>
-            <div style={{ color: "grey" }}>Each Epoch last 28 days.</div>
+            <div style={{ color: "grey" }}>Each Epoch lasts 28 days.</div>
           </div>
         </div>
       </MediaQuery>
 
       <MediaQuery minWidth={981}>
         <div className="cCeSgm">
-          <div
-            className="card cardbody"
-            style={{ marginBottom: "12px", height: "180px", color: "white" }}
-          >
+          <div className="card cardbody" style={{ marginBottom: "12px", height: "180px", color: "white" }}>
             <div className="card-body">
               <div style={{ marginBottom: "80px" }}>
-                <div
-                  className="float-left textBlackLarge"
-                  style={{ fontSize: "1.25rem", color: "white" }}
-                >
+                <div className="float-left textBlackLarge" style={{ fontSize: "1.25rem", color: "white" }}>
                   Countdown
                 </div>
               </div>
               <div>
                 <table>
-                  <thead
-                    className="textBlackSmall"
-                    style={{ color: "white", height: "35px" }}
-                  >
+                  <thead className="textBlackSmall" style={{ color: "white", height: "35px" }}>
                     <tr>
-                      <td
-                        style={{ textAlign: "start" }}
-                        scope="col"
-                        width="120"
-                      >
+                      <td style={{ textAlign: "start" }} scope="col" width="120">
                         {props.blockchainLoading ? (
                           <div
                             className="eWMWa-D"
                             style={{
                               fontSize: "1.25rem",
                               color: "white",
-                              lineHeight: "1.5rem",
+                              lineHeight: "1.5rem"
                             }}
                           >
-                            <CountdownTimer
-                              targetDate={
-                                NOW_IN_MS +
-                                parseInt(
-                                  props.poolTimeRemainingInCurrentEpoch * 1000
-                                )
-                              }
-                            />
+                            <CountdownTimer targetDate={NOW_IN_MS + parseInt(props.poolTimeRemainingInCurrentEpoch * 1000)} />
                           </div>
                         ) : (
                           <span className="loader"></span>
@@ -1568,20 +1233,8 @@ function StakeMenu(props) {
                   </thead>
                   <tbody className="textBlackSmall" style={{ color: "white" }}>
                     <tr>
-                      <td
-                        style={{ textAlign: "start" }}
-                        scope="col"
-                        width="120"
-                      >
-                        until the next epoch on{" "}
-                        {props.blockchainLoading ? (
-                          <span>
-                            {convertTimeStamp(props.poolEndOfCurrentEpoch)}
-                          </span>
-                        ) : (
-                          <span>-</span>
-                        )}
-                        .
+                      <td style={{ textAlign: "start" }} scope="col" width="120">
+                        until the next epoch on {props.blockchainLoading ? <span>{convertTimeStamp(props.poolEndOfCurrentEpoch)}</span> : <span>-</span>}.
                       </td>
                     </tr>
                   </tbody>
@@ -1590,48 +1243,30 @@ function StakeMenu(props) {
             </div>
           </div>
           <div>
-            <div
-              className="mr-auto card cardbody"
-              style={{ marginBottom: "12px", height: "180px", color: "white" }}
-            >
+            <div className="mr-auto card cardbody" style={{ marginBottom: "12px", height: "180px", color: "white" }}>
               <div className="card-body">
                 <div style={{ marginBottom: "80px" }}>
-                  <div
-                    className="float-left textBlackLarge"
-                    style={{ fontSize: "1.25rem", color: "white" }}
-                  >
+                  <div className="float-left textBlackLarge" style={{ fontSize: "1.25rem", color: "white" }}>
                     Reward Pool
                   </div>
                 </div>
                 <div className="center">
                   <table>
-                    <thead
-                      className="textBlackSmall"
-                      style={{ color: "white", height: "35px" }}
-                    >
+                    <thead className="textBlackSmall" style={{ color: "white", height: "35px" }}>
                       <tr>
-                        <td
-                          style={{ textAlign: "start" }}
-                          scope="col"
-                          width="120"
-                        >
+                        <td style={{ textAlign: "start" }} scope="col" width="120">
                           {props.blockchainLoading ? (
                             <div
                               className="eWMWa-D"
                               style={{
                                 fontSize: "1.25rem",
                                 color: "white",
-                                lineHeight: "1.5rem",
+                                lineHeight: "1.5rem"
                               }}
                             >
                               <div>
-                                {parseFloat(
-                                  window.web3Eth.utils.fromWei(
-                                    props.poolRewardRate,
-                                    "Ether"
-                                  ) * props.poolEpochInterval
-                                ).toLocaleString("en-US", {
-                                  maximumFractionDigits: 3,
+                                {parseFloat(window.web3Eth.utils.fromWei(props.poolRewardRate, "Ether") * props.poolEpochInterval).toLocaleString("en-US", {
+                                  maximumFractionDigits: 3
                                 })}{" "}
                               </div>
                               <div className="JYkOF">
@@ -1639,7 +1274,7 @@ function StakeMenu(props) {
                                   srcWebp={fx}
                                   style={{
                                     marginLeft: "6px",
-                                    marginRight: "0px",
+                                    marginRight: "0px"
                                   }}
                                   width="28px"
                                   alt=""
@@ -1652,16 +1287,9 @@ function StakeMenu(props) {
                         </td>
                       </tr>
                     </thead>
-                    <tbody
-                      className="textBlackSmall"
-                      style={{ color: "white" }}
-                    >
+                    <tbody className="textBlackSmall" style={{ color: "white" }}>
                       <tr>
-                        <td
-                          style={{ textAlign: "start" }}
-                          scope="col"
-                          width="120"
-                        >
+                        <td style={{ textAlign: "start" }} scope="col" width="120">
                           will be distributed this epoch.
                         </td>
                       </tr>
@@ -1682,24 +1310,18 @@ function StakeMenu(props) {
             height: "180px",
             minWidth: "300px",
             maxWidth: "400px",
-            color: "white",
+            color: "white"
           }}
         >
           <div className="card-body">
             <div style={{ marginBottom: "80px" }}>
-              <div
-                className="float-left textBlackLarge"
-                style={{ fontSize: "1.25rem", color: "white" }}
-              >
+              <div className="float-left textBlackLarge" style={{ fontSize: "1.25rem", color: "white" }}>
                 Countdown
               </div>
             </div>
             <div>
               <table>
-                <thead
-                  className="textBlackSmall"
-                  style={{ color: "white", height: "35px" }}
-                >
+                <thead className="textBlackSmall" style={{ color: "white", height: "35px" }}>
                   <tr>
                     <td style={{ textAlign: "start" }} scope="col" width="120">
                       {props.blockchainLoading ? (
@@ -1708,17 +1330,10 @@ function StakeMenu(props) {
                           style={{
                             fontSize: "1.25rem",
                             color: "white",
-                            lineHeight: "1.5rem",
+                            lineHeight: "1.5rem"
                           }}
                         >
-                          <CountdownTimer
-                            targetDate={
-                              NOW_IN_MS +
-                              parseInt(
-                                props.poolTimeRemainingInCurrentEpoch * 1000
-                              )
-                            }
-                          />
+                          <CountdownTimer targetDate={NOW_IN_MS + parseInt(props.poolTimeRemainingInCurrentEpoch * 1000)} />
                         </div>
                       ) : (
                         <span className="loader"></span>
@@ -1729,15 +1344,7 @@ function StakeMenu(props) {
                 <tbody className="textBlackSmall" style={{ color: "white" }}>
                   <tr>
                     <td style={{ textAlign: "start" }} scope="col" width="120">
-                      until the next epoch on{" "}
-                      {props.blockchainLoading ? (
-                        <span>
-                          {convertTimeStamp(props.poolEndOfCurrentEpoch)}
-                        </span>
-                      ) : (
-                        <span>-</span>
-                      )}
-                      .
+                      until the next epoch on {props.blockchainLoading ? <span>{convertTimeStamp(props.poolEndOfCurrentEpoch)}</span> : <span>-</span>}.
                     </td>
                   </tr>
                 </tbody>
@@ -1752,7 +1359,7 @@ function StakeMenu(props) {
             height: "180px",
             minWidth: "300px",
             maxWidth: "400px",
-            color: "white",
+            color: "white"
           }}
         >
           <div className="card-body">
@@ -1761,10 +1368,7 @@ function StakeMenu(props) {
             </div>
             <div className="center">
               <table>
-                <thead
-                  className="textBlackSmall"
-                  style={{ color: "white", height: "35px" }}
-                >
+                <thead className="textBlackSmall" style={{ color: "white", height: "35px" }}>
                   <tr>
                     <td style={{ textAlign: "start" }} scope="col" width="120">
                       {props.blockchainLoading ? (
@@ -1773,26 +1377,16 @@ function StakeMenu(props) {
                           style={{
                             fontSize: "1.25rem",
                             color: "white",
-                            lineHeight: "1.5rem",
+                            lineHeight: "1.5rem"
                           }}
                         >
                           <div>
-                            {parseFloat(
-                              window.web3Eth.utils.fromWei(
-                                props.poolRewardRate,
-                                "Ether"
-                              ) * props.poolEpochInterval
-                            ).toLocaleString("en-US", {
-                              maximumFractionDigits: 3,
+                            {parseFloat(window.web3Eth.utils.fromWei(props.poolRewardRate, "Ether") * props.poolEpochInterval).toLocaleString("en-US", {
+                              maximumFractionDigits: 3
                             })}{" "}
                           </div>
                           <div className="JYkOF">
-                            <ImgNextGen
-                              srcWebp={fx}
-                              style={{ marginLeft: "6px", marginRight: "0px" }}
-                              width="28px"
-                              alt=""
-                            />
+                            <ImgNextGen srcWebp={fx} style={{ marginLeft: "6px", marginRight: "0px" }} width="28px" alt="" />
                           </div>
                         </div>
                       ) : (
@@ -1821,50 +1415,28 @@ function StakeMenu(props) {
           height: "100%",
           minWidth: "300px",
           width: "100%",
-          color: "white",
+          color: "white"
         }}
       >
         <div className="card-body">
           <ul className="gradient-text" style={{ marginBottom: "0px" }}>
-            <div
-              className="gradient-text"
-              style={{ marginTop: "0px", fontSize: "18px" }}
-            >
+            <div className="gradient-text" style={{ marginTop: "0px", fontSize: "18px" }}>
               Things to note:
             </div>
-            <li
-              className="gradient-text"
-              style={{ marginTop: "15px", fontSize: "15px" }}
-            >
-              ONLY private blockchain wallets can participate. Please do not
-              send funds from an exchange.
+            <li className="gradient-text" style={{ marginTop: "15px", fontSize: "15px" }}>
+              ONLY private blockchain wallets can participate. Please do not send funds from an exchange.
             </li>
-            <li
-              className="gradient-text"
-              style={{ marginTop: "5px", fontSize: "15px" }}
-            >
-              There are no principal guarantees for this version of the Maker
-              Liquidity Pool.
+            <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
+              There are no principal guarantees for this version of the Maker Liquidity Pool.
             </li>
-            <li
-              className="gradient-text"
-              style={{ marginTop: "5px", fontSize: "15px" }}
-            >
+            <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
               $ETH is required to pay the gas fees for withdrawals.
             </li>
-            <li
-              className="gradient-text"
-              style={{ marginTop: "5px", fontSize: "15px" }}
-            >
-              Participants need to request for withdrawals and claim their
-              rewards manually on maker.marginx.io.
+            <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
+              Participants need to request for withdrawals and claim their rewards manually on maker.marginx.io.
             </li>
-            <li
-              className="gradient-text"
-              style={{ marginTop: "5px", fontSize: "15px" }}
-            >
-              MarginX is not be liable for any loss of funds due to user’s
-              negligence.
+            <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
+              MarginX is not be liable for any loss of funds due to user’s negligence.
             </li>
           </ul>
         </div>

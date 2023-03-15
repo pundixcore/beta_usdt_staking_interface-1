@@ -755,7 +755,7 @@ function StakeMenu(props) {
           <div className="textWhite mb-1" style={{ fontSize: "1.5rem", color: "white" }}>
             <b>Liquidity Pool Incentives</b>
           </div>
-          <div style={{ color: "grey" }}>Earn rewards for providing liquidity to verified Market Makers & participating in AI Bots Trading on MarginX.</div>
+          <div style={{ color: "grey" }}>Share the PnL and/or earn rewards for providing liquidity to verified Market Makers & participating in AI Bots Trading on MarginX.</div>
         </div>
       </div>
 
@@ -1145,12 +1145,10 @@ function StakeMenu(props) {
                             lineHeight: "1.5rem"
                           }}
                         >
-                          <div>
-                            {parseFloat(window.web3Eth.utils.fromWei(props.poolRewardRate_second, "Ether") * 86400).toLocaleString("en-US", {
+                          <div>- %{/* {parseFloat(window.web3Eth.utils.fromWei(props.poolRewardRate_second, "Ether") * 86400).toLocaleString("en-US", {
                               maximumFractionDigits: 0
-                            })}
-                          </div>
-                          <div className="JYkOF">
+                            })} */}</div>
+                          {/* <div className="JYkOF">
                             <ImgNextGen
                               srcWebp={fx}
                               style={{
@@ -1160,7 +1158,7 @@ function StakeMenu(props) {
                               width="28px"
                               alt=""
                             />
-                          </div>
+                          </div> */}
                         </div>
                       ) : (
                         <span className="loader"></span>
@@ -1174,7 +1172,7 @@ function StakeMenu(props) {
                       Pool Size
                     </td>
                     <td style={{ textAlign: "start" }} scope="col" width="120">
-                      Yield / day
+                      This week's APR {/* Yield / day */}
                     </td>
                   </tr>
                 </tbody>
@@ -1222,12 +1220,10 @@ function StakeMenu(props) {
                             lineHeight: "1.5rem"
                           }}
                         >
-                          <div>
-                            {props.APR_second.toLocaleString("en-US", {
+                          <div>- %{/* {props.APR_second.toLocaleString("en-US", {
                               maximumFractionDigits: 2
                             })}{" "}
-                            %
-                          </div>
+                            % */}</div>
                         </div>
                       ) : (
                         <span className="loader"></span>
@@ -1241,7 +1237,7 @@ function StakeMenu(props) {
                       Your Deposit
                     </td>
                     <td style={{ textAlign: "start" }} scope="col" width="120">
-                      APR
+                      Last epoch's APR
                     </td>
                   </tr>
                 </tbody>
@@ -1334,7 +1330,7 @@ function StakeMenu(props) {
             <div className="textWhite mb-1" style={{ fontSize: "1.5rem", color: "white" }}>
               <b>Epoch</b>
             </div>
-            <div style={{ color: "grey" }}>Each Epoch last 28 days.</div>
+            <div style={{ color: "grey" }}>Each Epoch lasts 28 days.</div>
           </div>
         </div>
       </MediaQuery>
@@ -1345,7 +1341,7 @@ function StakeMenu(props) {
             <div className="textWhite mb-1" style={{ fontSize: "1.5rem", color: "white" }}>
               <b>Epoch</b>
             </div>
-            <div style={{ color: "grey" }}>Each Epoch last 28 days.</div>
+            <div style={{ color: "grey" }}>Each Epoch lasts 28 days.</div>
           </div>
         </div>
       </MediaQuery>
@@ -1392,7 +1388,7 @@ function StakeMenu(props) {
               </div>
             </div>
           </div>
-          <div>
+          {/* <div>
             <div className="mr-auto card cardbody" style={{ marginBottom: "12px", height: "180px", color: "white" }}>
               <div className="card-body">
                 <div style={{ marginBottom: "80px" }}>
@@ -1448,7 +1444,7 @@ function StakeMenu(props) {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </MediaQuery>
 
@@ -1502,7 +1498,7 @@ function StakeMenu(props) {
             </div>
           </div>
         </div>
-        <div
+        {/* <div
           className="mr-auto card cardbody"
           style={{
             marginBottom: "16px",
@@ -1555,7 +1551,7 @@ function StakeMenu(props) {
               </table>
             </div>
           </div>
-        </div>
+        </div> */}
       </MediaQuery>
 
       <div
@@ -1583,7 +1579,7 @@ function StakeMenu(props) {
               $ETH is required to pay the gas fees for withdrawals.
             </li>
             <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
-              Participants need to request for withdrawals and claim their rewards manually on maker.marginx.io.
+              Participants need to request for withdrawals manually on maker.marginx.io.
             </li>
             <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
               MarginX is not liable for any loss of funds due to user’s negligence.
