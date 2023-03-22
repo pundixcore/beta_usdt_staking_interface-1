@@ -190,10 +190,10 @@ function StakeMenu(props) {
                                   lineHeight: "1.5rem"
                                 }}
                               >
-                                {parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount, "Ether")) + parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount_second, "Ether")) >= //Issei
+                                {parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount, "Ether")) + parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount_second, "Ether")) + parseFloat(window.web3Fx.utils.fromWei(props.userEarnedRewardAmount_third, "Ether")) >= //Issei
                                 0 ? (
                                   <div>
-                                    {(parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount, "Ether")) + parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount_second, "Ether"))).toLocaleString("en-US", {
+                                    {(parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount, "Ether")) + parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount_second, "Ether")) + parseFloat(window.web3Fx.utils.fromWei(props.userEarnedRewardAmount_third, "Ether"))).toLocaleString("en-US", {
                                       maximumFractionDigits: 2
                                     })}{" "}
                                   </div>
@@ -214,7 +214,7 @@ function StakeMenu(props) {
                       <ImgNextGen srcWebp={fx} style={{ marginLeft: "6px", marginRight: "0px" }} width="28px" alt="" />
                     </div>
                   </div>
-                  {parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount, "Ether")) + parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount_second, "Ether")) == 0 ? (
+                  {parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount, "Ether")) + parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount_second, "Ether")) + parseFloat(window.web3Fx.utils.fromWei(props.userEarnedRewardAmount_third, "Ether")) == 0 ? (
                     <Buttons
                       className="buttonGradientBorder cell3 center"
                       style={{
@@ -263,7 +263,7 @@ function StakeMenu(props) {
                             }}
                           >
                             <div>
-                              {parseFloat(window.web3Eth.utils.fromWei(props.userUSDTBalance, "mwei")).toLocaleString("en-US", {
+                              {(parseFloat(window.web3Eth.utils.fromWei(props.userUSDTBalance, "mwei")) + parseFloat(window.web3Fx.utils.fromWei(props.userUSDTBalance_third, "mwei"))).toLocaleString("en-US", {
                                 maximumFractionDigits: 0
                               })}{" "}
                             </div>
@@ -294,7 +294,7 @@ function StakeMenu(props) {
                             }}
                           >
                             <div>
-                              {(parseFloat(window.web3Eth.utils.fromWei(props.userStakedBalance, "mwei")) + parseFloat(window.web3Eth.utils.fromWei(props.userStakedBalance_second, "mwei"))).toLocaleString("en-US", {
+                              {(parseFloat(window.web3Eth.utils.fromWei(props.userStakedBalance, "mwei")) + parseFloat(window.web3Eth.utils.fromWei(props.userStakedBalance_second, "mwei")) + parseFloat(window.web3Fx.utils.fromWei(props.userStakedBalance_third, "mwei"))).toLocaleString("en-US", {
                                 maximumFractionDigits: 0
                               })}{" "}
                             </div>
@@ -330,6 +330,12 @@ function StakeMenu(props) {
                                 parseFloat(
                                   window.web3Eth.utils.fromWei(
                                     props.userWithdrawableAmount_second, //Issei
+                                    "mwei"
+                                  )
+                                ) +
+                                parseFloat(
+                                  window.web3Fx.utils.fromWei(
+                                    props.userWithdrawableAmount_third, //Issei
                                     "mwei"
                                   )
                                 )
@@ -575,7 +581,8 @@ function StakeMenu(props) {
                                     props.userEarnedRewardAmount_second, //Issei
                                     "Ether"
                                   )
-                                ) >= //issei
+                                ) +
+                                parseFloat(window.web3Fx.utils.fromWei(props.userEarnedRewardAmount_third, "Ether")) >= //issei
                               0 ? (
                                 <div>
                                   {(
@@ -585,7 +592,8 @@ function StakeMenu(props) {
                                         props.userEarnedRewardAmount_second, //Issei
                                         "Ether"
                                       )
-                                    )
+                                    ) +
+                                    parseFloat(window.web3Fx.utils.fromWei(props.userEarnedRewardAmount_third, "Ether"))
                                   ).toLocaleString("en-US", {
                                     maximumFractionDigits: 2
                                   })}{" "}
@@ -613,7 +621,8 @@ function StakeMenu(props) {
                       props.userEarnedRewardAmount_second, //Issei
                       "Ether"
                     )
-                  ) ==
+                  ) +
+                  parseFloat(window.web3Fx.utils.fromWei(props.userEarnedRewardAmount_third, "Ether")) ==
                 0 ? (
                   <Buttons
                     className="buttonGradientBorder cell3 center"
@@ -632,7 +641,7 @@ function StakeMenu(props) {
                     style={{ height: "38px", width: "80px" }}
                     size="lg"
                     onClick={() => {
-                      props.claimReward(process.env.REACT_APP_claimRewards_allPool_address);
+                      props.claimRewardAll();
                     }}
                   >
                     <div className="linearGradientText center">Claim</div>
@@ -663,7 +672,7 @@ function StakeMenu(props) {
                           }}
                         >
                           <div>
-                            {parseFloat(window.web3Eth.utils.fromWei(props.userUSDTBalance, "mwei")).toLocaleString("en-US", {
+                            {(parseFloat(window.web3Eth.utils.fromWei(props.userUSDTBalance, "mwei")) + parseFloat(window.web3Fx.utils.fromWei(props.userUSDTBalance_third, "mwei"))).toLocaleString("en-US", {
                               maximumFractionDigits: 0
                             })}{" "}
                           </div>
@@ -693,7 +702,8 @@ function StakeMenu(props) {
                                   props.userStakedBalance_second, //Issei
                                   "mwei"
                                 )
-                              )
+                              ) +
+                              parseFloat(window.web3Fx.utils.fromWei(props.userStakedBalance_third, "mwei"))
                             ).toLocaleString("en-US", {
                               maximumFractionDigits: 0
                             })}{" "}
@@ -717,7 +727,16 @@ function StakeMenu(props) {
                           }}
                         >
                           <div>
-                            {(parseFloat(window.web3Eth.utils.fromWei(props.userWithdrawableAmount, "mwei")) + parseFloat(window.web3Eth.utils.fromWei(props.userWithdrawableAmount_second, "mwei"))).toLocaleString("en-US", {
+                            {(
+                              parseFloat(window.web3Eth.utils.fromWei(props.userWithdrawableAmount, "mwei")) +
+                              parseFloat(window.web3Eth.utils.fromWei(props.userWithdrawableAmount_second, "mwei")) +
+                              parseFloat(
+                                window.web3Fx.utils.fromWei(
+                                  props.userWithdrawableAmount_third, //Issei
+                                  "mwei"
+                                )
+                              )
+                            ).toLocaleString("en-US", {
                               maximumFractionDigits: 0
                             })}{" "}
                           </div>
@@ -1017,15 +1036,17 @@ function StakeMenu(props) {
                     marginRight: "10px"
                   }}
                   size="lg"
-                  onClick={() => {
-                    props.claimReward(process.env.REACT_APP_liquiditystakingV1_address);
+                  onClick={async () => {
+                    console.log("1st claim button clicked");
+                    //await props.switchNetwork(process.env.REACT_APP_chainid);
+                    props.claimReward(process.env.REACT_APP_liquiditystakingV1_address, process.env.REACT_APP_chainid, process.env.REACT_APP_networkid);
                   }}
                 >
                   <div className="linearGradientText center">Claim</div>
                 </Buttons>
               )}
               {props.userUSDTBalance > 0 && parseInt(props.remainingPoolDepositedSize) > 0 ? (
-                <PopupDeposit poolSize={props.poolSize} maxPoolSize={props.maxPoolSize} remainingPoolDepositedSize={props.remainingPoolDepositedSize} userUSDTBalance={props.userUSDTBalance} userStakedBalance={props.userStakedBalance} userUSDTStakingAllowance={props.userUSDTStakingAllowance} stake={props.stake} approve={props.approve} pool_id={1} />
+                <PopupDeposit poolSize={props.poolSize} maxPoolSize={props.maxPoolSize} remainingPoolDepositedSize={props.remainingPoolDepositedSize} userUSDTBalance={props.userUSDTBalance} userStakedBalance={props.userStakedBalance} userUSDTStakingAllowance={props.userUSDTStakingAllowance} stake={props.stake} approve={props.approve} pool_id={1} connectMetamask={props.connectMetamask} switchNetwork={props.switchNetwork} />
               ) : (
                 <Buttons
                   className="textWhiteLargeButton cell2 center"
@@ -1289,15 +1310,296 @@ function StakeMenu(props) {
                     marginRight: "10px"
                   }}
                   size="lg"
-                  onClick={() => {
-                    props.claimReward(process.env.REACT_APP_liquiditystakingV1_address_second);
+                  onClick={async () => {
+                    console.log("2nd claim button clicked");
+                    //await props.switchNetwork(process.env.REACT_APP_chainid);
+                    props.claimReward(process.env.REACT_APP_liquiditystakingV1_address_second, process.env.REACT_APP_chainid, process.env.REACT_APP_networkid);
+                    console.log("2nd claim button clicked finished");
                   }}
                 >
                   <div className="linearGradientText center">Claim</div>
                 </Buttons>
               )}
               {props.userUSDTBalance > 0 && parseInt(props.remainingPoolDepositedSize_second) > 0 ? (
-                <PopupDeposit poolSize={props.poolSize_second} maxPoolSize={props.maxPoolSize_second} remainingPoolDepositedSize={props.remainingPoolDepositedSize_second} userUSDTBalance={props.userUSDTBalance} userStakedBalance={props.userStakedBalance_second} userUSDTStakingAllowance={props.userUSDTStakingAllowance_second} stake={props.stake} approve={props.approve} pool_id={2} />
+                <PopupDeposit poolSize={props.poolSize_second} maxPoolSize={props.maxPoolSize_second} remainingPoolDepositedSize={props.remainingPoolDepositedSize_second} userUSDTBalance={props.userUSDTBalance} userStakedBalance={props.userStakedBalance_second} userUSDTStakingAllowance={props.userUSDTStakingAllowance_second} stake={props.stake} approve={props.approve} pool_id={2} connectMetamask={props.connectMetamask} switchNetwork={props.switchNetwork} />
+              ) : (
+                <Buttons
+                  className="textWhiteLargeButton cell2 center"
+                  style={{
+                    height: "40px",
+                    width: "80px",
+                    border: "0px",
+                    color: "black",
+                    padding: "5px 16px",
+                    backgroundImage: "linear-gradient(90deg, #18eed8 1%, #a6f616 100%)",
+                    borderRadius: "22px",
+                    cursor: "not-allowed",
+                    opacity: "0.5"
+                  }}
+                >
+                  Deposit
+                </Buttons>
+              )}
+            </div>
+          </div>
+        ) : null}
+      </div>
+      {/* </div>
+        </HorizontalScroll>
+      </MediaQuery> */}
+
+      <div className="lkBtSA" style={{ borderRadius: "20px" }}>
+        {/* <Link to="/liquidity" className='exLink0'> */}
+        <div
+          className="card cardbody"
+          style={{
+            height: "100%",
+            color: "white",
+            minWidth: "300px",
+            maxWidth: "490px"
+          }}
+        >
+          <div className="card-body">
+            <div style={{ marginBottom: "80px" }}>
+              <div className="float-left textWhite" style={{ fontSize: "1.25rem", color: "white" }}>
+                Epoch3 Pool
+              </div>
+              {/* <div className="float-right" style={{ marginLeft: "10px" }}>
+                                  <ImgNextGen
+                                      srcWebp={usdt}
+                                      width="32px" height="32px" alt=""
+                                  />
+                              </div> */}
+              <Link
+                to={{
+                  pathname: "/liquidity",
+                  state: { from: "third_liquidity_pool" }
+                }}
+                className="exLink0"
+              >
+                <div className="float-right" style={{ marginLeft: "10px" }}>
+                  <Buttons
+                    className="textWhiteLargeButton cell2 center"
+                    style={{
+                      height: "35px",
+                      width: "100%",
+                      border: "0px",
+                      color: "black",
+                      padding: "5px 16px",
+                      backgroundImage: "linear-gradient(90deg, #18eed8 1%, #a6f616 100%)",
+                      borderRadius: "22px"
+                    }}
+                    size="lg"
+                  >
+                    More Info
+                  </Buttons>
+                </div>
+              </Link>
+            </div>
+            <div>
+              <table>
+                <thead className="textBlackSmall" style={{ color: "white", height: "35px" }}>
+                  <tr>
+                    <td style={{ textAlign: "start" }} scope="col" width="120">
+                      {props.blockchainLoading ? (
+                        <div
+                          className="eWMWa-D"
+                          style={{
+                            fontSize: "1.25rem",
+                            color: "white",
+                            lineHeight: "1.5rem"
+                          }}
+                        >
+                          <div>
+                            {parseFloat(window.web3Fx.utils.fromWei(props.poolSize_third, "mwei")).toLocaleString("en-US", {
+                              maximumFractionDigits: 0
+                            })}{" "}
+                            /{" "}
+                            {parseFloat(window.web3Fx.utils.fromWei(props.maxPoolSize_third, "mwei")).toLocaleString("en-US", {
+                              maximumFractionDigits: 0
+                            })}
+                          </div>
+                          <div className="JYkOF">
+                            <ImgNextGen
+                              srcWebp={usdt}
+                              style={{
+                                marginLeft: "6px",
+                                marginRight: "0px"
+                              }}
+                              width="24px"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                      ) : (
+                        <span className="loader"></span>
+                      )}
+                    </td>
+                    <td style={{ textAlign: "start" }} scope="col" width="120">
+                      {props.blockchainLoading ? (
+                        <div
+                          className="eWMWa-D"
+                          style={{
+                            fontSize: "1.25rem",
+                            color: "white",
+                            lineHeight: "1.5rem"
+                          }}
+                        >
+                          <div>- %{/* {parseFloat(window.web3Eth.utils.fromWei(props.poolRewardRate_second, "Ether") * 86400).toLocaleString("en-US", {
+                              maximumFractionDigits: 0
+                            })} */}</div>
+                          {/* <div className="JYkOF">
+                            <ImgNextGen
+                              srcWebp={fx}
+                              style={{
+                                marginLeft: "6px",
+                                marginRight: "0px"
+                              }}
+                              width="28px"
+                              alt=""
+                            />
+                          </div> */}
+                        </div>
+                      ) : (
+                        <span className="loader"></span>
+                      )}
+                    </td>
+                  </tr>
+                </thead>
+                <tbody className="textBlackSmall" style={{ color: "white" }}>
+                  <tr>
+                    <td style={{ textAlign: "start" }} scope="col" width="120">
+                      Pool Size
+                    </td>
+                    <td style={{ textAlign: "start" }} scope="col" width="120">
+                      This week's APR {/* Yield / day */}
+                    </td>
+                  </tr>
+                </tbody>
+
+                <thead className="textBlackSmall" style={{ color: "white", height: "35px" }}>
+                  <tr>
+                    <td style={{ textAlign: "start" }} scope="col" width="120">
+                      {props.accountLoading ? (
+                        <div
+                          className="eWMWa-D"
+                          style={{
+                            fontSize: "1.25rem",
+                            color: "white",
+                            lineHeight: "1.5rem"
+                          }}
+                        >
+                          <div>
+                            {parseFloat(window.web3Fx.utils.fromWei(props.userStakedBalance_third, "mwei")).toLocaleString("en-US", {
+                              maximumFractionDigits: 0
+                            })}{" "}
+                          </div>
+                          <div className="JYkOF">
+                            <ImgNextGen
+                              srcWebp={usdt}
+                              style={{
+                                marginLeft: "6px",
+                                marginRight: "0px"
+                              }}
+                              width="24px"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                      ) : (
+                        <span>-</span>
+                      )}
+                    </td>
+                    <td style={{ textAlign: "start" }} scope="col" width="120">
+                      {props.blockchainLoading ? (
+                        <div
+                          className="eWMWa-D"
+                          style={{
+                            fontSize: "1.25rem",
+                            color: "white",
+                            lineHeight: "1.5rem"
+                          }}
+                        >
+                          <div>- %{/* {props.APR_second.toLocaleString("en-US", {
+                              maximumFractionDigits: 2
+                            })}{" "}
+                            % */}</div>
+                        </div>
+                      ) : (
+                        <span className="loader"></span>
+                      )}
+                    </td>
+                  </tr>
+                </thead>
+                <tbody className="textBlackSmall" style={{ color: "white" }}>
+                  <tr>
+                    <td style={{ textAlign: "start" }} scope="col" width="120">
+                      Your Deposit
+                    </td>
+                    <td style={{ textAlign: "start" }} scope="col" width="120">
+                      Last epoch's APR
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        {/* </Link> */}
+
+        {props.wallet || props.walletConnect ? (
+          <div className="iqmhrB">
+            <div className="OYMUv">
+              <div className="eWMWa-D">
+                {props.userEarnedRewardAmount_third >= 0 ? (
+                  <span>
+                    {parseFloat(window.web3Fx.utils.fromWei(props.userEarnedRewardAmount_third, "Ether")).toLocaleString("en-US", {
+                      maximumFractionDigits: 2
+                    })}
+                  </span>
+                ) : (
+                  <span>TBD</span>
+                )}
+                <div>
+                  <ImgNextGen srcWebp={fx} style={{ marginLeft: "6px", marginRight: "15px" }} width="28px" alt="" />
+                </div>
+              </div>
+              <div className="iddTJh">Your rewards</div>
+            </div>
+            <div className="rowC">
+              {props.userEarnedRewardAmount_third == 0 ? (
+                <Buttons
+                  className="buttonGradientBorder cell3 center"
+                  style={{
+                    height: "38px",
+                    width: "80px",
+                    marginRight: "10px",
+                    cursor: "not-allowed",
+                    opacity: "0.5"
+                  }}
+                >
+                  Claim
+                </Buttons>
+              ) : (
+                <Buttons
+                  className="buttonGradientBorder cell3 center"
+                  style={{
+                    height: "38px",
+                    width: "80px",
+                    marginRight: "10px"
+                  }}
+                  size="lg"
+                  onClick={async () => {
+                    console.log("3rd claim button clicked");
+                    //await props.switchNetwork(process.env.REACT_APP_chainid_fxevm);
+                    props.claimReward(process.env.REACT_APP_liquiditystakingV1_address_third, process.env.REACT_APP_chainid_fxevm, process.env.REACT_APP_networkid_fxevm);
+                  }}
+                >
+                  <div className="linearGradientText center">Claim</div>
+                </Buttons>
+              )}
+              {props.userUSDTBalance_third > 0 && parseInt(props.remainingPoolDepositedSize_third) > 0 ? (
+                <PopupDeposit poolSize={props.poolSize_third} maxPoolSize={props.maxPoolSize_third} remainingPoolDepositedSize={props.remainingPoolDepositedSize_third} userUSDTBalance={props.userUSDTBalance_third} userStakedBalance={props.userStakedBalance_third} userUSDTStakingAllowance={props.userUSDTStakingAllowance_third} stake={props.stake} approve={props.approve} pool_id={3} connectMetamask={props.connectMetamask} switchNetwork={props.switchNetwork} />
               ) : (
                 <Buttons
                   className="textWhiteLargeButton cell2 center"
