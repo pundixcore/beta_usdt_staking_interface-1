@@ -1882,7 +1882,10 @@ function StakeMenu(props) {
               There are no principal guarantees for this version of the MarginX Liquidity Pool.
             </li>
             <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
-              $ETH is required to pay the gas fees for withdrawals.
+              $ETH is required to pay the gas fees for USDT (ERC20) withdrawals.
+            </li>
+            <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
+              $FX is required to pay the gas fees for USDT (FXCore) withdrawals.
             </li>
             <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
               Participants need to request for withdrawals manually on maker.marginx.io.

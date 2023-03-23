@@ -4044,10 +4044,10 @@ function StakeLiquidity(props) {
                       ONLY private blockchain wallets can participate. Please do not send funds from an exchange.
                     </li>
                     <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
-                      There are no principal guarantees for this version of MarginX AI Bots Trading Pool.
+                      There are no principal guarantees for this version of Maker Liquidity Pool.
                     </li>
                     <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
-                      $ETH is required to pay the gas fees for withdrawals.
+                      $FX is required to pay the gas fees for USDT (FXCore) withdrawals.
                     </li>
                     <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
                       Participants need to request for withdrawals manually on maker.marginx.io.
@@ -4834,10 +4834,10 @@ function StakeLiquidity(props) {
                         ONLY private blockchain wallets can participate. Please do not send funds from an exchange.
                       </li>
                       <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
-                        There are no principal guarantees for this version of MarginX AI Bots Trading Pool.
+                        There are no principal guarantees for this version of Maker Liquidity Pool.
                       </li>
                       <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
-                        $ETH is required to pay the gas fees for withdrawals.
+                        $FX is required to pay the gas fees for USDT (FXCore) withdrawals.
                       </li>
                       <li className="gradient-text" style={{ marginTop: "5px", fontSize: "15px" }}>
                         Participants need to request for withdrawals manually on maker.marginx.io.
