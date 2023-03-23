@@ -80,7 +80,7 @@ function StakeMenu(props) {
                 <ImgNextGen srcWebp={marginxLogo} style={{ marginLeft: "0px", marginRight: "18px" }} width="105" alt="" />
                 <div>
                   <div className="bzThwT mb-2 mt-4">
-                    <b>USDT (ERC20 & FXCore)</b>
+                    <b>USDT</b>
                   </div>
                   <div className="kXLvz mb-4" style={{ fontSize: "27px" }}>
                     <b>Welcome to MarginX Liquidity Pool</b>
@@ -411,7 +411,7 @@ function StakeMenu(props) {
                 <ImgNextGen srcWebp={marginxLogo} style={{ marginLeft: "0px", marginRight: "18px" }} width="105" alt="" />
                 <div>
                   <div className="bzThwT mb-2 mt-3">
-                    <b>USDT (ERC20 & FXCore)</b>
+                    <b>USDT</b>
                   </div>
                   <div className="kXLvz mb-3" style={{ fontSize: "25px", lineHeight: "2.3rem" }}>
                     <b>Welcome to MarginX Liquidity Pool</b>
@@ -465,7 +465,7 @@ function StakeMenu(props) {
             </MediaQuery>
             <MediaQuery maxWidth={480}>
               <div className="bzThwT mb-2 mt-3">
-                <b>USDT (ERC20)</b>
+                <b>USDT</b>
               </div>
               <div className="kXLvz mb-3" style={{ fontSize: "25px", lineHeight: "2.3rem" }}>
                 <b>Welcome to MarginX Liquidity Pool</b>
