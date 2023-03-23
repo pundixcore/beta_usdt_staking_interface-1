@@ -549,7 +549,7 @@ class App extends Component {
       window.web3 = new Web3(window.ethereum);
     }
     window.web3Eth = new Web3(`https://eth-mainnet.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
-    // window.web3Eth = new Web3(`https://eth-goerli.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
+    //window.web3Eth = new Web3(`https://eth-goerli.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
     this.setState({ loading: true });
   }
 
@@ -590,7 +590,7 @@ class App extends Component {
           let chainId = await window.ethereum.request({
             method: "eth_chainId"
           });
-          if (chainId == "0xa86a") {
+          if (chainId == process.env.REACT_APP_chainid || chainId == process.env.REACT_APP_chainid_fxevm) {
             if (accounts[0]) {
               this.WalletDisconnect();
               this.setWalletTrigger(true);
@@ -905,7 +905,13 @@ class App extends Component {
       console.log("chainIdx", chainIdx);
       console.log("networkIdx", networkId);
       if (parseInt(chainIdx) !== parseInt(networkId)) {
-        alert("You are on the wrong network.");
+        let networkName;
+        if (networkId === process.env.REACT_APP_networkid) {
+          networkName = "Ethereum chain";
+        } else if (networkId === process.env.REACT_APP_networkid_fxevm) {
+          networkName = "FXCore chain";
+        }
+        alert(`You are on the wrong network. Please use the ${networkName}.`);
         close();
         return;
       }
@@ -1008,7 +1014,13 @@ class App extends Component {
       console.log("chainIdx", chainIdx);
       console.log("networkIdx", networkId);
       if (parseInt(chainIdx) !== parseInt(networkId)) {
-        alert("You are on the wrong network.");
+        let networkName;
+        if (networkId === process.env.REACT_APP_networkid) {
+          networkName = "Ethereum chain";
+        } else if (networkId === process.env.REACT_APP_networkid_fxevm) {
+          networkName = "FXCore chain";
+        }
+        alert(`You are on the wrong network. Please use the ${networkName}.`);
         close();
         return;
       }
@@ -1023,7 +1035,8 @@ class App extends Component {
       const usdtToken = new intWeb3.eth.Contract(SystemCoin.abi, process.env.REACT_APP_usdt_address);
       const spenderAddress = process.env.REACT_APP_liquiditystakingV1_address;
       const gasPrice = await window.web3Eth.eth.getGasPrice();
-      await usdtToken.methods
+      // await usdtToken.methods
+      usdtToken.methods
         .approve(spenderAddress, "115792089237316195423570985008687907853269984665640564039457584007913129639935")
         .send({ from: this.state.account, gasPrice: gasPrice })
         .then(async result => {
@@ -1043,7 +1056,8 @@ class App extends Component {
       const usdtToken = new intWeb3.eth.Contract(SystemCoin.abi, process.env.REACT_APP_usdt_address);
       const spenderAddress = process.env.REACT_APP_liquiditystakingV1_address_second;
       const gasPrice = await window.web3Eth.eth.getGasPrice();
-      await usdtToken.methods
+      // await usdtToken.methods
+      usdtToken.methods
         .approve(spenderAddress, "115792089237316195423570985008687907853269984665640564039457584007913129639935")
         .send({ from: this.state.account, gasPrice: gasPrice })
         .then(async result => {
@@ -1063,7 +1077,8 @@ class App extends Component {
       const usdtToken = new intWeb3.eth.Contract(SystemCoin.abi, process.env.REACT_APP_usdt_address_fxevm);
       const spenderAddress = process.env.REACT_APP_liquiditystakingV1_address_real_third;
       const gasPrice = await window.web3Fx.eth.getGasPrice();
-      await usdtToken.methods
+      // await usdtToken.methods
+      usdtToken.methods
         .approve(spenderAddress, "115792089237316195423570985008687907853269984665640564039457584007913129639935")
         .send({ from: this.state.account, gasPrice: gasPrice })
         .then(async result => {
@@ -1103,7 +1118,13 @@ class App extends Component {
       console.log("chainIdx", chainIdx);
       console.log("networkIdx", networkId);
       if (parseInt(chainIdx) !== parseInt(networkId)) {
-        alert("You are on the wrong network.");
+        let networkName;
+        if (networkId === process.env.REACT_APP_networkid) {
+          networkName = "Ethereum chain";
+        } else if (networkId === process.env.REACT_APP_networkid_fxevm) {
+          networkName = "FXCore chain";
+        }
+        alert(`You are on the wrong network. Please use the ${networkName}.`);
         close();
         return;
       }
@@ -1206,7 +1227,13 @@ class App extends Component {
       console.log("chainIdx", chainIdx);
       console.log("networkIdx", networkId);
       if (parseInt(chainIdx) !== parseInt(networkId)) {
-        alert("You are on the wrong network.");
+        let networkName;
+        if (networkId === process.env.REACT_APP_networkid) {
+          networkName = "Ethereum chain";
+        } else if (networkId === process.env.REACT_APP_networkid_fxevm) {
+          networkName = "FXCore chain";
+        }
+        alert(`You are on the wrong network. Please use the ${networkName}.`);
         close();
         return;
       }
@@ -1308,7 +1335,13 @@ class App extends Component {
       console.log("chainIdx", chainIdx);
       console.log("networkIdx", networkId);
       if (parseInt(chainIdx) !== parseInt(networkId)) {
-        alert("You are on the wrong network.");
+        let networkName;
+        if (networkId === process.env.REACT_APP_networkid) {
+          networkName = "Ethereum chain";
+        } else if (networkId === process.env.REACT_APP_networkid_fxevm) {
+          networkName = "FXCore chain";
+        }
+        alert(`You are on the wrong network. Please use the ${networkName}.`);
         return;
       }
       intWeb3 = window.web3Con;

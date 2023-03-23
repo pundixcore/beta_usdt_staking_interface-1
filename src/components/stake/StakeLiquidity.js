@@ -32,7 +32,7 @@ function StakeLiquidity(props) {
             <div style={{ width: "100%" }}>
               <label className="textWhite" style={{ marginTop: "25px", fontSize: "22px", color: "white" }}>
                 <big>
-                  <b>Maker Liquidity Pool</b>
+                  <b>Maker Liquidity Pool USDT (ERC20)</b>
                 </big>
               </label>
               <div className="" style={{ color: "grey" }}>
@@ -50,7 +50,7 @@ function StakeLiquidity(props) {
             <div style={{ width: "100%" }}>
               <label className="textWhite" style={{ marginTop: "5px", fontSize: "22px", color: "white" }}>
                 <big>
-                  <b>Maker Liquidity Pool</b>
+                  <b>Maker Liquidity Pool USDT (ERC20)</b>
                 </big>
               </label>
               <div className="" style={{ color: "grey" }}>
@@ -3369,11 +3369,11 @@ function StakeLiquidity(props) {
             <div style={{ width: "100%" }}>
               <label className="textWhite" style={{ marginTop: "25px", fontSize: "22px", color: "white" }}>
                 <big>
-                  <b>Epoch3 Pool</b>
+                  <b>Maker Liquidity Pool USDT (FXCore)</b>
                 </big>
               </label>
               <div className="" style={{ color: "grey" }}>
-                Deposit and share the PnL by participating in XXXX on MarginX.
+                Share the PnL and earn rewards by contributing to MarginX Market Maker Liquidity Pool.
               </div>
             </div>
           </div>
@@ -3387,11 +3387,11 @@ function StakeLiquidity(props) {
             <div style={{ width: "100%" }}>
               <label className="textWhite" style={{ marginTop: "5px", fontSize: "22px", color: "white" }}>
                 <big>
-                  <b>Epoch3 Pool</b>
+                  <b>Maker Liquidity Pool USDT (FXCore)</b>
                 </big>
               </label>
               <div className="" style={{ color: "grey" }}>
-                Deposit and share the PnL by participating in XXXX on MarginX.
+                Share the PnL and earn rewards by contributing to MarginX Market Maker Liquidity Pool.
               </div>
             </div>
           </div>
@@ -3507,10 +3507,12 @@ function StakeLiquidity(props) {
                                   lineHeight: "1.5rem"
                                 }}
                               >
-                                <div>- %{/* {parseFloat(window.web3Eth.utils.fromWei(props.poolRewardRate_second, "Ether") * 86400).toLocaleString("en-US", {
+                                <div>
+                                  {parseFloat(window.web3Eth.utils.fromWei(props.poolRewardRate_second, "Ether") * 86400).toLocaleString("en-US", {
                                     maximumFractionDigits: 0
-                                  })} */}</div>
-                                {/* <div className="JYkOF">
+                                  })}
+                                </div>
+                                <div className="JYkOF">
                                   <ImgNextGen
                                     srcWebp={fx}
                                     style={{
@@ -3520,7 +3522,7 @@ function StakeLiquidity(props) {
                                     width="25px"
                                     alt=""
                                   />
-                                </div> */}
+                                </div>
                               </div>
                             ) : (
                               <span className="loader"></span>
@@ -3531,8 +3533,7 @@ function StakeLiquidity(props) {
                       <tbody className="textBlackSmall" style={{ color: "white" }}>
                         <tr>
                           <td style={{ textAlign: "start" }} scope="col" width="120">
-                            This week's APR
-                            {/* Estimated yield / day */}
+                            Estimated yield / day
                           </td>
                         </tr>
                       </tbody>
@@ -3597,7 +3598,7 @@ function StakeLiquidity(props) {
                           <tr>
                             <td style={{ textAlign: "start" }} scope="col" width="120">
                               {" "}
-                              This pool accepts USDT (ERC-20)
+                              This pool accepts USDT (FXCore)
                             </td>
                           </tr>
                         </tbody>
@@ -3629,7 +3630,7 @@ function StakeLiquidity(props) {
                     </div>
                   ) : null}
                 </div>
-                {/* 
+
                 <div className="lkBtSA" style={{ borderRadius: "20px", marginBottom: "20px" }}>
                   <div
                     className="ml-auto mr-auto card cardbody"
@@ -3658,9 +3659,9 @@ function StakeLiquidity(props) {
                                     lineHeight: "1.5rem"
                                   }}
                                 >
-                                  {props.userEarnedRewardAmount_second >= 0 ? (
+                                  {props.userEarnedRewardAmount_third >= 0 ? (
                                     <div>
-                                      {parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount_second, "Ether")).toLocaleString("en-US", {
+                                      {parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount_third, "Ether")).toLocaleString("en-US", {
                                         maximumFractionDigits: 2
                                       })}{" "}
                                     </div>
@@ -3699,7 +3700,7 @@ function StakeLiquidity(props) {
 
                   {props.wallet || props.walletConnect ? (
                     <div className="iqmhrC">
-                      {props.userEarnedRewardAmount_second == 0 ? (
+                      {props.userEarnedRewardAmount_third == 0 ? (
                         <Buttons
                           className="textWhiteLargeButton cell2 center"
                           style={{
@@ -3730,7 +3731,7 @@ function StakeLiquidity(props) {
                           }}
                           size="lg"
                           onClick={() => {
-                            props.claimReward(process.env.REACT_APP_liquiditystakingV1_address_second);
+                            props.claimReward(process.env.REACT_APP_liquiditystakingV1_address_third, process.env.REACT_APP_chainid_fxevm, process.env.REACT_APP_networkid_fxevm);
                           }}
                         >
                           Claim
@@ -3738,7 +3739,7 @@ function StakeLiquidity(props) {
                       )}
                     </div>
                   ) : null}
-                </div> */}
+                </div>
               </div>
 
               <div style={{ marginTop: "2.5rem", display: "block" }}>
@@ -4085,9 +4086,11 @@ function StakeLiquidity(props) {
                       </div>
                     </div>
                     <div className="textBlackSmall" style={{ color: "white" }}>
-                      <div style={{ textAlign: "start" }}>MarginX AI Bots Trading Pool is a way to allow participants to deposit their funds into a smart contract on Ethereum, and let fund managers (i.e. a series of artificial intelligence trading algorithms) deploy and run trading strategies on their behalf.</div>
+                      <div style={{ textAlign: "start" }}>MarginX Maker Liquidity Pool is a dedicated fund handled by professional market makers, to provide liquidity and depth on MarginX, and in return to help earn maker rewards.</div>
                       <br />
-                      <div style={{ textAlign: "start" }}>To be more specific, this feature uses machine learning frameworks to analyze millions of data points and execute trades at the optimal price with a specific strategy.</div>
+                      <div style={{ textAlign: "start" }}>The mechanics are simple. Users deposit funds USDT (FXCore) into a smart contract which bridges the funds automatically into MarginX.</div>
+                      <br />
+                      <div style={{ textAlign: "start" }}>Only whitelisted and verified market makers can ‘borrow’ these funds from the liquidity pool to trade, and the funds can only be deployed for market making through a dedicated MarginX wallet address.</div>
                     </div>
                   </div>
 
@@ -4145,11 +4148,33 @@ function StakeLiquidity(props) {
                     </div>
                     <div className="textBlackSmall" style={{ color: "white" }}>
                       <div scope="col" style={{ textAlign: "start" }} width="120">
-                        Participants will share the profit/loss from the performance of the AI Bots Trading Pool proportionally at the end of each epoch.
+                        Participants will share the profit/loss from the performance of the Maker LP proportionally, and shall be entitled to a portion of MarginX’s net platform (trading) fee. The rewards shall be distributed in $FX on a weekly basis.
                       </div>
                       <br></br>
                       <div scope="col" style={{ textAlign: "start" }} width="120">
-                        Note: Users must request to withdraw their USDT at least 14 days before the current epoch ends. If users do not request to withdraw, the deposited USDT is rolled over into the next epoch.
+                        MarginX net platform fee = Platform fee - Trading fee rebate - Referral commission
+                      </div>
+                      <br></br>
+                      <div scope="col" style={{ textAlign: "start" }} width="120">
+                        Distribution of MarginX net platform fee:
+                        <br></br>
+                        60% goes to Maker LP rewards
+                        <br></br>
+                        10% goes to Insurance Pool
+                        <br></br>
+                        30% goes to MarginX Treasury
+                      </div>
+                      <br></br>
+                      <div scope="col" style={{ textAlign: "start" }} width="120">
+                        New Maker LP rewards = Trading profit/loss + 60% of net platform fee
+                      </div>
+                      <br></br>
+                      <div scope="col" style={{ textAlign: "start" }} width="120">
+                        Each user will receive a proportional amount of the platform fee rewards based on their deposit amount.
+                      </div>
+                      <br></br>
+                      <div scope="col" style={{ textAlign: "start" }} width="120">
+                        Note: Users must request to withdraw their USDT (FXCore) at least 14 days before the current epoch ends. If users do not request to withdraw, the deposited USDT (FXCore) is rolled over into the next epoch.
                       </div>
                     </div>
                   </div>
@@ -4201,7 +4226,7 @@ function StakeLiquidity(props) {
                           }}
                           size="lg"
                           onClick={() => {
-                            window.open(`https://forum.starscan.io/t/marginx-ai-bots-trading-pool-usdt-erc20-beta/5053`, "_blank");
+                            window.open(`https://forum.starscan.io/t/maker-liquidity-pool-usdt-erc-20-epoch-3/5119`, "_blank");
                           }}
                         >
                           &#8599; Forums
@@ -4311,10 +4336,12 @@ function StakeLiquidity(props) {
                               lineHeight: "1.5rem"
                             }}
                           >
-                            <div>- %{/* {parseFloat(window.web3Eth.utils.fromWei(props.poolRewardRate_second, "Ether") * 86400).toLocaleString("en-US", {
+                            <div>
+                              {parseFloat(window.web3Eth.utils.fromWei(props.poolRewardRate_second, "Ether") * 86400).toLocaleString("en-US", {
                                 maximumFractionDigits: 0
-                              })} */}</div>
-                            {/* <div className="JYkOF">
+                              })}
+                            </div>
+                            <div className="JYkOF">
                               <ImgNextGen
                                 srcWebp={fx}
                                 style={{
@@ -4324,7 +4351,7 @@ function StakeLiquidity(props) {
                                 width="25px"
                                 alt=""
                               />
-                            </div> */}
+                            </div>
                           </div>
                         ) : (
                           <span className="loader"></span>
@@ -4335,8 +4362,7 @@ function StakeLiquidity(props) {
                   <tbody className="textBlackSmall" style={{ color: "white" }}>
                     <tr>
                       <td style={{ textAlign: "start" }} scope="col" width="120">
-                        This week's APR
-                        {/* Estimated yield / day */}
+                        Estimated yield / day
                       </td>
                     </tr>
                   </tbody>
@@ -4392,7 +4418,7 @@ function StakeLiquidity(props) {
                       <tr>
                         <td style={{ textAlign: "start" }} scope="col" width="120">
                           {" "}
-                          This pool accepts USDT (ERC-20)
+                          This pool accepts USDT (FXCore)
                         </td>
                       </tr>
                     </tbody>
@@ -4424,7 +4450,7 @@ function StakeLiquidity(props) {
                 </div>
               ) : null}
             </div>
-            {/* <div className="lkBtSA" style={{ borderRadius: "20px", marginBottom: "12px" }}>
+            <div className="lkBtSA" style={{ borderRadius: "20px", marginBottom: "12px" }}>
               <div className="ml-auto mr-auto card cardbody" style={{ height: "160px", width: "100%", color: "white" }}>
                 <div className="card-body">
                   <div style={{ marginBottom: "65px" }}>
@@ -4445,9 +4471,9 @@ function StakeLiquidity(props) {
                                 lineHeight: "1.5rem"
                               }}
                             >
-                              {props.userEarnedRewardAmount_second >= 0 ? (
+                              {props.userEarnedRewardAmount_third >= 0 ? (
                                 <div>
-                                  {parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount_second, "Ether")).toLocaleString("en-US", {
+                                  {parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount_third, "Ether")).toLocaleString("en-US", {
                                     maximumFractionDigits: 2
                                   })}{" "}
                                 </div>
@@ -4485,7 +4511,7 @@ function StakeLiquidity(props) {
               </div>
               {props.wallet || props.walletConnect ? (
                 <div className="iqmhrC">
-                  {props.userEarnedRewardAmount_second == 0 ? (
+                  {props.userEarnedRewardAmount_third == 0 ? (
                     <Buttons
                       className="textWhiteLargeButton cell2 center"
                       style={{
@@ -4516,7 +4542,7 @@ function StakeLiquidity(props) {
                       }}
                       size="lg"
                       onClick={() => {
-                        props.claimReward(process.env.REACT_APP_liquiditystakingV1_address_second);
+                        props.claimReward(process.env.REACT_APP_liquiditystakingV1_address_third, process.env.REACT_APP_chainid_fxevm, process.env.REACT_APP_networkid_fxevm);
                       }}
                     >
                       Claim
@@ -4524,7 +4550,7 @@ function StakeLiquidity(props) {
                   )}
                 </div>
               ) : null}
-            </div> */}
+            </div>
 
             <div style={{ marginTop: "2.5rem", display: "block" }}>
               <label className="textWhite" style={{ marginTop: "5px", fontSize: "22px", color: "white" }}>
@@ -4852,9 +4878,11 @@ function StakeLiquidity(props) {
                   </div>
                 </div>
                 <div className="textBlackSmall" style={{ color: "white" }}>
-                  <div style={{ textAlign: "start" }}>MarginX AI Bots Trading Pool is a way to allow participants to deposit their funds into a smart contract on Ethereum, and let fund managers (i.e. a series of artificial intelligence trading algorithms) deploy and run trading strategies on their behalf.</div>
+                  <div style={{ textAlign: "start" }}>MarginX Maker Liquidity Pool is a dedicated fund handled by professional market makers, to provide liquidity and depth on MarginX, and in return to help earn maker rewards.</div>
                   <br />
-                  <div style={{ textAlign: "start" }}>To be more specific, this feature uses machine learning frameworks to analyze millions of data points and execute trades at the optimal price with a specific strategy.</div>
+                  <div style={{ textAlign: "start" }}>The mechanics are simple. Users deposit funds USDT (FXCore) into a smart contract which bridges the funds automatically into MarginX.</div>
+                  <br />
+                  <div style={{ textAlign: "start" }}>Only whitelisted and verified market makers can ‘borrow’ these funds from the liquidity pool to trade, and the funds can only be deployed for market making through a dedicated MarginX wallet address.</div>
                 </div>
               </div>
 
@@ -4912,11 +4940,33 @@ function StakeLiquidity(props) {
                 </div>
                 <div className="textBlackSmall" style={{ color: "white" }}>
                   <div scope="col" style={{ textAlign: "start" }} width="120">
-                    Participants will share the profit/loss from the performance of the AI Bots Trading Pool proportionally at the end of each epoch.
+                    Participants will share the profit/loss from the performance of the Maker LP proportionally, and shall be entitled to a portion of MarginX’s net platform (trading) fee. The rewards shall be distributed in $FX on a weekly basis.
                   </div>
                   <br></br>
                   <div scope="col" style={{ textAlign: "start" }} width="120">
-                    Note: Users must request to withdraw their USDT at least 14 days before the current epoch ends. If users do not request to withdraw, the deposited USDT is rolled over into the next epoch.
+                    MarginX net platform fee = Platform fee - Trading fee rebate - Referral commission
+                  </div>
+                  <br></br>
+                  <div scope="col" style={{ textAlign: "start" }} width="120">
+                    Distribution of MarginX net platform fee:
+                    <br></br>
+                    60% goes to Maker LP rewards
+                    <br></br>
+                    10% goes to Insurance Pool
+                    <br></br>
+                    30% goes to MarginX Treasury
+                  </div>
+                  <br></br>
+                  <div scope="col" style={{ textAlign: "start" }} width="120">
+                    New Maker LP rewards = Trading profit/loss + 60% of net platform fee
+                  </div>
+                  <br></br>
+                  <div scope="col" style={{ textAlign: "start" }} width="120">
+                    Each user will receive a proportional amount of the platform fee rewards based on their deposit amount.
+                  </div>
+                  <br></br>
+                  <div scope="col" style={{ textAlign: "start" }} width="120">
+                    Note: Users must request to withdraw their USDT (FXCore) at least 14 days before the current epoch ends. If users do not request to withdraw, the deposited USDT (FXCore) is rolled over into the next epoch.
                   </div>
                 </div>
               </div>
@@ -4968,7 +5018,7 @@ function StakeLiquidity(props) {
                       }}
                       size="lg"
                       onClick={() => {
-                        window.open(`https://forum.starscan.io/t/marginx-ai-bots-trading-pool-usdt-erc20-beta/5053`, "_blank");
+                        window.open(`https://forum.starscan.io/t/maker-liquidity-pool-usdt-erc-20-epoch-3/5119`, "_blank");
                       }}
                     >
                       &#8599; Forums

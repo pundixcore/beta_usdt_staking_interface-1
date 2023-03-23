@@ -80,7 +80,7 @@ function StakeMenu(props) {
                 <ImgNextGen srcWebp={marginxLogo} style={{ marginLeft: "0px", marginRight: "18px" }} width="105" alt="" />
                 <div>
                   <div className="bzThwT mb-2 mt-4">
-                    <b>USDT (ERC20)</b>
+                    <b>USDT (ERC20 & FXCore)</b>
                   </div>
                   <div className="kXLvz mb-4" style={{ fontSize: "27px" }}>
                     <b>Welcome to MarginX Liquidity Pool</b>
@@ -214,7 +214,7 @@ function StakeMenu(props) {
                       <ImgNextGen srcWebp={fx} style={{ marginLeft: "6px", marginRight: "0px" }} width="28px" alt="" />
                     </div>
                   </div>
-                  {parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount, "Ether")) + parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount_second, "Ether")) + parseFloat(window.web3Fx.utils.fromWei(props.userEarnedRewardAmount_third, "Ether")) == 0 ? (
+                  {/* {parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount, "Ether")) + parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount_second, "Ether")) + parseFloat(window.web3Fx.utils.fromWei(props.userEarnedRewardAmount_third, "Ether")) == 0 ? (
                     <Buttons
                       className="buttonGradientBorder cell3 center"
                       style={{
@@ -237,7 +237,8 @@ function StakeMenu(props) {
                     >
                       <div className="linearGradientText center">Claim</div>
                     </Buttons>
-                  )}
+                    
+                  )} */}
                 </div>
               </div>
 
@@ -411,7 +412,7 @@ function StakeMenu(props) {
                 <ImgNextGen srcWebp={marginxLogo} style={{ marginLeft: "0px", marginRight: "18px" }} width="105" alt="" />
                 <div>
                   <div className="bzThwT mb-2 mt-3">
-                    <b>USDT (ERC20)</b>
+                    <b>USDT (ERC20 & FXCore)</b>
                   </div>
                   <div className="kXLvz mb-3" style={{ fontSize: "25px", lineHeight: "2.3rem" }}>
                     <b>Welcome to MarginX Liquidity Pool</b>
@@ -615,7 +616,7 @@ function StakeMenu(props) {
                     <ImgNextGen srcWebp={fx} style={{ marginLeft: "6px", marginRight: "0px" }} width="28px" alt="" />
                   </div>
                 </div>
-                {parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount, "Ether")) +
+                {/* {parseFloat(window.web3Eth.utils.fromWei(props.userEarnedRewardAmount, "Ether")) +
                   parseFloat(
                     window.web3Eth.utils.fromWei(
                       props.userEarnedRewardAmount_second, //Issei
@@ -646,7 +647,7 @@ function StakeMenu(props) {
                   >
                     <div className="linearGradientText center">Claim</div>
                   </Buttons>
-                )}
+                )} */}
               </div>
             </div>
 
@@ -804,8 +805,8 @@ function StakeMenu(props) {
         >
           <div className="card-body">
             <div style={{ marginBottom: "80px" }}>
-              <div className="float-left textWhite" style={{ fontSize: "1.25rem", color: "white" }}>
-                Maker Liquidity Pool
+              <div className="float-left textWhite" style={{ fontSize: "1.1rem", color: "white" }}>
+                Maker Liquidity Pool USDT (ERC20)
               </div>
               {/* <div className="float-right" style={{ marginLeft: "10px" }}>
                                   <ImgNextGen
@@ -1082,7 +1083,7 @@ function StakeMenu(props) {
         >
           <div className="card-body">
             <div style={{ marginBottom: "80px" }}>
-              <div className="float-left textWhite" style={{ fontSize: "1.25rem", color: "white" }}>
+              <div className="float-left textWhite" style={{ fontSize: "1.1rem", color: "white" }}>
                 AI Bots Trading Pool
               </div>
               {/* <div className="float-right" style={{ marginLeft: "10px" }}>
@@ -1361,8 +1362,8 @@ function StakeMenu(props) {
         >
           <div className="card-body">
             <div style={{ marginBottom: "80px" }}>
-              <div className="float-left textWhite" style={{ fontSize: "1.25rem", color: "white" }}>
-                Epoch3 Pool
+              <div className="float-left textWhite" style={{ fontSize: "1.1rem", color: "white" }}>
+                Maker Liquidity Pool USDT (FXCore)
               </div>
               {/* <div className="float-right" style={{ marginLeft: "10px" }}>
                                   <ImgNextGen
@@ -1445,10 +1446,12 @@ function StakeMenu(props) {
                             lineHeight: "1.5rem"
                           }}
                         >
-                          <div>- %{/* {parseFloat(window.web3Eth.utils.fromWei(props.poolRewardRate_second, "Ether") * 86400).toLocaleString("en-US", {
+                          <div>
+                            {parseFloat(window.web3Eth.utils.fromWei(props.poolRewardRate_second, "Ether") * 86400).toLocaleString("en-US", {
                               maximumFractionDigits: 0
-                            })} */}</div>
-                          {/* <div className="JYkOF">
+                            })}
+                          </div>
+                          <div className="JYkOF">
                             <ImgNextGen
                               srcWebp={fx}
                               style={{
@@ -1458,7 +1461,7 @@ function StakeMenu(props) {
                               width="28px"
                               alt=""
                             />
-                          </div> */}
+                          </div>
                         </div>
                       ) : (
                         <span className="loader"></span>
@@ -1472,7 +1475,7 @@ function StakeMenu(props) {
                       Pool Size
                     </td>
                     <td style={{ textAlign: "start" }} scope="col" width="120">
-                      This week's APR {/* Yield / day */}
+                      Yield / day
                     </td>
                   </tr>
                 </tbody>
@@ -1520,10 +1523,12 @@ function StakeMenu(props) {
                             lineHeight: "1.5rem"
                           }}
                         >
-                          <div>- %{/* {props.APR_second.toLocaleString("en-US", {
+                          <div>
+                            {props.APR_second.toLocaleString("en-US", {
                               maximumFractionDigits: 2
                             })}{" "}
-                            % */}</div>
+                            %
+                          </div>
                         </div>
                       ) : (
                         <span className="loader"></span>
@@ -1537,7 +1542,7 @@ function StakeMenu(props) {
                       Your Deposit
                     </td>
                     <td style={{ textAlign: "start" }} scope="col" width="120">
-                      Last epoch's APR
+                      APR
                     </td>
                   </tr>
                 </tbody>
