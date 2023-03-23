@@ -247,8 +247,7 @@ function StakeMenu(props) {
                   <b>Portfolio</b>
                 </big>
               </div>
-              <div style={{ color: "grey" }}>Track balances</div>
-
+              <div style={{ color: "grey" }}>Track balances (Ethereum & FXCore)</div>
               <div>
                 <table>
                   <thead className="textBlackSmall" style={{ color: "white" }}>
@@ -656,7 +655,7 @@ function StakeMenu(props) {
                 <b>Portfolio</b>
               </big>
             </div>
-            <div style={{ color: "grey" }}>Track balances</div>
+            <div style={{ color: "grey" }}>Track balances (Ethereum & FXCore)</div>
 
             <div>
               <table>
