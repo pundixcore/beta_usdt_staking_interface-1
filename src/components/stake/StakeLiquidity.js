@@ -1740,7 +1740,7 @@ function StakeLiquidity(props) {
             <div style={{ width: "100%" }}>
               <label className="textWhite" style={{ marginTop: "25px", fontSize: "22px", color: "white" }}>
                 <big>
-                  <b>AI Bots Trading Pool</b>
+                  <b>AI Bots Trading Pool USDT (ERC20)</b>
                 </big>
               </label>
               <div className="" style={{ color: "grey" }}>
@@ -1758,7 +1758,7 @@ function StakeLiquidity(props) {
             <div style={{ width: "100%" }}>
               <label className="textWhite" style={{ marginTop: "5px", fontSize: "22px", color: "white" }}>
                 <big>
-                  <b>AI Bots Trading Pool</b>
+                  <b>AI Bots Trading Pool USDT (ERC20)</b>
                 </big>
               </label>
               <div className="" style={{ color: "grey" }}>

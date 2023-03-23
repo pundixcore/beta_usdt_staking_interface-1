@@ -1083,7 +1083,7 @@ function StakeMenu(props) {
           <div className="card-body">
             <div style={{ marginBottom: "80px" }}>
               <div className="float-left textWhite" style={{ fontSize: "1.1rem", color: "white" }}>
-                AI Bots Trading Pool
+                AI Bots Trading Pool USDT (ERC20)
               </div>
               {/* <div className="float-right" style={{ marginLeft: "10px" }}>
                                   <ImgNextGen

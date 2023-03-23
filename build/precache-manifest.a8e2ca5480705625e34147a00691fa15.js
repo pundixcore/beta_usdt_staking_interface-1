@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "73be237cfc8ad0df4f80",
+    "revision": "019724fadfc79bcdf0b7",
     "url": "/static/css/main.53bdbd6e.chunk.css"
   },
   {
-    "revision": "73be237cfc8ad0df4f80",
-    "url": "/static/js/main.73be237c.chunk.js"
+    "revision": "019724fadfc79bcdf0b7",
+    "url": "/static/js/main.019724fa.chunk.js"
   },
   {
     "revision": "15df29d0adfed825d458",
@@ -80,7 +80,7 @@ self.__precacheManifest = [
     "url": "/static/media/walletconnect-logo.37f2bc6e.svg"
   },
   {
-    "revision": "7878902dc3e11a6f2d5f1abd6709936b",
+    "revision": "b330561ea89695f21206913074ffe7c7",
     "url": "/index.html"
   }
 ];
