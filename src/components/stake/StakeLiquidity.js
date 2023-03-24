@@ -154,7 +154,7 @@ function StakeLiquidity(props) {
                   <div className="card-body">
                     <div style={{ marginBottom: "65px" }}>
                       <div className="float-left textWhiteLarge" style={{ fontSize: "1.25rem", color: "white" }}>
-                        Yield
+                        APR
                       </div>
                     </div>
                     <table>
@@ -171,11 +171,15 @@ function StakeLiquidity(props) {
                                 }}
                               >
                                 <div>
-                                  {parseFloat(window.web3Eth.utils.fromWei(props.poolRewardRate, "Ether") * 86400).toLocaleString("en-US", {
+                                  {/* {parseFloat(window.web3Eth.utils.fromWei(props.poolRewardRate, "Ether") * 86400).toLocaleString("en-US", {
+                                    maximumFractionDigits: 0
+                                  })} */}
+                                  {((100 * ((4000 / 7) * 365)) / (parseFloat(window.web3Eth.utils.fromWei(props.poolSize, "mwei")) + parseFloat(window.web3Fx.utils.fromWei(props.poolSize_third, "mwei")))).toLocaleString("en-US", {
                                     maximumFractionDigits: 0
                                   })}
+                                  %
                                 </div>
-                                <div className="JYkOF">
+                                {/* <div className="JYkOF">
                                   <ImgNextGen
                                     srcWebp={fx}
                                     style={{
@@ -185,7 +189,7 @@ function StakeLiquidity(props) {
                                     width="25px"
                                     alt=""
                                   />
-                                </div>
+                                </div> */}
                               </div>
                             ) : (
                               <span className="loader"></span>
@@ -196,7 +200,7 @@ function StakeLiquidity(props) {
                       <tbody className="textBlackSmall" style={{ color: "white" }}>
                         <tr>
                           <td style={{ textAlign: "start" }} scope="col" width="120">
-                            Estimated yield / day
+                            Estimated APR
                           </td>
                         </tr>
                       </tbody>
@@ -999,7 +1003,7 @@ function StakeLiquidity(props) {
               <div className="card-body">
                 <div style={{ marginBottom: "65px" }}>
                   <div className="float-left textWhiteLarge" style={{ fontSize: "1.25rem", color: "white" }}>
-                    Yield
+                    APR
                   </div>
                 </div>
                 <table>
@@ -1016,11 +1020,13 @@ function StakeLiquidity(props) {
                             }}
                           >
                             <div>
-                              {parseFloat(window.web3Eth.utils.fromWei(props.poolRewardRate, "Ether") * 86400).toLocaleString("en-US", {
+                              {" "}
+                              {((100 * ((4000 / 7) * 365)) / (parseFloat(window.web3Eth.utils.fromWei(props.poolSize, "mwei")) + parseFloat(window.web3Fx.utils.fromWei(props.poolSize_third, "mwei")))).toLocaleString("en-US", {
                                 maximumFractionDigits: 0
                               })}
+                              %
                             </div>
-                            <div className="JYkOF">
+                            {/* <div className="JYkOF">
                               <ImgNextGen
                                 srcWebp={fx}
                                 style={{
@@ -1030,7 +1036,7 @@ function StakeLiquidity(props) {
                                 width="25px"
                                 alt=""
                               />
-                            </div>
+                            </div> */}
                           </div>
                         ) : (
                           <span className="loader"></span>
@@ -1041,7 +1047,7 @@ function StakeLiquidity(props) {
                   <tbody className="textBlackSmall" style={{ color: "white" }}>
                     <tr>
                       <td style={{ textAlign: "start" }} scope="col" width="120">
-                        Estimated yield / day
+                        Estimated APR
                       </td>
                     </tr>
                   </tbody>
@@ -3491,7 +3497,7 @@ function StakeLiquidity(props) {
                   <div className="card-body">
                     <div style={{ marginBottom: "65px" }}>
                       <div className="float-left textWhiteLarge" style={{ fontSize: "1.25rem", color: "white" }}>
-                        Yield
+                        APR
                       </div>
                     </div>
                     <table>
@@ -3508,11 +3514,15 @@ function StakeLiquidity(props) {
                                 }}
                               >
                                 <div>
-                                  {parseFloat(window.web3Eth.utils.fromWei(props.poolRewardRate_second, "Ether") * 86400).toLocaleString("en-US", {
+                                  {/* {parseFloat(window.web3Eth.utils.fromWei(props.poolRewardRate_second, "Ether") * 86400).toLocaleString("en-US", {
+                                    maximumFractionDigits: 0
+                                  })} */}
+                                  {((100 * ((4000 / 7) * 365)) / (parseFloat(window.web3Eth.utils.fromWei(props.poolSize, "mwei")) + parseFloat(window.web3Fx.utils.fromWei(props.poolSize_third, "mwei")))).toLocaleString("en-US", {
                                     maximumFractionDigits: 0
                                   })}
+                                  %
                                 </div>
-                                <div className="JYkOF">
+                                {/* <div className="JYkOF">
                                   <ImgNextGen
                                     srcWebp={fx}
                                     style={{
@@ -3522,7 +3532,7 @@ function StakeLiquidity(props) {
                                     width="25px"
                                     alt=""
                                   />
-                                </div>
+                                </div> */}
                               </div>
                             ) : (
                               <span className="loader"></span>
@@ -3533,7 +3543,7 @@ function StakeLiquidity(props) {
                       <tbody className="textBlackSmall" style={{ color: "white" }}>
                         <tr>
                           <td style={{ textAlign: "start" }} scope="col" width="120">
-                            Estimated yield / day
+                            Estimated APR
                           </td>
                         </tr>
                       </tbody>
@@ -4320,7 +4330,7 @@ function StakeLiquidity(props) {
               <div className="card-body">
                 <div style={{ marginBottom: "65px" }}>
                   <div className="float-left textWhiteLarge" style={{ fontSize: "1.25rem", color: "white" }}>
-                    Yield
+                    APR
                   </div>
                 </div>
                 <table>
@@ -4337,11 +4347,15 @@ function StakeLiquidity(props) {
                             }}
                           >
                             <div>
-                              {parseFloat(window.web3Eth.utils.fromWei(props.poolRewardRate_second, "Ether") * 86400).toLocaleString("en-US", {
+                              {/* {parseFloat(window.web3Eth.utils.fromWei(props.poolRewardRate_second, "Ether") * 86400).toLocaleString("en-US", {
+                                maximumFractionDigits: 0
+                              })} */}{" "}
+                              {((100 * ((4000 / 7) * 365)) / (parseFloat(window.web3Eth.utils.fromWei(props.poolSize, "mwei")) + parseFloat(window.web3Fx.utils.fromWei(props.poolSize_third, "mwei")))).toLocaleString("en-US", {
                                 maximumFractionDigits: 0
                               })}
+                              %
                             </div>
-                            <div className="JYkOF">
+                            {/* <div className="JYkOF">
                               <ImgNextGen
                                 srcWebp={fx}
                                 style={{
@@ -4351,7 +4365,7 @@ function StakeLiquidity(props) {
                                 width="25px"
                                 alt=""
                               />
-                            </div>
+                            </div> */}
                           </div>
                         ) : (
                           <span className="loader"></span>
@@ -4362,7 +4376,7 @@ function StakeLiquidity(props) {
                   <tbody className="textBlackSmall" style={{ color: "white" }}>
                     <tr>
                       <td style={{ textAlign: "start" }} scope="col" width="120">
-                        Estimated yield / day
+                        Estimated APR
                       </td>
                     </tr>
                   </tbody>
