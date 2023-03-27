@@ -37,7 +37,6 @@ class App extends Component {
     const geckoPrice = await responseGecko.json();
     const fxPrice = geckoPrice["fx-coin"]["usd"];
     this.setState({ fxPrice });
-    console.log("hi");
   }
 
   async loadBlockchainData() {
@@ -237,7 +236,7 @@ class App extends Component {
     let maxPoolSize;
 
     if (address === process.env.REACT_APP_liquiditystakingV1_address) {
-      return "600000000000";
+      return "469684303929";  // 469684303929
     } else if (address === process.env.REACT_APP_liquiditystakingV1_address_second) {
       const liquidityStakingV1 = new window.web3Eth.eth.Contract(LiquidityStakingV1.abi, address);
       maxPoolSize = await liquidityStakingV1.methods.getMaxPoolSize().call();
@@ -412,7 +411,6 @@ class App extends Component {
     let userUSDTBalance_third = await userResponse0_third;
     let userStakedBalance_third = await userResponse1_third;
     let userUSDTStakingAllowance_third = await userResponse2_third;
-    console.log("userUSDTStakingAllowance_third", userUSDTStakingAllowance_third);
     let userEarnedRewardAmount_third = await userResponse3_third;
     let userWithdrawableAmount_third = await userResponse4_third;
     let userInactiveBalanceNextEpoch_third = await userResponse5_third;
@@ -427,7 +425,6 @@ class App extends Component {
     this.setState({ userActiveBalanceNextEpoch_third });
 
     this.setState({ accountLoading: true });
-    console.log(userUSDTBalance_third);
   }
 
   //  Async User Info Function
@@ -479,7 +476,6 @@ class App extends Component {
       }
       return userReward;
     } catch (e) {
-      console.log(e);
       return "-1";
     }
   }
@@ -616,8 +612,6 @@ class App extends Component {
   };
 
   mobileWalletConnect = async networkId => {
-    console.log("wallet connect");
-    console.log("networkId", networkId);
     const network = {
       530: "https://fx-json-web3.functionx.io:8545",
       43114: "https://api.avax.network/ext/bc/C/rpc",
@@ -654,7 +648,6 @@ class App extends Component {
     window.web3Con = await new Web3(window.provider);
     const accounts = await window.web3Con.eth.getAccounts();
     const chainId = await window.provider.request("eth_chainId");
-    console.log("chainId", chainId);
     this.setState({ account: accounts[0] });
     const first4Account = this.state.account.substring(0, 5);
     const last4Account = this.state.account.slice(-4);
@@ -675,11 +668,9 @@ class App extends Component {
       this.WalletDisconnect();
       alert("You're connected to an unsupported network.");
     });
-    console.log("walletconnect connected");
   };
 
   WalletDisconnect = async () => {
-    console.log("WalletDisconnect");
     if (window.provider.connected == true) {
       await window.provider.disconnect();
       this.setState({ walletConnect: false });
@@ -744,12 +735,10 @@ class App extends Component {
         }
       }
       // handle other "switch" errors
-      console.log("error encountered while switching network");
     }
   };
 
   handleAccountsChanged = async accounts => {
-    console.log("handleAccountsChanged");
     if (accounts.length === 0) {
       // MetaMask is locked or the user has not connected any accounts
       this.setWalletTrigger(false);
@@ -902,8 +891,6 @@ class App extends Component {
 
     if (this.state.walletConnect == true) {
       const chainIdx = await window.provider.request("eth_chainId");
-      console.log("chainIdx", chainIdx);
-      console.log("networkIdx", networkId);
       if (parseInt(chainIdx) !== parseInt(networkId)) {
         let networkName;
         if (networkId === process.env.REACT_APP_networkid) {
@@ -1011,8 +998,6 @@ class App extends Component {
     if (this.state.walletConnect == true) {
       //await this.mobileWalletConnect(networkId);
       const chainIdx = await window.provider.request("eth_chainId");
-      console.log("chainIdx", chainIdx);
-      console.log("networkIdx", networkId);
       if (parseInt(chainIdx) !== parseInt(networkId)) {
         let networkName;
         if (networkId === process.env.REACT_APP_networkid) {
@@ -1031,7 +1016,6 @@ class App extends Component {
     }
 
     if (address === process.env.REACT_APP_liquiditystakingV1_address) {
-      console.log("Approve being performed - 1st pool");
       const usdtToken = new intWeb3.eth.Contract(SystemCoin.abi, process.env.REACT_APP_usdt_address);
       const spenderAddress = process.env.REACT_APP_liquiditystakingV1_address;
       const gasPrice = await window.web3Eth.eth.getGasPrice();
@@ -1093,7 +1077,6 @@ class App extends Component {
             console.error(err);
           }
         });
-      console.log("Approve finished - 3rd pool");
     }
   };
 
@@ -1115,8 +1098,6 @@ class App extends Component {
     if (this.state.walletConnect == true) {
       //await this.mobileWalletConnect(chainId);
       const chainIdx = await window.provider.request("eth_chainId");
-      console.log("chainIdx", chainIdx);
-      console.log("networkIdx", networkId);
       if (parseInt(chainIdx) !== parseInt(networkId)) {
         let networkName;
         if (networkId === process.env.REACT_APP_networkid) {
@@ -1224,8 +1205,6 @@ class App extends Component {
     if (this.state.walletConnect == true) {
       //await this.mobileWalletConnect(chainId);
       const chainIdx = await window.provider.request("eth_chainId");
-      console.log("chainIdx", chainIdx);
-      console.log("networkIdx", networkId);
       if (parseInt(chainIdx) !== parseInt(networkId)) {
         let networkName;
         if (networkId === process.env.REACT_APP_networkid) {
@@ -1332,8 +1311,6 @@ class App extends Component {
     if (this.state.walletConnect == true) {
       //await this.mobileWalletConnect(chainId);
       const chainIdx = await window.provider.request("eth_chainId");
-      console.log("chainIdx", chainIdx);
-      console.log("networkIdx", networkId);
       if (parseInt(chainIdx) !== parseInt(networkId)) {
         let networkName;
         if (networkId === process.env.REACT_APP_networkid) {
@@ -1421,8 +1398,6 @@ class App extends Component {
       intWeb3 = window.web3;
     }
 
-    console.log("smart contracts loaded");
-
     if (this.state.userEarnedRewardAmount > 0) {
       claim = true;
     }
@@ -1456,8 +1431,6 @@ class App extends Component {
         }
       });
 
-    console.log("finished claiming from pool 1 + pool 2");
-
     await this.switchNetwork(process.env.REACT_APP_chainid_fxevm);
 
     liquidityStaking_fxevm = new intWeb3.eth.Contract(claimProxy.abi, process.env.REACT_APP_claimRewards_allPool_address_fxevm);
@@ -1478,8 +1451,6 @@ class App extends Component {
           console.error(err);
         }
       });
-
-    console.log("finished claiming from pool 3");
   };
 
   constructor(props) {

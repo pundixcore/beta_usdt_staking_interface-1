@@ -153,7 +153,7 @@ function StakeMenu(props) {
               <div
                 className="ml-auto mr-auto card cardbodyBlack float-right"
                 style={{
-                  marginBottom: "12px",
+                  marginBottom: "50px",
                   color: "white",
                   maxWidth: "400px"
                 }}
@@ -538,7 +538,7 @@ function StakeMenu(props) {
             <div
               className="ml-auto mr-auto card cardbodyBlack float-right"
               style={{
-                marginBottom: "12px",
+                marginBottom: "50px",
                 color: "white",
                 maxWidth: "400px"
               }}
