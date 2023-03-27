@@ -171,7 +171,6 @@ function PopupDeposit(props) {
                 </div>
               </div>
             </div>
-
             {bigInt(window.web3Eth.utils.toWei(textInputRef, "mWei")).value <= bigInt(props.userUSDTBalance).value && bigInt(window.web3Eth.utils.toWei(textInputRef, "mWei")).value <= bigInt(props.remainingPoolDepositedSize).value ? (
               <div
                 className="label cell2"
@@ -368,17 +367,27 @@ function PopupDeposit(props) {
                     amount = window.web3Eth.utils.toWei(amount, "mWei");
                     setTxLoading(true);
                     if (props.pool_id === 1) {
-                      await props.stake(amount, process.env.REACT_APP_liquiditystakingV1_address, close);
+                      //await props.switchNetwork(process.env.REACT_APP_chainid);
+                      await props.stake(amount, process.env.REACT_APP_liquiditystakingV1_address, close, process.env.REACT_APP_chainid, process.env.REACT_APP_networkid);
                     } else if (props.pool_id === 2) {
-                      await props.stake(amount, process.env.REACT_APP_liquiditystakingV1_address_second, close);
+                      //await props.switchNetwork(process.env.REACT_APP_chainid);
+                      await props.stake(amount, process.env.REACT_APP_liquiditystakingV1_address_second, close, process.env.REACT_APP_chainid, process.env.REACT_APP_networkid);
+                    } else if (props.pool_id === 3) {
+                      //await props.switchNetwork(process.env.REACT_APP_chainid_fxevm);
+                      await props.stake(amount, process.env.REACT_APP_liquiditystakingV1_address_third, close, process.env.REACT_APP_chainid_fxevm, process.env.REACT_APP_networkid_fxevm);
                     }
                     //close();
                   } else {
                     setTxLoading(true);
                     if (props.pool_id === 1) {
-                      await props.approve(process.env.REACT_APP_liquiditystakingV1_address);
+                      //await props.switchNetwork(process.env.REACT_APP_chainid);
+                      await props.approve(process.env.REACT_APP_liquiditystakingV1_address, process.env.REACT_APP_chainid, process.env.REACT_APP_networkid, close);
                     } else if (props.pool_id === 2) {
-                      await props.approve(process.env.REACT_APP_liquiditystakingV1_address_second);
+                      //await props.switchNetwork(process.env.REACT_APP_chainid);
+                      await props.approve(process.env.REACT_APP_liquiditystakingV1_address_second, process.env.REACT_APP_chainid, process.env.REACT_APP_networkid, close);
+                    } else if (props.pool_id === 3) {
+                      //await props.switchNetwork(process.env.REACT_APP_chainid_fxevm);
+                      await props.approve(process.env.REACT_APP_liquiditystakingV1_address_third, process.env.REACT_APP_chainid_fxevm, process.env.REACT_APP_networkid_fxevm, close);
                     }
                     setTxLoading(false);
                   }

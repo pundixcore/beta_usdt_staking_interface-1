@@ -363,11 +363,18 @@ function PopupWithdraw(props) {
                   amount = window.web3Eth.utils.toWei(amount, "mWei");
                   setTxLoading(true);
                   if (props.pool_id === 1) {
-                    await props.withdraw(amount, process.env.REACT_APP_liquiditystakingV1_address, close);
+                    console.log("1st withdraw button clicked");
+                    //await props.switchNetwork(process.env.REACT_APP_chainid);
+                    await props.withdraw(amount, process.env.REACT_APP_liquiditystakingV1_address, close, process.env.REACT_APP_chainid, process.env.REACT_APP_networkid);
                   } else if (props.pool_id === 2) {
-                    await props.withdraw(amount, process.env.REACT_APP_liquiditystakingV1_address_second, close);
+                    console.log("2nd withdraw button clicked");
+                    //await props.switchNetwork(process.env.REACT_APP_chainid);
+                    await props.withdraw(amount, process.env.REACT_APP_liquiditystakingV1_address_second, close, process.env.REACT_APP_chainid, process.env.REACT_APP_networkid);
+                  } else if (props.pool_id === 3) {
+                    console.log("3rd withdraw button clicked");
+                    //await props.switchNetwork(process.env.REACT_APP_chainid_fxevm);
+                    await props.withdraw(amount, process.env.REACT_APP_liquiditystakingV1_address_third, close, process.env.REACT_APP_chainid_fxevm, process.env.REACT_APP_networkid_fxevm);
                   }
-
                   //close();
                 }
               }}
