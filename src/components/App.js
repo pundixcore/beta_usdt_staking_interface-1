@@ -236,7 +236,7 @@ class App extends Component {
     let maxPoolSize;
 
     if (address === process.env.REACT_APP_liquiditystakingV1_address) {
-      return "469684303929";  // 469684303929
+      return "469684303929"; // 469684303929
     } else if (address === process.env.REACT_APP_liquiditystakingV1_address_second) {
       const liquidityStakingV1 = new window.web3Eth.eth.Contract(LiquidityStakingV1.abi, address);
       maxPoolSize = await liquidityStakingV1.methods.getMaxPoolSize().call();
@@ -525,11 +525,11 @@ class App extends Component {
       window.web3 = new Web3(window.ethereum);
     }
     // mainnet
-    window.web3Eth = new Web3(`https://rpc.ankr.com/eth`);
-    window.web3Fx = new Web3(`https://fx-json-web3.functionx.io:8545`);
+    // window.web3Eth = new Web3(`https://rpc.ankr.com/eth`);
+    // window.web3Fx = new Web3(`https://fx-json-web3.functionx.io:8545`);
     // testnet
-    // window.web3Eth = new Web3(`https://rpc.ankr.com/eth_goerli`);
-    // window.web3Fx = new Web3(`https://testnet-fx-json-web3.functionx.io:8545`); //Issei
+    window.web3Eth = new Web3(`https://rpc.ankr.com/eth_goerli`);
+    window.web3Fx = new Web3(`https://testnet-fx-json-web3.functionx.io:8545`); //Issei
     try {
       let id = await window.web3Eth.eth.net.isListening();
       // let id2 = await window.web3Fx.eth.net.isListening();
@@ -544,8 +544,8 @@ class App extends Component {
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum);
     }
-    window.web3Eth = new Web3(`https://eth-mainnet.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
-    //window.web3Eth = new Web3(`https://eth-goerli.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
+    // window.web3Eth = new Web3(`https://eth-mainnet.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
+    window.web3Eth = new Web3(`https://eth-goerli.g.alchemy.com/v2/${process.env.REACT_APP_alchemy_goerli}`);
     this.setState({ loading: true });
   }
 

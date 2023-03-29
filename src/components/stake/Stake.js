@@ -17,6 +17,9 @@ import CountdownTimer from "../CountdownTimer";
 import bigInt from "big-integer";
 import HorizontalScroll from "react-horizontal-scrolling";
 
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
+
 function StakeMenu(props) {
   const convertTimeStamp = event => {
     var timestamp = event;
@@ -839,6 +842,16 @@ function StakeMenu(props) {
                 </div>
               </Link>
             </div>
+            <span class="jss801 jss802" style={{ color: "rgb(52, 70, 139)", background: "rgb(208, 216, 249)" }}>
+              <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 1.8v5.324l4.499 2.01L9 1.801ZM8.999 1.8 4.5 9.135l4.499-2.01V1.8ZM9 12.584v3.617l4.501-6.228L9 12.584ZM8.999 16.201v-3.617L4.5 9.973 8.999 16.2ZM9 11.75l4.499-2.613L9 7.127v4.622ZM4.5 9.137l4.499 2.612V7.127L4.5 9.137Z" fill="currentColor"></path>
+              </svg>
+              Ethereum
+            </span>
+
+            {/* <div style={{ textAlign: "start" }}>
+              <ImgNextGen srcWebp={fx} style={{ marginTop: "-1000", marginLeft: "6px", marginRight: "0px" }} width="28px" alt="" />
+            </div> */}
             <div>
               <table>
                 <thead className="textBlackSmall" style={{ color: "white", height: "35px" }}>
@@ -1118,6 +1131,15 @@ function StakeMenu(props) {
                 </div>
               </Link>
             </div>
+            {/* <Stack spacing={10} direction="row">
+              <Button variant="outlined">Ethereum</Button>
+            </Stack> */}
+            <span class="jss801 jss802" style={{ color: "rgb(52, 70, 139)", background: "rgb(208, 216, 249)" }}>
+              <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 1.8v5.324l4.499 2.01L9 1.801ZM8.999 1.8 4.5 9.135l4.499-2.01V1.8ZM9 12.584v3.617l4.501-6.228L9 12.584ZM8.999 16.201v-3.617L4.5 9.973 8.999 16.2ZM9 11.75l4.499-2.613L9 7.127v4.622ZM4.5 9.137l4.499 2.612V7.127L4.5 9.137Z" fill="currentColor"></path>
+              </svg>
+              Ethereum
+            </span>
             <div>
               <table>
                 <thead className="textBlackSmall" style={{ color: "white", height: "35px" }}>
@@ -1188,6 +1210,7 @@ function StakeMenu(props) {
                     </td>
                   </tr>
                 </thead>
+
                 <tbody className="textBlackSmall" style={{ color: "white" }}>
                   <tr>
                     <td style={{ textAlign: "start" }} scope="col" width="120">
@@ -1397,6 +1420,15 @@ function StakeMenu(props) {
                 </div>
               </Link>
             </div>
+            {/* <Stack spacing={10} direction="row">
+              <Button variant="outlined">FXCore</Button>
+            </Stack> */}
+            <span class="jss801 jss802" style={{ color: "rgb(137, 97, 0)", background: "rgb(242, 225, 185)" }}>
+              <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.364 4.144 9.125 2l3.76 2.144-1.382.793-2.378-1.353-2.378 1.353-1.383-.793Zm7.522 2.705-1.383-.792-2.378 1.352-2.378-1.352-1.383.792v1.584l2.378 1.352v2.705l1.383.792 1.383-.792V9.785l2.378-1.352V6.85Zm0 4.288V9.553l-1.383.792v1.585l1.383-.793Zm.981.56L11.49 13.05v1.584l3.761-2.144V8.2l-1.383.792v2.705Zm-1.382-6.2 1.382.792v1.584l1.383-.792V5.497l-1.383-.793-1.382.793Zm-4.743 8.126v1.585L9.125 16l1.383-.792v-1.585l-1.383.793-1.383-.793Zm-2.378-2.486 1.383.793v-1.585l-1.383-.792v1.584Zm2.378-5.64 1.383.792 1.383-.792-1.383-.793-1.383.793Zm-3.36.792 1.383-.792-1.382-.793L3 5.497V7.08l1.383.792V6.29Zm0 2.704L3 8.201v4.289l3.76 2.144V13.05l-2.377-1.352V8.993Z" fill="currentColor"></path>
+              </svg>
+              FXCore
+            </span>
             <div>
               <table>
                 <thead className="textBlackSmall" style={{ color: "white", height: "35px" }}>

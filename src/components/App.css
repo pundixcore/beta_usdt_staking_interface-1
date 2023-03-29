@@ -12,12 +12,7 @@ body {
   /* background-color: #39595e; */
   background-attachment: fixed;
   background-color: #0c0c0d;
-  background-image: linear-gradient(
-    135deg,
-    rgba(24, 238, 216, 0.2) 0%,
-    rgba(16, 19, 20, 0) 48%,
-    rgba(166, 246, 22, 0.2) 100%
-  );
+  background-image: linear-gradient(135deg, rgba(24, 238, 216, 0.2) 0%, rgba(16, 19, 20, 0) 48%, rgba(166, 246, 22, 0.2) 100%);
 }
 
 .center {
@@ -251,16 +246,14 @@ input[name="searchmSyn"]:focus {
   font-weight: bold;
   border: double 1px transparent;
   border-radius: 5px;
-  background-image: linear-gradient(#fffcf0, #fffcf0),
-    linear-gradient(to right, green, gold);
+  background-image: linear-gradient(#fffcf0, #fffcf0), linear-gradient(to right, green, gold);
   background-origin: border-box;
   background-clip: content-box, border-box;
   font-size: 15px;
 }
 
 .textDarkOpenOrder:hover {
-  background-image: linear-gradient(#fffcf0, #fffcf0),
-    linear-gradient(to right, green, gold);
+  background-image: linear-gradient(#fffcf0, #fffcf0), linear-gradient(to right, green, gold);
   box-shadow: 0 0 10px #9ecaed;
 }
 
@@ -391,8 +384,7 @@ input[name="searchmSyn"]:focus {
   margin-left: 0px;
   font-size: 16px;
   opacity: 0.8;
-  font-family: "Montserrat_Regular", "Helvetica Neue", "PingFang SC",
-    "Microsoft YaHei", "Simsun", Helvetica, Arial, Verdana, sans-serif;
+  font-family: "Montserrat_Regular", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", "Simsun", Helvetica, Arial, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -1218,13 +1210,7 @@ html {
   text-transform: uppercase;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(
-    to right,
-    rgb(255, 166, 0) 0%,
-    rgb(255, 166, 0) 15%,
-    rgb(255, 225, 30) 85%,
-    rgb(255, 225, 30) 100%
-  );
+  background-image: linear-gradient(to right, rgb(255, 166, 0) 0%, rgb(255, 166, 0) 15%, rgb(255, 225, 30) 85%, rgb(255, 225, 30) 100%);
 }
 
 .gradient-text {
@@ -1239,8 +1225,7 @@ html {
   /* Set the background size and repeat properties. */
   background-size: 100%;
   background-repeat: repeat;
-  font-family: "Montserrat_Regular", "Helvetica Neue", "PingFang SC",
-    "Microsoft YaHei", "Simsun", Helvetica, Arial, Verdana, sans-serif;
+  font-family: "Montserrat_Regular", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", "Simsun", Helvetica, Arial, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   /* Use the text as a mask for the background. */
   /* This will show the gradient as a text color rather than element bg. */
@@ -1352,12 +1337,7 @@ ul li::before {
   left: 0px;
   position: absolute;
   border-radius: 10px;
-  background-image: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.5) 50%,
-    transparent 100%
-  );
+  background-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5) 50%, transparent 100%);
   background-repeat: no-repeat;
   background-size: 75px 175px, 100% 100px, 100% 16px, 100% 30px;
   background-position: -185px 0, center 0, center 115px, center 142px;
@@ -1553,12 +1533,7 @@ ul li::before {
   color: white;
   opacity: 1;
   background-color: rgba(24, 238, 216, 0.2);
-  background-image: linear-gradient(
-    135deg,
-    rgba(24, 238, 216, 0.2) 0%,
-    rgba(16, 19, 20, 0) 48%,
-    rgba(166, 246, 22, 0.2) 100%
-  );
+  background-image: linear-gradient(135deg, rgba(24, 238, 216, 0.2) 0%, rgba(16, 19, 20, 0) 48%, rgba(166, 246, 22, 0.2) 100%);
   border-radius: 50px;
 }
 
@@ -1569,8 +1544,7 @@ ul li::before {
   border-radius: 22px;
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
-  background-image: linear-gradient(to right, #000000, #000000),
-    linear-gradient(360deg, #18eed8, #a6f616);
+  background-image: linear-gradient(to right, #000000, #000000), linear-gradient(360deg, #18eed8, #a6f616);
 }
 
 .buttonGradientBorder:hover {
@@ -1579,8 +1553,7 @@ ul li::before {
   opacity: 0.6;
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
-  background-image: linear-gradient(to right, #000000, #000000),
-    linear-gradient(360deg, #18eed8, #a6f616);
+  background-image: linear-gradient(to right, #000000, #000000), linear-gradient(360deg, #18eed8, #a6f616);
 }
 
 .linearGradientText {
@@ -1662,4 +1635,52 @@ ul li::before {
   display: flex;
   column-gap: 20px;
   justify-content: space-between;
+} */
+element.style {
+  color: rgb(137, 97, 0);
+  background: rgb(242, 225, 185);
+}
+
+.jss802 {
+  height: 1.75rem;
+  padding: 0 0.375rem;
+  font-size: 0.875rem;
+}
+
+.jss801 {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  border-radius: 0.25rem;
+}
+
+element.style {
+  color: rgb(52, 70, 139);
+  background: rgb(208, 216, 249);
+}
+
+.jss801 {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  border-radius: 0.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* element.style {
+}
+:not(svg) {
+  transform-origin: 0px 0px;
+}
+
+style attribute {
+  color: rgb(52, 70, 139);
+  background: rgb(208, 216, 249);
 } */
